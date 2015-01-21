@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esri Leaflet Plugins Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Leafet -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+  <!-- Esri Leafet -->
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+
+  <!-- Esri Leaflet Geocoder -->
+  <script src="https://rawgit.com/Esri/esri-leaflet-geocoder/master/dist/esri-leaflet-geocoder.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/Esri/esri-leaflet-geocoder/master/dist/esri-leaflet-geocoder.css">
+
+  <!-- Esri Leaflet Demographic Maps-->
+  <script src="https://rawgit.com/Esri/esri-leaflet-demographic-layer/master/dist/esri-leaflet-demographics.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/Esri/esri-leaflet-demographic-layer/master/dist/esri-leaflet-legend.css">
+  <script src="https://rawgit.com/Esri/esri-leaflet-demographic-layer/master/layers/usa.js"></script>
+
+  <!-- Leaflet Loader Plugin -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js"></script>
+  <script src="https://rawgit.com/ebrelsford/Leaflet.loading/master/src/Control.Loading.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/ebrelsford/Leaflet.loading/master/src/Control.Loading.css">
+
+  <!-- Styles -->
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+    #map {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    body.authed .box{
+      display: none;
+    }
+    .box {
+      width: 250px;
+      position: absolute;
+      top: 10px;
+      margin-left: -125px;
+      background: white;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+      border-radius: 4px;
+      z-index: 1000;
+      left: 50%;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .button {
+      display: block;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 1em;
+      background: #0078c5;
+      color: white;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: #003b61
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="box">
+    <p>Sign in to start the demo.</p>
+    <a href="#" id="log-in-link" class="button" onclick="startOauth();">Sign Into ArcGIS Online</a>
+    <br>
+    <small>If you need account you can sign up for a free development and testing account at <a href="https://developers.arcgis.com/sign-up/">ArcGIS for Developers</a></small>
+  </div>
+  <script>
+    var map = L.map('map').setView([ 32.71, -117.11], 13);
+
+    var redirect = encodeURIComponent('http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/callback.html');
+    var clientID = 'FxeCTSwkrA9yqVGS';
+
+    // this function will open a popup window and start the oauth process
+    function startOauth() {
+      window.open("https://www.arcgis.com/sharing/oauth2/authorize?client_id="+clientID+"&response_type=token&expiration=20160&redirect_uri=" + redirect, "oauth-window", "height=400,width=600,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes");
+    }
+
+    // this function will be called when the oauth process is complete
+    window.oauthCallback = function(token) {
+      document.body.className += " authed";
+      startDemo(token);
+    };
+
+    L.esri.basemapLayer('Gray').addTo(map);
+    L.esri.basemapLayer('GrayLabels').addTo(map);
+
+    // create the geocoding control and add it to the map
+    var searchControl = new L.esri.Controls.Geosearch({
+      allowMultipleResults: false
+    }).addTo(map);
+
+    // listen for the results event and add every result to the map
+    searchControl.on("results", function(data){
+      currentLocation = data.results[0].latlng;
+      createPopup(currentLocation);
+    });
+
+    var loadingControl = L.Control.loading({
+      separate:true,
+      spinjs: true,
+      spin: {
+            lines: 9, // The number of lines to draw
+  length: 2, // The length of each line
+  width: 2, // The line thickness
+  radius: 4, // The radius of the inner circle
+  speed: 0.8, // Rounds per second
+  trail: 30, // Afterglow percentage
+  hwaccel: true, // Whether to use hardware acceleration
+      }
+    });
+    map.addControl(loadingControl);
+
+    var demographiclayerControl;
+    var legends;
+    var layers;
+    var currentLegend;
+    var currentLayer;
+    var currentLocation;
+    var currentKeys;
+    var outline;
+    var popup;
+    var keys;
+
+    function createPopup(latlng){
+      map.fire('dataloading');
+      currentLocation = latlng;
+      if(outline){
+        map.removeLayer(outline);
+      }
+
+      currentLayer.query(latlng, function(response){
+        map.fire('dataload');
+        // workaround for https://github.com/Esri/esri-leaflet-demographic-layer/issues/3
+        for (var id in layers){
+          layers[id]._fieldCache = false;
+        }
+
+        // if ther was no error
+        if(!response.error){
+          outline = new L.GeoJSON(response.features[0], {
+            style: function(feature){
+              return {
+                color: "#000",
+                weight:  2,
+                opacity: 0.85
+              };
+            }
+          }).addTo(map);
+
+          var properties = response.features[0].properties;
+          var template = "<small>{description}: <strong>{value}</strong></small><br>";
+          var content = "";
+
+          for (var i = currentKeys.length - 1; i >= 0; i--) {
+            var key = currentKeys[i];
+            console.log(key, properties);
+            content += L.Util.template(template, {
+              description: properties[key].description,
+              value: properties[key].value
+            });
+          }
+
+          popup = L.popup().setLatLng(latlng).setContent(content).addTo(map);
+        }
+      });
+    }
+
+    function startDemo(token){
+      keys = {
+        "Median Age": ['MEDFAGE_CY', 'FEM18UP_CY', 'MAL18UP_CY'],
+        "Average Income": ['AVGHINC_CY', 'PCI_CY'],
+        "Unemployment": ['EMP_CY', 'UNEMP_CY', 'UNEMPRT_CY' ],
+        "Diversity": [
+          'TOTPOP_CY',
+          'HISPPOP_CY',
+          'NHSPWHT_CY',
+          'NHSPBLK_CY',
+          'NHSPAI_CY',
+          'NHSPASN_CY',
+          'NHSPPI_CY',
+          'NHSPOTH_CY',
+          'NHSPMLT_CY',
+          'DIVINDX_CY'
+        ]
+      };
+
+      layers = {
+        "Median Age": new L.esri.Demographics.DemographicLayer('USAMedianAge', { token: token }),
+        "Average Income": new L.esri.Demographics.DemographicLayer('USAAverageHouseholdIncome', { token: token }),
+        "Unemployment": new L.esri.Demographics.DemographicLayer('USAUnemploymentRate', { token: token }),
+        "Diversity": new L.esri.Demographics.DemographicLayer('USADiversityIndex', { token: token })
+      };
+
+      for (var id in layers){
+        layers[id].on('loading', function(){
+          map.fire('dataloading');
+        });
+        layers[id].on('load', function(){
+          map.fire('dataload');
+        });
+      }
+
+      legends = {
+        "Median Age": new L.esri.Demographics.Legend('USAMedianAge', { token: token }),
+        "Average Income": new L.esri.Demographics.Legend('USAAverageHouseholdIncome', { token: token }),
+        "Unemployment": new L.esri.Demographics.Legend('USAUnemploymentRate', { token: token }),
+        "Diversity": new L.esri.Demographics.Legend('USADiversityIndex', { token: token })
+      };
+
+      currentLayer = layers["Median Age"].addTo(map);
+      currentLegend = legends["Median Age"].addTo(map);
+      currentKeys = keys['Median Age'];
+
+      demographiclayerControl = L.control.layers(layers, {
+        collapsed: false
+      }).addTo(map);
+
+      map.on("click", function(e) {
+        createPopup(e.latlng);
+      });
+    }
+
+    map.on('baselayerchange',function(e){
+      currentKeys = keys[e.name];
+
+      console.log(popup);
+      if(popup) {
+        map.closePopup(popup);
+      }
+
+      if(currentLegend){
+        currentLegend.removeFrom(map);
+      }
+
+      currentLayer = e.layer;
+      currentLegend = legends[e.name].addTo(map);
+
+      if(currentLocation) {
+        createPopup(currentLocation);
+      }
+    });
+  </script>
+</body>
+</html>

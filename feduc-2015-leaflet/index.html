@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introducing Esri Leaflet</title>
+
+		<meta name="description" content="Talk introducing Esri Leaflet, a new series of plugins for working with ArcGIS Services in Leaflet. From the 2014 Esri International Developers Summit.">
+		<meta name="author" content="Patrick Arlt">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/esri.css" id="theme">
+
+		<link rel="stylesheet" href="plugin/leaflet/reveal-leaflet.css">
+		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.css">
+		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.Default.css">
+
+		<link rel="stylesheet" href="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.css">
+
+		<link rel="stylesheet" href="lib/esri-leaflet-demographics/esri-leaflet-legend.css">
+
+		<style>
+			.reveal .leaflet-popup {
+				color: black;
+			}
+			.reveal .leaflet-popup-close-button:hover {
+				border: none;
+			}
+			.reveal .geocoder-control-suggestions {
+				margin-top: 10px;
+			}
+			.reveal .geocoder-control-suggestion {
+				margin: 0;
+				color: black;
+			}
+		</style>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<a href="https://github.com/patrickarlt/uc-2014-esri-leaflet"><img style="z-index: 1000; position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section class="left">
+					<h1>Mapping with Leaflet</h1>
+					<h3>Patrick Arlt</h3>
+					<p>Experience Developer - Esri Portland R&D Center</p>
+					<p><a href="http://twitter.com/patrickarlt">@patrickarlt</a> - <a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/">http://bit.ly/1pSCyV2</a></p>
+				</section>
+
+				<section>
+					<h2>Who am I?</h2>
+					<ul>
+						<li>Joined ESRI in 2012</li>
+						<li>Came from a web design/startup background</li>
+						<li>ArcGIS was something people asked me how to print from in college</li>
+						<li>I didn't know what spatial references, projects, mercator or renderers were</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Leaflet?</h2>
+					<ul>
+						<li>Open Source Mapping API</li>
+						<li>Used by OSM, Mapbox, Data.gov</li>
+						<li>Small, Extensible API</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Brief History of Esri Leaflet</h2>
+					<ul>
+						<li>I loved the simplicity of Leaflet to consuming ArcGIS Online services</li>
+						<li>Started very simple, Feature Services, Basemaps, Dynamic Map Services</li>
+						<li>Grown in capabilities, contributors and stability.</li>
+						<li>Most popular Esri Open Source project.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Beta 5</h2>
+					<ul>
+						<li>Querying!</li>
+						<li>Editing!</li>
+						<li><a href="http://esri.github.io/esri-leaflet/">Website!</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Demo Time!</h1>
+					<ul>
+						<li><a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/querying.html">Querying Data</a></li>
+						<li><a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/editing.html">Editing Features</a></li>
+						<li><a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/plugins.html">Plugins!</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Smackdown!</h1>
+					<h3>Esri Leaflet vs JS API</h3>
+					<h4 class="fragment">Who Wins?</h4>
+				</section>
+
+				<section>
+					<h1>No One</h1>
+					<h3 class="fragment">Good developers choose the right tools for the project</h3>
+				</section>
+
+				<section class="left">
+					<h2>Esri Leaflet</h2>
+					<ul>
+						<li class="fragment">Supports a wide variety of ArcGIS Services</li>
+						<li class="fragment">Clean Simple API</li>
+						<li class="fragment">Growing Fast</li>
+						<li class="fragment">Open Source</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>Esri Leaflet</h2>
+					<ul>
+						<li class="fragment">Doesn't support non-mercator tiles</li>
+						<li class="fragment">No Renderer support</li>
+						<li class="fragment">No Webmap support</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>JS API</h2>
+					<ul>
+						<li class="fragment">Offically maintained and supported by a large team</li>
+						<li class="fragment">Supports ALL the functionality of ArcGIS</li>
+						<li class="fragment">Comes with lots of UI components</li>
+						<li class="fragment">Lots of helper components from Dojo</li>
+						<li class="fragment">Very opinionated</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>Choose Esri Leaflet if you...</h2>
+					<ul>
+						<li class="fragment">are integrating into existing apps</li>
+						<li class="fragment">are already using Leaflet</li>
+						<li class="fragment">want a simpler focused toolset</li>
+						<li class="fragment">want to leverage non-ArcGIS Services or data</li>
+						<li class="fragment">want to leverage Leaflet Plugins</li>
+						<li class="fragment">easier integration w/ frameworks and build systems</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>Choose the JS API if you...</h2>
+					<ul>
+						<li class="fragment">need deep integration with ArcGIS</li>
+						<li class="fragment">want to support everything (renderers, web maps&hellip;)</li>
+						<li class="fragment">work in non-web-mercator/wgs 84 projections</li>
+						<li class="fragment">love Dojo</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>You are my dev team</h2>
+					<p><a href="https://github.com/esri/esri-leaflet">https://github.com/esri/esri-leaflet</a></p>
+					<p><a href="https://github.com/Esri/esri-leaflet-geocoder">https://github.com/Esri/esri-leaflet-geocoder</a></p>
+					<p><a href="https://github.com/Esri/esri-leaflet-demographic-layer">https://github.com/Esri/esri-leaflet-demographic-layer</a></p>
+					<p><a href="https://github.com/Esri/esri-leaflet/wiki/Roadmap">API Roadmap</a></p>
+				</section>
+
+				<section class="left">
+					<h1>Thanks!</h1>
+					<p>Twitter : <a href="http://twitter.com/patrickarlt">@patrickarlt</a></p>
+					<p>Slides : <a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/">http://bit.ly/1pSCyV2</a></p>
+					<div class="center-text">
+						<img src="esri-logo.png" alt="Esri" width="280" height="118" >
+					</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script src="plugin/leaflet/leaflet.js"></script>
+
+		<script src="plugin/leaflet/reveal-leaflet.js"></script>
+
+		<script src="lib/leaflet-marker-cluster/leaflet.markercluster.js"></script>
+
+		<script src="lib/esri-leaflet/esri-leaflet.js"></script>
+		<script src="lib/esri-leaflet/extras/clustered-feature-layer.js"></script>
+		<script src="lib/esri-leaflet/extras/heatmap-feature-layer.js"></script>
+
+		<script src="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.js"></script>
+
+		<script src="lib/esri-leaflet-demographics/esri-leaflet-demographics.js"></script>
+
+		<script src="lib/leaflet-heat/leaflet-heat.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: false,
+
+ 				// Factor of the display size that should remain empty around the content
+    		margin: 0.1,
+
+    		// Bounds for smallest/largest possible scale to apply to content
+		    minScale: 1.0,
+		    maxScale: 1.0,
+
+				theme: 'esri', // available themes are in /css/theme
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: '/background.jpg',
+				// parallaxBackgroundSize: '2193px 1334px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
