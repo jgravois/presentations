@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Introducing Esri Leaflet</title>
+		<title>Intro to Esri Leaflet</title>
 
 		<meta name="description" content="Talk introducing Esri Leaflet, a new series of plugins for working with ArcGIS Services in Leaflet. From the 2014 Esri International Developers Summit.">
 		<meta name="author" content="Patrick Arlt">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/esri.css" id="theme">
+		<link rel="stylesheet" href="css/theme/esri-yellow.css" id="theme">
 
 		<link rel="stylesheet" href="plugin/leaflet/reveal-leaflet.css">
 		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.css">
@@ -56,31 +56,31 @@
 
 	<body>
 
-		<a href="https://github.com/patrickarlt/uc-2014-esri-leaflet"><img style="z-index: 1000; position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+		<a href="https://github.com/presentations/feduc-2015-leaflet"><img style="z-index: 1000; position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 
 		<div class="reveal">
 
 			<div class="slides">
 
 				<section class="left">
-					<h1>Mapping with Leaflet</h1>
-					<h3>Patrick Arlt</h3>
-					<p>Experience Developer - Esri Portland R&D Center</p>
-					<p><a href="http://twitter.com/patrickarlt">@patrickarlt</a> - <a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/">http://bit.ly/1pSCyV2</a></p>
+					<h1>Introduction to Esri Leaflet</h1>
+					<h3>John Gravois</h3>
+					<p>Developer Advocate - Redlands</p>
+					<p><a href="http://twitter.com/geoganster">@geogangster</a> - <a href="http://jgravois.github.io/presentations/feduc-2015-leaflet/">http://bit.ly/generate</a></p>
 				</section>
 
 				<section>
 					<h2>Who am I?</h2>
 					<ul>
-						<li>Joined ESRI in 2012</li>
-						<li>Came from a web design/startup background</li>
+						<li>Geographer by training</li>
+						<li>Joined Esri in 2009</li>
 						<li>ArcGIS was something people asked me how to print from in college</li>
-						<li>I didn't know what spatial references, projects, mercator or renderers were</li>
+						<li>Current Esri Leaflet contributor/maintainer</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Leaflet?</h2>
+					<h2>So, what's Leaflet?</h2>
 					<ul>
 						<li>Open Source Mapping API</li>
 						<li>Used by OSM, Mapbox, Data.gov</li>
@@ -91,15 +91,24 @@
 				<section>
 					<h2>Brief History of Esri Leaflet</h2>
 					<ul>
-						<li>I loved the simplicity of Leaflet to consuming ArcGIS Online services</li>
-						<li>Started very simple, Feature Services, Basemaps, Dynamic Map Services</li>
+						<li>The simplicity of Leaflet + consuming ArcGIS Online services</li>
+						<li>Started 'very' simple (Feature Services, Basemaps, Dynamic Map Services)</li>
 						<li>Grown in capabilities, contributors and stability.</li>
 						<li>Most popular Esri Open Source project.</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Beta 5</h2>
+					<h2>Release Candidate 5</h2>
+					<ul>
+						<li>Renderer plugin!</li>
+						<li>Editing!</li>
+						<li><a href="http://esri.github.io/esri-leaflet/">Website!</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Older stuff</h2>
 					<ul>
 						<li>Querying!</li>
 						<li>Editing!</li>
@@ -110,21 +119,22 @@
 				<section>
 					<h1>Demo Time!</h1>
 					<ul>
-						<li><a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/querying.html">Querying Data</a></li>
-						<li><a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/editing.html">Editing Features</a></li>
-						<li><a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/demos/plugins.html">Plugins!</a></li>
+						<li><a href="demos/querying.html">Querying Data</a></li>
+						<li><a href="demos/editing.html">Editing Features</a></li>
+						<li><a href="demos/plugins.html">Plugins!</a></li>
 					</ul>
 				</section>
 
 				<section>
 					<h1>Smackdown!</h1>
-					<h3>Esri Leaflet vs JS API</h3>
+					<h3>Esri Leaflet vs JavaScript API</h3>
 					<h4 class="fragment">Who Wins?</h4>
 				</section>
 
 				<section>
 					<h1>No One</h1>
 					<h3 class="fragment">Good developers choose the right tools for the project</h3>
+					<h4 class="fragment">and everyone knows tag team wrestling is more fun anyway</h4>
 				</section>
 
 				<section class="left">
@@ -141,7 +151,9 @@
 					<h2>Esri Leaflet</h2>
 					<ul>
 						<li class="fragment">Doesn't support non-mercator tiles</li>
-						<li class="fragment">No Renderer support</li>
+						<strike>
+						  <li class="fragment">No Renderer support</li>
+						</strike>
 						<li class="fragment">No Webmap support</li>
 					</ul>
 				</section>
@@ -161,9 +173,8 @@
 					<h2>Choose Esri Leaflet if you...</h2>
 					<ul>
 						<li class="fragment">are integrating into existing apps</li>
-						<li class="fragment">are already using Leaflet</li>
+						<li class="fragment">are already familiar w/ Leaflet</li>
 						<li class="fragment">want a simpler focused toolset</li>
-						<li class="fragment">want to leverage non-ArcGIS Services or data</li>
 						<li class="fragment">want to leverage Leaflet Plugins</li>
 						<li class="fragment">easier integration w/ frameworks and build systems</li>
 					</ul>
@@ -173,14 +184,14 @@
 					<h2>Choose the JS API if you...</h2>
 					<ul>
 						<li class="fragment">need deep integration with ArcGIS</li>
-						<li class="fragment">want to support everything (renderers, web maps&hellip;)</li>
+						<li class="fragment">want to support everything (print services, web maps&hellip;)</li>
 						<li class="fragment">work in non-web-mercator/wgs 84 projections</li>
 						<li class="fragment">love Dojo</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>You are my dev team</h2>
+					<h2>You are our dev team</h2>
 					<p><a href="https://github.com/esri/esri-leaflet">https://github.com/esri/esri-leaflet</a></p>
 					<p><a href="https://github.com/Esri/esri-leaflet-geocoder">https://github.com/Esri/esri-leaflet-geocoder</a></p>
 					<p><a href="https://github.com/Esri/esri-leaflet-demographic-layer">https://github.com/Esri/esri-leaflet-demographic-layer</a></p>
@@ -189,10 +200,10 @@
 
 				<section class="left">
 					<h1>Thanks!</h1>
-					<p>Twitter : <a href="http://twitter.com/patrickarlt">@patrickarlt</a></p>
-					<p>Slides : <a href="http://patrickarlt.github.io/uc-2014-esri-leaflet/">http://bit.ly/1pSCyV2</a></p>
+					<p>Twitter : <a href="http://twitter.com/geogangster">@geogangster</a></p>
+					<p>Slides : <a href="http://jgravois.github.io/presentations/feduc-2015-leaflet/">http://bit.ly/generate</a></p>
 					<div class="center-text">
-						<img src="esri-logo.png" alt="Esri" width="280" height="118" >
+						<img src="esri-logo-black.gif" alt="Esri" width="280" height="118" >
 					</div>
 				</section>
 
@@ -235,7 +246,7 @@
 		    minScale: 1.0,
 		    maxScale: 1.0,
 
-				theme: 'esri', // available themes are in /css/theme
+				theme: 'esri-yellow', // available themes are in /css/theme
 				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
