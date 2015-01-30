@@ -17,13 +17,13 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/esri-yellow.css" id="theme">
 
-		<link rel="stylesheet" href="plugin/leaflet/reveal-leaflet.css">
+		<!--link rel="stylesheet" href="plugin/leaflet/reveal-leaflet.css">
 		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.css">
 		<link rel="stylesheet" href="lib/leaflet-marker-cluster/MarkerCluster.Default.css">
 
 		<link rel="stylesheet" href="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.css">
 
-		<link rel="stylesheet" href="lib/esri-leaflet-demographics/esri-leaflet-legend.css">
+		<link rel="stylesheet" href="lib/esri-leaflet-demographics/esri-leaflet-legend.css"-->
 
 		<style>
 			.reveal .leaflet-popup {
@@ -71,36 +71,36 @@
 
 				<section>
 					<h2>Who am I?</h2>
-					<ul>
+					<br><ul>
 						<li>geographer by training</li>
 						<li>joined Esri in 2009</li>
-						<li>worked in technical support on products like ArcMap, ArcGIS Server, ArcGIS Online, Flex, Sharepoint (etc. etc.)</li>
+						<li>worked in technical support on products like ArcMap, ArcGIS Online and Server, Flex, Sharepoint (etc. etc.)</li>
 						<li>current Esri Leaflet contributor/maintainer</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>So, what is Leaflet anyway?</h2>
-					<ul>
+					<h2>So, what is this 'Leaflet'?</h2>
+					<br><ul>
 						<li>open source mapping API</li>
-						<li>used by OSM, Mapbox, Data.gov</li>
+						<li>used by OpenStreetMap, Mapbox, Data.gov</li>
 						<li>small, extensible API</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Brief History of Esri Leaflet</h2>
-					<ul>
+					<br><ul>
 						<li>the simplicity of Leaflet + ArcGIS Online and ArcGIS Server services</li>
 						<li>started 'very' simple (Feature Services, Basemaps, Dynamic Map Services)</li>
-						<li>grown in capabilities, contributors and stability.</li>
+						<li>has grown in capabilities, contributors and stability.</li>
 						<li>Esri's most popular Open Source project.</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Release Candidate 5</h2>
-					<ul>
+					<br><ul>
 						<li>new renderer plugin!</li>
 						<li>scale dependency for FeatureLayers!</li>
 						<li>leverage native GeoJSON from ArcGIS Online!</li>
@@ -110,20 +110,21 @@
 
 				<section>
 					<h2>Older stuff</h2>
-					<ul>
-						<li>Querying!</li>
-						<li>Editing!</li>
-						<li>Clustering!</li>
-						<li><a href="http://esri.github.io/esri-leaflet/">Website!</a></li>
+					<br><ul>
+						<li>Querying</li>
+						<li>Editing</li>
+						<li>Clustering</li>
+						<li><a href="http://esri.github.io/esri-leaflet/">Website</a></li>
 					</ul>
 				</section>
 
 				<section>
 					<h1>Demo Time!</h1>
-					<ul>
+					<br><ul>
 						<li><a href="demos/querying.html">Querying Data</a></li>
+						<li><a href="demos/geocoding.html">Geocoding (+ search)</a></li>
 						<li><a href="demos/editing.html">Editing Features</a></li>
-						<li><a href="demos/plugins.html">Plugins!</a></li>
+						<li><a href="demos/gp.html">Geoprocessing!</a></li>
 					</ul>
 				</section>
 
@@ -135,13 +136,13 @@
 
 				<section>
 					<h1>No One</h1>
-					<h3>Good developers choose the right tools for the project</h3>
+					<h3>Good developers choose the right tools for the job</h3>
 					<h4 class="fragment">and everyone knows tag team wrestling is more fun anyway</h4>
 				</section>
 
 				<section class="left">
 					<h2>Esri Leaflet</h2>
-					<ul>
+					<br><ul>
 						<li>supports a variety of ArcGIS Services</li>
 						<li>clean, simple API</li>
 						<li>growing fast</li>
@@ -151,16 +152,17 @@
 
 				<section class="left">
 					<h2>Esri Leaflet</h2>
-					<ul>
-						<li>doesn't support non-mercator tiles automatically</li>
+					<br><ul>
+						<li>doesn't support non-mercator tiles automagically</li>
 						<li><strike>no Renderer support</strike> (fixed)</li>
 						<li>no Webmap support</li>
+						<li>no Routing support (yet)</li>
 					</ul>
 				</section>
 
 				<section class="left">
 					<h2>JavaScript API</h2>
-					<ul>
+					<br><ul>
 						<li>offically maintained and supported by a large team</li>
 						<li>supports ALL the functionality of ArcGIS</li>
 						<li>comes with lots of UI components</li>
@@ -170,7 +172,7 @@
 
 				<section class="left">
 					<h2>Choose Esri Leaflet if you...</h2>
-					<ul>
+					<br><ul>
 						<li>are integrating into existing apps</li>
 						<li>are already familiar w/ Leaflet</li>
 						<li>want a simpler, focused toolset</li>
@@ -181,16 +183,16 @@
 
 				<section class="left">
 					<h2>Choose the JS API if you...</h2>
-					<ul>
+					<br><ul>
 						<li>need deep integration with ArcGIS</li>
-						<li>want to support everything (print services, web maps&hellip;)</li>
-						<li>work in non-web-mercator/wgs84 projections</li>
+						<li>want to support everything ( print services, web maps&hellip;)</li>
+						<li>work in non-web-mercator / wgs84 projections</li>
 						<li>love Dojo</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>You're on our Dev Team</h2>
+					<h2>You're part of the team</h2>
 					<p><a href="https://github.com/esri/esri-leaflet">https://github.com/esri/esri-leaflet</a></p>
 					<p><a href="https://github.com/Esri/esri-leaflet-geocoder">https://github.com/Esri/esri-leaflet-geocoder</a></p>
 					<p><a href="https://github.com/Esri/esri-leaflet-renderers">https://github.com/Esri/esri-leaflet-renderers</a></p>
@@ -212,7 +214,7 @@
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
-		<script src="plugin/leaflet/leaflet.js"></script>
+		<!--script src="plugin/leaflet/leaflet.js"></script>
 
 		<script src="plugin/leaflet/reveal-leaflet.js"></script>
 
@@ -224,9 +226,7 @@
 
 		<script src="lib/esri-leaflet-geocoder/esri-leaflet-geocoder.js"></script>
 
-		<script src="lib/esri-leaflet-demographics/esri-leaflet-demographics.js"></script>
-
-		<script src="lib/leaflet-heat/leaflet-heat.js"></script>
+		<script src="lib/leaflet-heat/leaflet-heat.js"></script-->
 
 		<script>
 			// Full list of configuration options available here:
