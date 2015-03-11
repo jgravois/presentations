@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>Comparing Leaflet to ArcGIS JS API</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" href="comparisons.css" />
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.6/esri-leaflet.js"></script>
+    <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-renderers/v0.0.1-beta.2/esri-leaflet-renderers.js"></script>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+    <script src="http://js.arcgis.com/3.13/"></script>
+  </head>
+  <body>
+
+
+    <div id='details'>
+    <h3 id='url'></h3>
+    <div><label>Geometry Type:</label> <span id='geoType'></span></div>
+    <div><label>Renderer Type:</label> <span id='rendererType'></span></div>
+
+    <div id="map" class="mapContainer"></div>
+    <div id="esrimap" class="mapContainer"></div>
+    <div id="featureSelection">
+      <div><select id='selector'></select></div><div><input id='serviceUrl' type='text'></input><button id='loadServiceBtn'>Load</button></div>
+    </div>
+    <h3 id="leafletLabel">Leaflet</h3>
+    <h3 id="esriLabel">Esri JS API</h3>
+
+    <script>
+      var layers = [{
+        url: 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/oregoncrime2002_smart/FeatureServer/0',
+        title: 'Portland Neighborhoods - Classic Renderers',
+        geoType: 'Polygon',
+        rendererType: 'Classbreaks',
+        lat: 43.025,
+        lon: -122.653,
+        zoomLevel: 6
+      }, {
+        url: 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/oregoncrime2002_smarter/FeatureServer/0',
+        title: 'Portland Neighborhoods - Smart Maps',
+        geoType: 'Polygon',
+        rendererType: 'Classbreaks',
+        lat: 43.025,
+        lon: -122.653,
+        zoomLevel: 6
+      }];
+
+      var options = "";
+      for(var i=0; i<layers.length; i++){
+        options += "<option value='" + i + "'>" + layers[i].title + "</option>";
+      }
+
+      document.getElementById("selector").innerHTML = options;
+
+      var layerIndex = 0,
+        layer = layers[layerIndex];
+
+      var updateEsriMap;
+
+      require([
+      "dojo/dom-construct",
+      "esri/map",
+      "esri/layers/FeatureLayer",
+      "dojo/domReady!"
+      ], function( domConstruct, Map, FeatureLayer) {
+
+        var esrimap = new Map("esrimap", {
+          basemap: "gray",
+          center: [layer.lon, layer.lat],
+          zoom: layer.zoomLevel
+        });
+
+        var esrifl = new FeatureLayer(layer.url);
+        esrimap.addLayer(esrifl);
+
+        updateEsriMap = function(layer) {
+          esrimap.removeLayer(esrifl);
+          esrifl = new FeatureLayer(layer.url);
+          esrimap.centerAndZoom([layer.lon, layer.lat], layer.zoomLevel).then(function(v){
+              esrimap.addLayer(esrifl);
+          });
+        };
+      });
+
+
+      var map = L.map('map').setView([layer.lat, layer.lon], layer.zoomLevel);
+      L.esri.basemapLayer('Gray').addTo(map);
+      L.esri.basemapLayer('GrayLabels').addTo(map);
+      var fl = L.esri.featureLayer(layer.url);
+      map.addLayer(fl);
+
+      function updateLeafletMap(layer) {
+        map.removeLayer(fl);
+        fl = L.esri.featureLayer(layer.url);
+        map.setView([layer.lat, layer.lon], layer.zoomLevel);
+        map.addLayer(fl);
+      };
+
+      function setLayer(layer) {
+        updateLeafletMap(layer);
+        updateEsriMap(layer);
+        updateText(layer);
+      };
+
+      function updateText(layer) {
+        document.getElementById("geoType").innerHTML = layer.geoType;
+        document.getElementById("rendererType").innerHTML = layer.rendererType;
+        if (layer.url && layer.title) {
+          document.getElementById("url").innerHTML = "<a target='details' href='" + layer.url + "'>" + layer.title + "</a>"
+        }
+      };
+
+      document.getElementById("selector").onchange = function(e) {
+        layer = layers[document.getElementById("selector").selectedIndex];
+        setLayer(layer);
+      };
+
+      document.getElementById("loadServiceBtn").onclick = function(e) {
+        //get the url
+        serviceUrl = document.getElementById("serviceUrl").value;
+        if (serviceUrl.length) {
+
+          layer = {
+            url: serviceUrl,
+            title: 'User Defined',
+            geoType: 'N/A',
+            rendererType: 'N/A',
+            lat: 0,
+            lon: 0,
+            zoomLevel: 1
+          }
+          setLayer(layer);
+        }
+      }
+
+      updateText(layer);
+
+    </script>
+  </body>
+</html>
