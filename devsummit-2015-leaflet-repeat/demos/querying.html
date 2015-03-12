@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esri Leaflet Query Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Leafet -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+  <!--  Leaflet.heat. Don't use rawgit.com in production -->
+  <script src="https://rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
+
+  <!-- Esri Leafet -->
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leafelt-heatmap-feature-layer.js"></script>
+
+  <!-- Pickaday date picker. Don't use rawgit.com in production -->
+  <link rel="stylesheet" href="https://rawgit.com/dbushell/Pikaday/master/css/pikaday.css">
+  <script src="https://rawgit.com/dbushell/Pikaday/master/pikaday.js"></script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    #map {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .query-controls {
+      background: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.5em 0;
+    }
+    label {
+      clear: both;
+      width: 240px;
+      display: block;
+      line-height: 32px;
+      margin: 0.5em;
+    }
+    input, select {
+      float: right;
+      width: 160px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+    input {
+      padding: 8px;
+    }
+    select {
+      width: 178px;
+      height: 32px;
+      line-height: 32px;
+      -webkit-appearance: menulist-button;
+      border: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="query-controls leaflet-bar">
+    <label for="from">From
+      <input type="text" id="from">
+    </label>
+    <label for="to">To
+      <input type="text" id="to">
+    </label>
+    <label for="open-closed">Status
+      <select id="open-closed">
+        <option value="">Any</option>
+        <option value="Status='Open'">Open</option>
+        <option value="Status='Closed'">Closed</option>
+      </select>
+    </label>
+  </div>
+  <script>
+    var map = L.map('map').setView([ 40.706, -73.926], 12);
+
+    L.esri.basemapLayer('Gray').addTo(map);
+    L.esri.basemapLayer('GrayLabels').addTo(map);
+
+    var from = new Pikaday({
+      field: document.getElementById('from'),
+      defaultDate: new Date('2011-01-01'),
+      setDefaultDate: true,
+      minDate: new Date('2010-09-13'),
+      maxDate: new Date('2011-18-8'),
+      onSelect: filterTime
+    });
+
+    var to = new Pikaday({
+      field: document.getElementById('to'),
+      defaultDate: new Date('2011-03-31'),
+      setDefaultDate: true,
+      minDate: new Date('2010-09-13'),
+      maxDate: new Date('2011-18-8'),
+      onSelect: filterTime
+    });
+
+    var reports = L.esri.heatmapFeatureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Graffiti_Reports/FeatureServer/0', {
+      timeField: 'CreatedDate',
+      from: new Date('2011-01-01'),
+      to: new Date('2011-03-31'),
+      radius: 12
+    }).addTo(map);
+
+    function filterTime(){
+      reports.setTimeRange(from.getDate(), to.getDate());
+    }
+
+    var attribute = document.getElementById('open-closed');
+
+    attribute.addEventListener('change', function(){
+      reports.setWhere(attribute.value);
+    });
+  </script>
+</body>
+</html>
