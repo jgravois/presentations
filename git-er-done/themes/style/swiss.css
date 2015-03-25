@@ -348,6 +348,10 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+.righty-tighty {
+  text-align: left;
+}
+
 .deck-container {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.75em;
@@ -389,3 +393,4 @@ a:hover, a:focus {
 .deck-menu .deck-current, .no-touch .deck-menu .slide:hover {
   background: #ddf;
 }
+
