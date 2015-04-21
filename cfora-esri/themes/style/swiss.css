@@ -293,11 +293,12 @@ li > ol, li > ul {
 
 h1 {
   color: white;
+  line-height: 0.6em;
 }
 
 h2 {
   /* #c00 */
-  color: #03C03C;
+  color: white;
   border-bottom-color: #ccc;
 }
 
@@ -350,6 +351,10 @@ a:hover, a:focus {
 
 .righty-tighty {
   text-align: left;
+}
+
+.lil {
+  font-size: 2em;
 }
 
 .deck-container {
