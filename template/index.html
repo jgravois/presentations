@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Oauth 2.0 and ArcGIS Online Authentication</title>
+
+		<meta name="description" content="Presentation on authentication in ArcGIS Online at the 2015 Esri Dev Summit.">
+		<meta name="author" content="Patrick Arlt">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/esri.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<a href="https://github.com/patrickarlt/dev-summit-2015-authentication-in-arcgis-online"><img style="z-index: 1000; position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section class="left">
+					<h1>Auth in ArcGIS Online</h1>
+					<h3>John</h3>
+					<p>Experience Developer - ArcGIS for Developers</p>
+					<p><a href="http://twitter.com/patrickarlt">@patrickarlt</a> - <a href="http://patrickarlt.github.io/dev-summit-2015-authentication-in-arcgis-online/#/">http://arcg.is/1BAm5cz</a></p>
+				</section>
+
+				<section>
+					<h2>What is oAuth 2.0?</h2>
+					<p>A standard for conveying authorization decisions.</p>
+					<i>I {username} authorize {app name} to do {whatever}</i>
+				</section>
+
+				<section class="center-slide">
+					<h2>OAuth 2.0 is not an authentication protocol</h2>
+				</section>
+
+				<section class="center-slide">
+					<p><code>OAuth 2.0 !== authentication protocol</code></p>
+				</section>
+
+				<section class="center-slide">
+					<p><code>OAuth 2.0 != authentication protocol</code></p>
+				</section>
+
+				<section class="center-slide">
+					<h3>OAuth 2.0 is used <i>inside</i> of authentication protocols</h3>
+				</section>
+
+				<section class="center-slide">
+					<p>OAuth 2.0 doesn't know about your users identities, it only care about authorization</p>
+				</section>
+
+				<section class="center-slide">
+					<code>OAuth 2.0 === Authorization</code>
+				</section>
+
+				<section>
+					<code>ArcGIS Portal/Online === Identity && Access</code>
+				</section>
+
+				<section class="center-slide">
+					<h2>A Complete System</h2>
+					<p>oAuth 2.0 + ArcGIS Portal/Online</p>
+				</section>
+
+				<section class="center-slide">
+					<h2>User Logins vs App Authentication</h2>
+				</section>
+
+				<section>
+					<h2>User Logins</h2>
+					<ol>
+						<li>User authorizes application</li>
+						<li>Application can act on users behalf</li>
+						<li>Usage if any is billed to that users organization</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>User User Logins When...</h2>
+					<ul>
+						<li>You have to work with private content</li>
+						<li>you need to create/edit content</li>
+						<li>want usage to be billed to your apps users</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Application Authentication</h2>
+					<ol>
+						<li>App exchanges credentials for token</li>
+						<li>Uses token to access premium services</li>
+						<li>Often implimented as a proxy</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Use Application Authentication When&hellip;</h2>
+					<ul>
+						<li>You only need to work with public and premium content</li>
+						<li>You dont want your users to sign in</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Whats Changed?</h2>
+					<ul>
+						<li>ArcGIS Portal 10.3 now supports oAuth 2.0</li>
+						<li>1st class oAuth 2.0 support in the JS API</li>
+						<li>More support for OAuth in the ArcGIS Runtimes</li>
+						<li>New ways to access premium services</li>
+						<li>Better <a href="https://developers.arcgis.com/authentication/">Authentication Docs</a></li>
+					</ul>
+				</section>
+
+				<section class="center-slide">
+					<h1>Demo Time!</h1>
+					<ul>
+						<li>Browser-based with JS API</li>
+						<li>Server-based with JS API + Hapi</li>
+						<li>App Proxies for Premium Services</li>
+					</ul>
+					<a href="https://github.com/patrickarlt/dev-summit-2015-authentication-in-arcgis-online/tree/gh-pages/demos">Demos on GitHub</a>
+				</section>
+
+				<section>
+					<h1>Thanks!</h1>
+					<p><a href="www.esri.com/RateMyDevSummitSession">www.esri.com/RateMyDevSummitSession</a></p>
+					<p>Twitter: <a href="http://twitter.com/patrickarlt">@patrickarlt</a></p>
+					<p>Slides:<a href="http://patrickarlt.github.io/dev-summit-2015-authentication-in-arcgis-online/#/">http://arcg.is/1BAm5cz</a></p>
+					<div class="center-text">
+						<img src="esri-logo.png" alt="Esri" width="280" height="118" >
+					</div>
+				</section>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+ 				// Factor of the display size that should remain empty around the content
+    		margin: 0.1,
+
+    		// Bounds for smallest/largest possible scale to apply to content
+		    minScale: 1.0,
+		    maxScale: 1.0,
+
+				theme: 'esri', // available themes are in /css/theme
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'background.jpg',
+				// parallaxBackgroundSize: '2193px 1334px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
