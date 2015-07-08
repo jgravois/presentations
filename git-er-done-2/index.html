@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>'git' er done 2</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+
+    <section class="slide">
+      <h1>let's <em>git</em> er done (2)</h1>
+    </section>
+
+    <section class="slide">
+      <h1>basics of<br>git and github</h1>
+    </section>
+
+    <section class="slide">
+      <h1>w/ <a href="https://twitter.com/geogangster">@jgravois</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>so what <em>is</em> <a href='http://git-scm.com/'>git</a>?</h1>
+    </section>
+
+    <section class="slide">
+      <br><br><br>
+      <h3>basically:</h3>
+      <h3>git allows you to keep track of changes to the files in a folder</h3>
+      <h3>and synchronize those changes to the same folder somewhere else</h3>
+    </section>
+
+    <section class="slide">
+      <h1>this is called <em>distributed version control</em></h1>
+    </section>
+
+    <section class="slide">
+      <h1>are you more of a visual <a href="https://twitter.com/cthydng/status/575483540202106880">learner?</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>so lets give it a test drive!</h1>
+    </section>
+
+    <section class="slide">
+      <h1>demo 1<br>(improve an existing sample)</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>demo 2<br><a href='https://github.com/Esri/esri-leaflet/issues/450'>(contributing a new one)</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>some words of wisdom...</h1>
+    </section>
+
+    <section class="slide">
+      <h1>be patient with yourself</h1>
+    </section>
+
+    <section class="slide">
+      <h1>be patient with maintainers</h1>
+    </section>
+
+    <section class="slide">
+      <h1>don't <font color="red">ever</font> work<br>on <em>master</em></h1>
+    </section>
+
+    <section class="slide">
+      <h1>don't focus<br>on the client</h1>
+    </section>
+
+    <section class="slide">
+      <br><br><br><h3>handy (but dangerous) commands</h3>
+      <script src="https://gist.github.com/jgravois/f3571b2e98657c07f54d.js"></script>
+      <h3>when all else fails, you can always delete your fork and start over</h3>
+    </section>
+
+    <section class="slide">
+      <h1>this presentation<br>is <a href='https://github.com/jgravois/presentations/tree/gh-pages/git-er-done-2/'>on</a> github!</h1>
+    </section>
+
+    <section class="slide">
+      <h1>and its over</h1>
+    </section>
+
+    <section class="slide">
+      <br><br><br>
+      <h3>more resources:</h3>
+      <p><a href='http://rogerdudler.github.io/git-guide/'>http://rogerdudler.github.io/git-guide/</a></p>
+      <p><a href='https://puppetlabs.com/blog/git-tool-learning-puppet'>https://puppetlabs.com/blog/git-tool-learning-puppet</a></p>
+    </section>
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
