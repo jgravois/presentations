@@ -25,12 +25,24 @@
 
   L.esri.basemapLayer('DarkGray').addTo(map);
 
+  var busIcon = L.icon({
+    iconUrl: './img/bus.png',
+    iconSize: [30, 30],
+    iconAnchor: [13.5, 17.5],
+    popupAnchor: [0, -11],
+  });
+
   var busStops = L.esri.featureLayer({
-    url: 'http://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/Enriched%20Metro%20Rapid%20Bus%20Stops/FeatureServer/0'
+    url: 'http://services.arcgis.com/uCXeTVveQzP4IIcx/arcgis/rest/services/Enriched%20Metro%20Rapid%20Bus%20Stops/FeatureServer/0',
+    pointToLayer: function (geojson, latlng) {
+      return L.marker(latlng, {
+        icon: busIcon
+      });
+    }
   }).addTo(map);
 
   busStops.bindPopup(function (feature) {
-    return L.Util.template('<p>the median household 5 minutes walk from this bus stop is <b>${MEDHINC_CY}</b>.  <b>{ACSSNAP}%</b> of folks are on SNAP</p>', feature.properties);
+    return L.Util.template('<p>the median household income 5 minutes walk from this bus stop is <b>${MEDHINC_CY}</b>.  <b>{ACSSNAP}%</b> of folks are on SNAP</p>', feature.properties);
   });
 </script>
 

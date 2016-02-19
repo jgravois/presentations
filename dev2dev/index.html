@@ -1,156 +1,149 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=1024, user-scalable=no">
+<!--
+for dev to dev summit...
+mostly entrepreneurs, don't expect people to work during the workshop
+talk about what makes spatial data crucial, (and sometimes a pain)
+conflict between appeal of simple web standards and endless exceptions desired by local geographers
+show real use cases, geocode custom data, enrich, symbolize, plot and enable search on a map
+talk about mashing up custom and authoritative data
+remind them how big the government services market is
+pimp esri's startup program and free developer accounts last
+don't expect any questions (besides 'can you code for me')
 
-  <title>SF Dev to Dev Summit</title>
+https://github.com/patrickarlt/cascadia-js-2014
+http://patrickarlt.github.io/cascadia-js-2014/
+-->
+<!doctype html>
+<html lang="en">
 
-  <!-- Required stylesheet -->
-  <link rel="stylesheet" media="screen" href="../template/core/deck.core.css">
+	<head>
+		<meta charset="utf-8">
 
-  <!-- Extension CSS files go here. Remove or add as needed. -->
-  <link rel="stylesheet" media="screen" href="../template/extensions/goto/deck.goto.css">
-  <link rel="stylesheet" media="screen" href="../template/extensions/menu/deck.menu.css">
-  <link rel="stylesheet" media="screen" href="../template/extensions/navigation/deck.navigation.css">
-  <link rel="stylesheet" media="screen" href="../template/extensions/status/deck.status.css">
-  <link rel="stylesheet" media="screen" href="../template/extensions/scale/deck.scale.css">
+		<title>dev2dev maps</title>
 
-  <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" media="screen" href="../template/themes/style/swiss.css">
+		<meta name="description" content="map talk for SF Dev to Dev summit">
+		<meta name="author" content="john gravois">
 
-  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
-  <link rel="stylesheet" media="screen" href="../template/themes/transition/horizontal-slide.css">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- Basic black and white print styles -->
-  <link rel="stylesheet" media="print" href="../template/core/print.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-  <!-- Required Modernizr file -->
-  <script src="../template/modernizr.custom.js"></script>
-</head>
-<body>
-  <a href="https://github.com/jgravois/presentations/tree/gh-pages/hackforla"><img style="z-index: 1000; position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
 
-  <div class="deck-container">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
 
-    <section class="slide">
-      <h1>making maps <br>
-      on the web<br>
-      <span style="font-size: .75em;">w/ <a href="https://twitter.com/geogangster">@geogangster</a></span>
-      </h1>
-    </section>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 
-    <section class="slide">
-      <h1>what <span style="color: #F1F540;">are</span> we<br>gonna cover?</h1>
-    </section>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-    <section class="slide">
-      <!-- &amp;<br> -->
-      <h1 class="righty-tighty">
-        Esri Open Data<br>
-        <a href='http://esri.github.io/esri-leaflet'>Leaflet plugins</a><br>
-        whatever you want
-      </h1>
-    </section>
+	<body>
 
-    <section class="slide">
-      <h1><a href="http://opendata.arcgis.com">opendata.arcgis.com</a></h1>
-    </section>
+		<div class="reveal">
 
-    <section class="slide">
-      <br><br>
-      <h3>glorious geojson</h3>
-      <script src="http://gist.github.com/jgravois/d20efcec5043c9a6ad67.js"></script>
-      <br><br>
-      <h3>'evil' <a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/The_ArcGIS_REST_API/02r300000054000000/'>geoservices</a> json</h3>
-      <script src="http://gist.github.com/jgravois/eab035258f8157d54618.js"></script>
-    </section>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
 
-    <section class="slide">
-      <h1>
-        alright server, lets <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?geometry=-118.2,34.1&inSR=4326&outSR=4326&geometryType=esriGeometryPoint&outFields=*&f=json'>talk</a>
-      </h1>
-    </section>
+				<section class="slide">
+		      <h1>making maps</h1>
+		      <h2>w/ <a href="https://twitter.com/geogangster">@geogangster</a></h2>
 
-    <section class="slide">
-      <h1>do you<br><span style="color: #F1F540;">really</span><br>need ETL?</h1>
-    </section>
+		      <h3>SF Dev to Dev Summit 2016</h3>
+		    </section>
 
-    <section class="slide">
-      <h1>where's the <strike>beef</strike> <span style="color: #F1F540;">doc?</span></h1>
-    </section>
+		    <section class="slide">
+		      <h2>what <span style="color: #F1F540;">are</span> we<br>gonna cover?</h2>
+		    </section>
 
-    <section class="slide">
-      <h1><a href="http://developers.arcgis.com">developers.arcgis.com</a></h1>
-    </section>
+		    <section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2>
+		        a (brief) geography lesson<br>
+		        <a class='fragment' href='http://esri.github.io/esri-leaflet'>maps on the web (w/ leaflet)</a><br>
+		        <span class='fragment'>?</span>
+		      </h2>
+		    </section>
 
-    <section class="slide">
-      <h1>back to that <a href="http://esri.github.io/esri-leaflet">esri leaflet</a></h1>
-    </section>
+		    <section class="slide" data-background="img/azimuthal.png" data-background-size="cover">
+		      <h3><span style="color: #F1F540;">like peeling an orange...</span></h3>
+		    </section>
 
-    <section class="slide">
-      <h1>lets check out a <a href="./demo.html">demo!</a></h1>
-    </section>
+		    <section class="slide">
+		      <h3>you're <a href="http://www.upworthy.com/we-have-been-misled-by-an-erroneous-map-of-the-world-for-500-years-2">freaking</a> me out</h3>
+		    </section>
 
-    <section class="slide">
-      <h1>whats next?</h1>
-    </section>
+				<section class="slide">
+		      <h3>spatial data is <i>everywhere</i></h3>
+		    </section>
 
-    <section class="slide">
-      <br><br><br>
-      <h3>resources:</h3>
+		    <section class="slide">
+		      <h3>lets find <a href="http://opendata.arcgis.com">some</a></h3>
+		    </section>
 
-      <p>esri leaflet - <a href='http://esri.github.io/esri-leaflet'>http://esri.github.io/esri-leaflet</a></p>
-      <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
-      <p>REST Feature Service query doc - <br><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Feature_Service_Layer/02r3000000r1000000/'>http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000</a></p>
-      <p>koop - <br><a href='http://github.com/koopjs'>http://github.com/koopjs</a></p>
-      <p>cool intro tutorial by @sidewalkballet - <br><a href='https://gist.github.com/sidewalkballet/60edc3408cbbcb6fb949'>https://gist.github.com/sidewalkballet/60e...</a></p>
-    </section>
-    <!-- End slides. -->
+		    <section class="slide">
+		      <h1><a href="http://developers.arcgis.com">developers.arcgis.com</a></h1>
+		    </section>
 
-    <!-- Begin extension snippets. Add or remove as needed. -->
+		    <section class="slide">
+		      <h1>lets check out a <a href="./demo.html">demo!</a></h1>
+		    </section>
 
-    <!-- deck.navigation snippet -->
-    <div aria-role="navigation">
-      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-    </div>
+		    <section class="slide">
+		      <h1>whats next?</h1>
+		    </section>
 
-    <!-- deck.status snippet -->
-    <p class="deck-status" aria-role="status">
-      <span class="deck-status-current"></span>
-      /
-      <span class="deck-status-total"></span>
-    </p>
+		    <section class="slide">
+		      <br><br><br>
+		      <h3>resources:</h3>
+		      <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
+		      <p>startup program - <a href+'https://developers.arcgis.com/startups/'>https://developers.arcgis.com/startups/</a></p>
+		      <p>cool tutorial by @sidewalkballet - <br><a href='https://gist.github.com/sidewalkballet/60edc3408cbbcb6fb949'>https://gist.github.com/sidewalkballet/60e...</a></p>
+		    </section>
 
-    <!-- deck.goto snippet -->
-    <form action="." method="get" class="goto-form">
-      <label for="goto-slide">Go to slide:</label>
-      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-      <datalist id="goto-datalist"></datalist>
-      <input type="submit" value="Go">
-    </form>
+				<section data-background="../fresher-template/img/end.png" data-background-size="cover"></section>
 
-    <!-- End extension snippets. -->
-  </div>
+			</div>
 
-<!-- Required JS files. -->
-<script src="../template/jquery.min.js"></script>
-<script src="../template/core/deck.core.js"></script>
+		</div>
 
-<!-- Extension JS files. Add or remove as needed. -->
-<script src="../template/extensions/menu/deck.menu.js"></script>
-<script src="../template/extensions/goto/deck.goto.js"></script>
-<script src="../template/extensions/status/deck.status.js"></script>
-<script src="../template/extensions/navigation/deck.navigation.js"></script>
-<script src="../template/extensions/scale/deck.scale.js"></script>
+		<script src="../fresher-template/lib/js/head.min.js"></script>
+		<script src="../fresher-template/js/reveal.js"></script>
 
-<!-- Initialize the deck. You can put this in an external file if desired. -->
-<script>
-  $(function() {
-    $.deck('.slide');
-  });
-</script>
-</body>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../fresher-template/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
 </html>
