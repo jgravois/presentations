@@ -1,3 +1,65 @@
+<!--
+who are we?
+  geographer, developer
+
+what is leaflet?
+  open source, popular, small
+
+What is Esri Leaflet? (1-5 Minutes)
+  making it really *easy* to use *some* arcgis services in leaflet
+	collab across teams at Esri, contributions from extended community
+	no roadmap or product lifecycle
+
+first demo
+  just esri leaflet core
+	basemap, fuel stations, popup
+	snooping network traffic shows we grab features selectively
+	you have to jump back and forth between our doc and leaflet doc
+
+plugin demo
+  add renderers, no more code to display service symbology
+
+search demo
+  add address search, more code and another plugin
+  we can show off that the doc is right next to core
+
+editing demo (skip at fed.  let pat know how much time is left)
+  we handle geojson, even for old services (edit demo is good opp)
+  a normal part of leaflet dev is mixing and matching lots of plugins
+
+what we didnt show you (do this through navigating doc page)
+  clustering
+	heatmap
+	map services
+	image services
+
+upgrading from 0.7.x?
+
+reasons some people love esri leaflet
+existing leaflet app/experience
+simpler/more focused toolset
+requirement/mandate for open source
+easier integration with frameworks/build systems* (jsapi has improved)
+youre a nerd
+
+reasons to choose the JSAPI
+flagship product
+projection support* we've improved
+UI components* (open source soon)
+whole platform (3D, webmaps, identity management, printing)
+builders/templates
+
+for the path less travelled...
+its a 'project'  (a different beast)
+limited platform support (no support for webmaps, print services, network analyst services)
+little to no UI components
+you mix and match with other plugins
+scope creep
+
+online resources
+github, spatial community, geonet, stack exchange
+-->
+
 <!doctype html>
 <html lang="en">
 
@@ -49,66 +111,119 @@
 		    </section>
 
 		    <section class="slide">
-		      <h2>what <span style="color: #F1F540;">are</span> we<br>gonna cover?</h2>
+		      <h2>who am i?</h2>
+					<h3 class="fragment">geographer turned web developer</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>what is leaflet?</h2>
+  				<h3 class="fragment">open source, popular, small</h3>
+					<!-- sites like craigslist -->
+		    </section>
+
+				<section class="slide">
+		      <h2>so, what is <i>esri</i> leaflet?</h2>
+  				<h3 class="fragment">leaflet + arcgis = <3</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>a group effort</h2>
+					<h3 class="fragment">supported by our community</h3>
+					<h3 class="fragment">no roadmap or product lifecycle</h3>
 		    </section>
 
 		    <section class="slide">
 		      <!-- &amp;<br> -->
-		      <h2>
-		        a (brief) geography lesson<br>
-		        <a href='http://esri.github.io/esri-leaflet'>making maps w/ Leaflet</a><br>
-		        ?
-		      </h2>
+		      <h2>demo #1</h2>
+					<!--
+					just esri leaflet core
+					basemap, fuel stations, popup
+					snooping network traffic shows we grab features selectively
+					you have to jump back and forth between our doc and leaflet doc
+				  -->
 		    </section>
 
-		    <section class="slide" data-background="img/azimuthal.png" data-background-size="cover">
-		      <h1>?</h1>
+				<section class="slide">
+		      <h2>more plugins!</h2>
 		    </section>
 
-		    <section class="slide">
-		      <h1><a href="http://www.upworthy.com/we-have-been-misled-by-an-erroneous-map-of-the-world-for-500-years-2">you're freaking me out</a></h1>
-		    </section>
-
-		    <section class="slide">
-		      <h1><a href="http://opendata.arcgis.com">opendata.arcgis.com</a></h1>
-		    </section>
-
-		    <section class="slide">
-		      <br><br>
-		      <h3>glorious geojson</h3>
-		      <script src="http://gist.github.com/jgravois/d20efcec5043c9a6ad67.js"></script>
-		      <br><br>
-		      <h3>'evil' <a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/The_ArcGIS_REST_API/02r300000054000000/'>geoservices</a> json</h3>
-		      <script src="http://gist.github.com/jgravois/eab035258f8157d54618.js"></script>
-		    </section>
-
-		    <section class="slide">
-		      <h1>do you<br><span style="color: #F1F540;">really</span><br>need ETL?</h1>
+				<section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2>demo #2</h2>
+					<!--
+					plugin demo
+					add renderers, no more code to display service symbology
+				  -->
 		    </section>
 
 
-
-		    <section class="slide">
-		      <h1><a href="http://developers.arcgis.com">developers.arcgis.com</a></h1>
+				<section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2>demo #3</h2>
+					<!--
+					we handle geojson, even for old services (edit demo is good opp)
+				  a normal part of leaflet dev is mixing and matching lots of plugins
+				  -->
 		    </section>
 
-		    <section class="slide">
-		      <h1>lets check out a <a href="./demo.html">demo!</a></h1>
+				<section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2><strike>demo #4</strike></h2>
+					<!--
+					search demo
+				  add address search, more code and another plugin
+				  we can show off that the doc is right next to core
+				  -->
 		    </section>
 
-		    <section class="slide">
-		      <h1>whats next?</h1>
+				<section class="slide">
+		      <h2>but wait</h2>
+					<h3 class="fragment">there's more</h3>
+					<!--
+					  clustering
+					  heatmap
+					  map services
+					  image services
+				  -->
 		    </section>
 
-		    <section class="slide">
-		      <br><br><br>
-		      <h3>resources:</h3>
-		      <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
-		      <p>startup program - <a href+'https://developers.arcgis.com/startups/'>https://developers.arcgis.com/startups/</a></p>
-		      <br>
-		      <p>esri leaflet - <a href='http://esri.github.io/esri-leaflet'>http://esri.github.io/esri-leaflet</a></p>
-		      <p>REST Feature Service query doc - <br><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Feature_Service_Layer/02r3000000r1000000/'>http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000</a></p>
-		      <p>cool tutorial by @sidewalkballet - <br><a href='https://gist.github.com/sidewalkballet/60edc3408cbbcb6fb949'>https://gist.github.com/sidewalkballet/60e...</a></p>
+				<section class="slide">
+		      <h2>upgrading from 0.7.x?</h2>
+		    </section>
+
+				<section class="slide">
+		      <h2>reasons some people love esri leaflet</h2>
+					<h3>already use(d) it</h3>
+					<h3>simpler toolset</h3>
+					<h3>open source mandate</h3>
+					<h3>easy integration with build systems*</h3>
+					<h3>they're just nerds</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>why you'd choose the JSAPI</h2>
+					<h3>flagship product</h3>
+					<h3>makes the whole platform available</h3>
+					<h3>UI components</h3>
+					<h3>builders/templates</h3>
+					<h3>support for custom projections*</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>for the path less travelled</h2>
+					<h3>we build esri leaflet in our spare time</h3>
+					<h3>only some of the platform is easily accessible</h3>
+					<h3>no UI components</h3>
+					<h3>you mix and match with other plugins</h3>
+					<h3>scope creep</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>the community is here to help</h2>
+					<h3>github</h3>
+					<h3>geonet</h3>
+					<h3>stack exchange</h3>
+					<h3>spatial community</h3>
 		    </section>
 
 				<section data-background="../fresher-template/img/end.png" data-background-size="cover"></section>
