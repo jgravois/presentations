@@ -8,7 +8,7 @@ L.Icon.MarkerCluster = L.Icon.extend({
    * This is part of the Leaflet http://leafletjs.com/reference.html#class
    */
   options: {
-    iconSize: new L.Point(48, 48),
+    iconSize: new L.Point(56, 56),
     className: 'prunecluster leaflet-markercluster-icon',
     fillColor: '#FFFFFF',
     textColor: '#000000',
@@ -54,14 +54,22 @@ L.Icon.MarkerCluster = L.Icon.extend({
    * Draw the arcs and text on the <canvas>
    */
   draw: function(canvas, width, height) {
-    var start = 0;
-    var center = width / 2;
-    var pi2 = Math.PI * 2;
+    // center of the circle
+    var center = width / ((L.Browser.retina) ? 4 : 2);
 
+    // radius of the outer rings
+    var radius = width / ((L.Browser.retina) ? 4 : 2);
+
+    // radius of the inner circle
+    var radiusCenter = center - this.options.ringWidth;
+
+    // double the scale if we are on a Retina display
     if (L.Browser.retina) {
       canvas.scale(2, 2);
-      center /= 2;
     }
+
+    // start position of our arc
+    var arcStart = 0;
 
     // draw an arc for each category
     for (category in this.options.categoryColors) {
@@ -72,29 +80,29 @@ L.Icon.MarkerCluster = L.Icon.extend({
         canvas.beginPath();
         canvas.moveTo(center, center);
         canvas.fillStyle = color;
-        var end = start + size * pi2;
-        if (end < start) {
-            start = start;
+        var arcEnd = arcStart + size * Math.PI * 2;
+        if (arcEnd < arcStart) {
+          arcEnd = arcStart;
         }
-        canvas.arc(center, center, center, start, end);
-        start = start + size * pi2;
-        canvas.lineTo(center,center);
+        canvas.arc(center, center, radius, arcStart, arcEnd);
+        arcStart = arcEnd;
+        canvas.moveTo(center, center);
         canvas.fill();
         canvas.closePath();
       }
     }
 
-    // draw the center circle and text
     canvas.beginPath();
-    canvas.fillStyle = this.options.fillColor;
-    canvas.arc(center, center, (width/2)-(this.options.ringWidth), 0, pi2);
+    canvas.fillStyle = 'white';
+    canvas.moveTo(center, center);
+    canvas.arc(center, center, radiusCenter, 0, Math.PI * 2);
     canvas.fill();
     canvas.closePath();
-    canvas.fillStyle = this.options.textColor;
+    canvas.fillStyle = '#454545';
     canvas.textAlign = 'center';
     canvas.textBaseline = 'middle';
-    canvas.font = this.options.font;
-    canvas.fillText(this.population, width/2, width/2, width);
+    canvas.font = 'bold 13px sans-serif';
+    canvas.fillText(this.population, center, center, radiusCenter * 2);
   }
 });
 
@@ -383,7 +391,7 @@ var fuelStations = new PruneClusterFeatureLayer({
   },
 
   // options for Icon.MarkerCluster
-  iconSize: new L.Point(48, 48),
+  iconSize: new L.Point(56, 56),
   fillColor: '#F1F1F1',
   textColor: '#444444',
   ringWidth: 8,
