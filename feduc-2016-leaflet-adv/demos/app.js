@@ -9,7 +9,6 @@ L.Icon.MarkerCluster = L.Icon.extend({
    */
   options: {
     iconSize: new L.Point(56, 56),
-    className: 'prunecluster leaflet-markercluster-icon',
     fillColor: '#FFFFFF',
     textColor: '#000000',
     ringWidth: 8,
@@ -93,15 +92,15 @@ L.Icon.MarkerCluster = L.Icon.extend({
     }
 
     canvas.beginPath();
-    canvas.fillStyle = 'white';
+    canvas.fillStyle = this.options.fillColor;
     canvas.moveTo(center, center);
     canvas.arc(center, center, radiusCenter, 0, Math.PI * 2);
     canvas.fill();
     canvas.closePath();
-    canvas.fillStyle = '#454545';
+    canvas.fillStyle = this.options.textColor;
     canvas.textAlign = 'center';
     canvas.textBaseline = 'middle';
-    canvas.font = 'bold 13px sans-serif';
+    canvas.font = this.options.font;
     canvas.fillText(this.population, center, center, radiusCenter * 2);
   }
 });
@@ -405,9 +404,6 @@ var fuelStations = new PruneClusterFeatureLayer({
 // L.esri.Task represents a call to an ArcGIS service. It can be extended to apply
 // to any task and present a pretty and simplified UI.
 var Directions = L.esri.Task.extend({
-  // The path on the service. This gets appened to the URL of the service.
-  path: 'solve',
-
   // Each `setter` create a method that corresponds to a param on the service.
   // for example calling `task.unit('esriNAUFeet')` would set the `directionsLengthUnits`
   // to 'esriNAUFeet'. Setters are useful when you want to simplify param names but still
