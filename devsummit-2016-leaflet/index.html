@@ -1,0 +1,257 @@
+<!--
+first demo
+  just esri leaflet core
+	basemap, fuel stations, popup
+	snooping network traffic shows we grab features selectively
+	you have to jump back and forth between our doc and leaflet doc
+
+plugin demo
+  add renderers, no more code to display service symbology
+
+search demo
+  add address search, more code and another plugin
+  we can show off that the doc is right next to core
+
+editing demo (skip at fed.  let pat know how much time is left)
+  we handle geojson, even for old services (edit demo is good opp)
+  a normal part of leaflet dev is mixing and matching lots of plugins
+
+what we didnt show you (do this through navigating doc page)
+  clustering
+	heatmap
+	map services
+	image services
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>feduc - esri leaflet</title>
+
+		<meta name="description" content="Talk introducing Esri Leaflet, a series of plugins for working with ArcGIS Services in Leaflet. From the 2016 Developer Summit in Palm Springs.">
+		<meta name="author" content="john gravois/pat arlt">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section class="slide" data-background="../fresher-template/img/DevDC_title2016.png" data-background-size="cover">
+		      <p>Esri Leaflet: Getting Started</p>
+					<p>john gravois</p>
+	        <p><a href="http://twitter.com/geogangster">@geogangster</a></p>
+	        <p><a href="http://jgravois.github.io/presentations/feduc-2016-leaflet/">jgravois.github.io/presentations/feduc-2016-leaflet/</a></p>
+		    </section>
+
+		    <section class="slide">
+		      <h2>who am i?</h2>
+					<h3 class="fragment">geographer turned web developer</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>what is <a href="https://leafletjs.org">leaflet</a>?</h2>
+  				<h3 class="fragment">open source, <span style="font-size: .75em;">small</span>, popular</h3>
+					<!-- sites like craigslist -->
+		    </section>
+
+				<section class="slide">
+		      <h2>so, what is <i>esri</i> leaflet?</h2>
+  				<h3 class="fragment">leaflet + arcgis = <3</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>a group effort</h2>
+					<h3 class="fragment">supported by our community</h3>
+					<h3 class="fragment">no roadmap or product lifecycle</h3>
+		    </section>
+
+				<section class="slide">
+		      <h3>over 500 stars/forks</h3>
+					<h3>30+ non-esri contributors!</h3>
+					<h3>doc suggestions, bug fixes, features</h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>contributions from</h2>
+					<h3>USGS, State Dept, Netflix, Stanford University, City of Philadelphia, <b>Utah AGRC</b></h3>
+		    </section>
+
+				<section class="slide">
+		      <h2>apps from</h2>
+					<h3>Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...</h3>
+		    </section>
+
+		    <section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2>demo <a href="./demos/index.html">#1</a></h2>
+					<!--
+					just esri leaflet core
+					basemap, fuel stations, popup
+					snooping network traffic shows we grab features selectively
+					you have to jump back and forth between our doc and leaflet doc
+				  -->
+		    </section>
+
+				<section class="slide">
+		      <h2>more plugins!</h2>
+		    </section>
+
+				<section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2>demo #2</h2>
+					<!--
+					plugin demo
+					add renderers, no more code to display service symbology
+				  -->
+		    </section>
+
+
+				<section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2>demo <a href="./demos/done.html">#3</a></h2>
+					<!--
+					we handle geojson, even for old services (edit demo is good opp)
+				  a normal part of leaflet dev is mixing and matching lots of plugins
+				  -->
+		    </section>
+
+				<section class="slide">
+		      <!-- &amp;<br> -->
+		      <h2><strike>demo #4</strike></h2>
+					<!--
+					search demo
+				  add address search, more code and another plugin
+				  we can show off that the doc is right next to core
+				  -->
+		    </section>
+
+				<section class="slide">
+		      <h2>but wait <span class="fragment">there's <a href="http://esri.github.io/esri-leaflet/examples/">more!</a></h2>
+
+					<!--
+					  clustering
+					  heatmap
+					  map services
+					  image services
+				  -->
+		    </section>
+
+				<section class="slide">
+		      <h2>upgrading from <a href="https://github.com//Esri/esri-leaflet/wiki/FAQ#upgrading-the-version-of-esri-leaflet-used-in-my-app-broke-everything">0.7.x?</a></h2>
+		    </section>
+
+				<section class="slide">
+		      <h2>some people like esri leaflet</h2>
+					<ul>
+						<li>open source mandate</li>
+						<li>already familiar with it</li>
+						<li>simpler toolset</li>
+						<li>easy integration with build systems*</li>
+						<li>they're just nerds</li>
+					</ul>
+		    </section>
+
+				<section class="slide">
+		      <h2>why you'd choose the JSAPI</h2>
+					<ul>
+						<li>flagship product</li>
+						<li>can be cut lean</li>
+						<li>unlocks the whole platform</li>
+						<li>UI components</li>
+						<li>builders/templates</li>
+						<li>support for custom projections*</li>
+					</ul>
+		    </section>
+
+				<section class="slide">
+		      <h2>for the path less travelled</h2>
+					<ul>
+						<li>we build esri leaflet in our spare time</li>
+						<li>only <span style="color: red;">some</span> platform is readily accessible</li>
+						<li>almost no UI components</li>
+						<li>mix and match with other plugins</li>
+						<li>beware of scope creep</li>
+					</ul>
+		    </section>
+
+				<section class="slide">
+		      <h2>the community is here to help</h2>
+					<ul>
+						<li>github</li>
+						<li>geonet</li>
+						<li>stack exchange</li>
+						<li>spatial community</li>
+						<li>technical support</li>
+					</ul>
+		    </section>
+
+				<section class="slide">
+		      <h2>please fill out a survey!</h2>
+		    </section>
+
+				<section data-background="../fresher-template/img/end.png" data-background-size="cover"></section>
+
+			</div>
+
+		</div>
+
+		<script src="../fresher-template/lib/js/head.min.js"></script>
+		<script src="../fresher-template/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../fresher-template/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
