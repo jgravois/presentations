@@ -9,7 +9,10 @@
     <script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.7/esri-leaflet.js"></script>
 
     <!-- Load Esri Leaflet Renderers -->
-    <!--script src="https://cdn.jsdelivr.net/leaflet.esri.renderers/2.0.1/esri-leaflet-renderers.js"></script-->
+    <script src="https://cdn.jsdelivr.net/leaflet.esri.renderers/2.0.1/esri-leaflet-renderers.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.css">
+    <script src="//cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.js"></script>
 
     <style>
       html, body, #map {
@@ -38,6 +41,12 @@
       altFuelStations.bindPopup(function(e){
         return L.Util.template(popupTemplate, e.feature.properties)
       });
+
+      var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
+
+      var searchControl = L.esri.Geocoding.geosearch({
+        providers: [arcgisOnline]
+      }).addTo(map);
     </script>
   </body>
 </html>
