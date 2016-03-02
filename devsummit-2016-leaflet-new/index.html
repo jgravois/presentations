@@ -1,41 +1,5 @@
 <!--
 It has been a busy year for Leaflet and Esri Leaflet. Check out performance improvements and new capabilities such as working with non-mercator projections, controlling layer ordering and integrating with JavaScript build systems.
-
-Summary (5 Minutes)
-Stats!
-
-Esri Leaflet 1.0 stable (10 min)
-	Stable release of Esri Leaflet for use with Leaflet 0.7.x
-	Some bug fixes (1.0.1, 1.0.2, 1.0.3)
-
-Leaflet 1.0 beta (10 min)
-Esri Leaflet 2.0 beta
-	Performance improvements!
-	new features (ballistic panning, fractional zoom)
-	API changes (panes, renderers, projection refactor, ect…)
-	What this means for you (check plugins, read changelog)
-  we'll likely leave beta when Leaflet 1.0 is officially stamped
-
-Summary of visible API changes
-  plugin doc now included in the main site
-  we reorganized a few namespaces
-
-Changes under the hood
-  ES6
-	bundler
-	refactor to several small node module dependencies
-	website placed in its own repo
-
-What do we need help with
-  tutorials on the website
-	bug reports
-  success stories
-
-Stay in touch
-Watch Esri Leaflet on GitHub
-Follow @jgravois and @patrickarlt
-Stay tuned for the deep dive video after dev summit
-
 -->
 <!doctype html>
 <html lang="en">
@@ -89,150 +53,154 @@ Stay tuned for the deep dive video after dev summit
 
 		    <section class="slide">
 		      <h2>who are we?</h2>
-					<h3 class="fragment">geographer + designer</h3>
+					<h3 class="fragment">a designer + a geographer</h3>
+
+					<aside class="notes">
+						no need to go into details unless it looks like a new crowd
+          </aside>
 		    </section>
 
 				<section class="slide">
-		      <h2>what is <a href="https://leafletjs.org">leaflet</a>?</h2>
-  				<h3 class="fragment">open source, <span style="font-size: .75em;">small</span>, popular</h3>
+		      <h2>lets talk stats!</h2>
 
 					<aside class="notes">
-						its a JS API, there isn't anything 'out of the box'
-						sites like craigslist, etc.
+						nada
           </aside>
 
 		    </section>
 
 				<section class="slide">
-		      <h2>so, what is <i>esri</i> leaflet?</h2>
-  				<h3 class="fragment">leaflet + arcgis = <3</h3>
-		    </section>
-
-				<section class="slide">
-		      <h2>a group effort</h2>
-					<h3 class="fragment">supported by our community</h3>
-					<h3 class="fragment">no roadmap or product lifecycle</h3>
-		    </section>
-
-				<section class="slide">
-		      <h3>over 500 stars/forks</h3>
-					<h3>30+ non-esri contributors!</h3>
-					<h3>doc suggestions, bug fixes, features</h3>
-		    </section>
-
-				<section class="slide">
-		      <h2>contributions from</h2>
-					<h3>USGS, State Dept, Netflix, Stanford University, City of Philadelphia, <b>Utah AGRC</b></h3>
-		    </section>
-
-				<section class="slide">
-		      <h2>apps from</h2>
-					<h3>Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...</h3>
-		    </section>
-
-		    <section class="slide">
-		      <h2>demo <a href="./demos/index.html">#1</a></h2>
+  				<h3>over 500 forks/stars on github</h3>
+					<h3>30+ non esri contributors</h3>
+					<h3>apps from USGS, State Dept, Netflix and many others</h3>
 
 					<aside class="notes">
-						just esri leaflet core
-						basemap, fuel stations, popup
-						snooping network traffic shows we grab features selectively
-						you have to jump back and forth between our doc and leaflet doc
+						5 minutes for intro and stats
           </aside>
 		    </section>
 
 				<section class="slide">
-		      <h2>more plugins!</h2>
-		    </section>
-
-				<section class="slide">
-		      <h2>demo #2</h2>
+		      <h2>stable <a href="https://github.com/Esri/esri-leaflet/wiki/Esri-Leaflet-1.0.0-Announcement">1.0.3</a> release</h2>
+  				<h3>compatible with Leaflet 0.7.x</h3>
 
 					<aside class="notes">
-						plugin demo
-						add renderers, no more code to display service symbology
-          </aside>
-		    </section>
-
-
-				<section class="slide">
-		      <h2>demo <a href="./demos/done.html">#3</a></h2>
-
-					<aside class="notes">
-						search demo
-					  add address search, more code and another plugin
-					  show that the plugin doc is right next to core
+						1.0.0 release was in july of 2015<br>
           </aside>
 		    </section>
 
 				<section class="slide">
-		      <h2>demo #4</h2>
-					<aside class="notes">
-						editing demo (skip at fed.  let pat know how much time is left)
-					  we handle geojson, even for old services (edit demo is good opp)
-					  a normal part of leaflet dev is mixing and matching lots of plugins
-          </aside>
-		    </section>
-
-				<section class="slide">
-		      <h2>but wait <span class="fragment">there's <a href="http://esri.github.io/esri-leaflet/examples/">more!</a></h2>
-
-					<aside class="notes">
-						clustering
-					  heatmap
-					  map services
-					  image services
-						etc.
-          </aside>
-		    </section>
-
-				<section class="slide">
-		      <h2>upgrading from <a href="https://github.com//Esri/esri-leaflet/wiki/FAQ#upgrading-the-version-of-esri-leaflet-used-in-my-app-broke-everything">0.7.x?</a></h2>
-		    </section>
-
-				<section class="slide">
-		      <h2>some people like esri leaflet</h2>
+		      <h2>leaflet's own <a href="http://leafletjs.com/2015/10/14/leaflet-1.0-beta2-released.html">1.0.0 beta</a></h2>
 					<ul>
-						<li>open source mandate</li>
-						<li>already familiar with it</li>
-						<li>simpler toolset</li>
-						<li>easy integration with build systems*</li>
-						<li>they're just nerds</li>
+						<li>performance improvements</li>
+						<li>fractional zoom</li>
+						<li>ballistic panning</li>
+						<li>map panes</li>
 					</ul>
+					<aside class="notes">
+						but what if you want to take advantage of all this??
+          </aside>
 		    </section>
 
 				<section class="slide">
-		      <h2>why you'd choose the JSAPI</h2>
-					<ul>
-						<li>flagship product</li>
-						<li>can be cut lean</li>
-						<li>unlocks the whole platform</li>
-						<li>UI components</li>
-						<li>builders/templates</li>
-						<li>support for custom projections*</li>
-					</ul>
+		      <h2>we've got you covered!</h2>
+
+					<aside class="notes">
+						transition slide
+          </aside>
 		    </section>
 
 				<section class="slide">
-		      <h2>for the path less travelled</h2>
+		      <h2>esri leaflet <a href="https://github.com/Esri/esri-leaflet/releases/tag/v2.0.0-beta.8">2.0.0-beta.8</a></h2>
 					<ul>
-						<li>we build esri leaflet in our spare time</li>
-						<li>only <span style="color: red;">some</span> platform is readily accessible</li>
-						<li>almost no UI components</li>
-						<li>mix and match with other plugins</li>
-						<li>beware of scope creep</li>
+						<li>compatible with leaflet 1.0 beta 2</li>
+						<li>changes to renderers</li>
+						<li>improvements for custom projections</li>
 					</ul>
+					<aside class="notes">
+						released march 2016<br>
+						check changelog for details<br>
+						we'll stamp 2.0.0. final shortly after leaflet does
+          </aside>
 		    </section>
 
 				<section class="slide">
-		      <h2>the community is here to help</h2>
+		      <h2>demo <a href="./demos/ballistic.html">#1</a></h2>
+
+					<aside class="notes">
+						dark gray + alternative fuel stations<br>
+						show that surface code is the same<br>
+						use console to zoom to x.5<br>
+						click a button to kick off ballistic panning
+          </aside>
+		    </section>
+
+				<section class="slide">
+		      <h2>changes you'll probably notice</h2>
 					<ul>
-						<li>github</li>
-						<li>geonet</li>
-						<li>stack exchange</li>
-						<li>spatial community</li>
-						<li>technical support</li>
+						<li>namespace reorganization</li>
+						<li>plugin doc moved to main website</li>
 					</ul>
+					<aside class="notes">
+						need codeblock to show L.esri.query vs. Tasks
+          </aside>
+		    </section>
+
+				<section class="slide">
+		      <h2>changes you might not notice</h2>
+					<ul>
+						<li>ES6 rewrite</li>
+						<li>refactored new <a href="https://github.com/Esri/esri-leaflet/blob/master/package.json#L15-L18">standalone</a> node modules</li>
+						<li>website moved into its own repo</li>
+						<li>new local build tooling</li>
+					</ul>
+					<aside class="notes">
+						under the hood
+          </aside>
+		    </section>
+
+				<section class="slide">
+		      <h2>things to watch out for</h2>
+					<h3>leaflet plugin compatibility</h3>
+
+					<aside class="notes">
+						its easy to get mixed up with version numbers<br>
+						some leaflet plugin authors haven't updated their code<br>
+						others aren't tagging versions yet
+          </aside>
+		    </section>
+
+				<section class="slide">
+		      <h2>we need help!</h2>
+					<ul>
+						<li>bug reports</li>
+						<li>new tutorials for the website</li>
+						<li>success stories</li>
+					</ul>
+
+					<aside class="notes">
+						?
+          </aside>
+		    </section>
+
+				<section class="slide">
+					<h2>stay in touch!</h2>
+					<ul>
+						<li>watch the github repos</li>
+						<li>follow <a href="https://twitter.com/patrickarlt">@patrickarlt</a> / @geogangster</li>
+						<li>stay tuned for deep dive (video)</li>
+					</ul>
+
+					<aside class="notes">
+						?
+					</aside>
+				</section>
+
+				<section class="slide">
+		      <h2>we need a demo #2 somewhere</h2>
+
+					<aside class="notes">
+						?
+          </aside>
 		    </section>
 
 				<section class="slide">
