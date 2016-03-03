@@ -11,42 +11,44 @@
     <!-- Load Esri Leaflet Renderers -->
     <script src="https://cdn.jsdelivr.net/leaflet.esri.renderers/2.0.1/esri-leaflet-renderers.js"></script>
 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.css">
-    <script src="//cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.js"></script>
-
     <style>
       html, body, #map {
         margin:0; padding:0;  width : 100%; height : 100%;
+      }
+
+      .fly {
+        z-index: 10000;
+        position: absolute;
+        top: 80px;
+        left: 0;
       }
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <button class="fly" onclick="letsGo()">lets go!</button>
     <script>
-      // set center of map on Washington DC, (latitude first)
-      var map = L.map('map').setView([38.9023, -77.0468], 11);
+      var dc = [38.9023, -77.0468];
+      var palmSprings = [33.83, -116.545];
+      var ticked = true;
 
-      // don't let people zoom in more than one level beyond the default
-      // http://leafletjs.com/reference.html#tilelayer-options
-      var basemapOptions = { maxZoom: 12 }
-      L.esri.basemapLayer("DarkGray", basemapOptions).addTo(map);
+      // set center of map on Washington DC, (latitude first)
+      var map = L.map('map').setView([38.9023, -77.0468], 9);
+      L.esri.basemapLayer("DarkGray").addTo(map);
 
       var altFuelStations = L.esri.featureLayer({
         url: "http://services1.arcgis.com/4yjifSiIG17X0gW4/arcgis/rest/services/Alternative_Fuel_Stations/FeatureServer/2",
       }).addTo(map);
 
-      var popupTemplate = "<h3>{Station_Na}</h3><p>Fuel Type: {Fuel_Type}<p>";
-
-      // binding is done one feature at a time
-      altFuelStations.bindPopup(function(e){
-        return L.Util.template(popupTemplate, e.feature.properties)
-      });
-
-      var arcgisOnline = L.esri.Geocoding.arcgisOnlineProvider();
-
-      var searchControl = L.esri.Geocoding.geosearch({
-        providers: [arcgisOnline]
-      }).addTo(map);
+      function letsGo () {
+        if (ticked) {
+          map.flyTo(palmSprings);
+          ticked = false;
+        } else {
+          map.flyTo(dc);
+          ticked = true;
+        }
+      }
     </script>
   </body>
 </html>
