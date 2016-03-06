@@ -28,8 +28,12 @@ $backgroundColor: #3F3F3F;
 $linkColor: #21AEDB;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
-$mainFontSize: 32px;
+$mainFontSize: 42px;
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal pre {
+  font-size: auto;
+}
