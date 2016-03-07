@@ -22,7 +22,7 @@ f - full screen (esc to exit)
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
-		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="../fresher-template/css/theme/esri-dev-summit-2016.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
@@ -49,57 +49,56 @@ f - full screen (esc to exit)
 			<div class="slides">
 
 				<section class="slide" data-background="../fresher-template/img/title.png" data-background-size="cover">
-		      <p>Building Apps with Leaflet and the Esri Leaflet Project</p>
-					<p>john gravois + patrick arlt</p>
+		      <h1 style="font-size:3rem; margin: 6rem auto 0; max-width: 85%">Building Apps with Leaflet and the Esri Leaflet Project</h1>
+					<p>John Gravois + Patrick Arlt</p>
 	        <p><a href="http://twitter.com/geogangster">@geogangster</a> / <a href="http://twitter.com/patrickarlt">@patrickarlt</a></p>
 	        <p><a href="http://jgravois.github.io/presentations/devsummit-2016-leaflet/">http://bit.ly/1QpspY3</a></p>
 		    </section>
 
-		    <section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>who are we?</h2>
 					<h3 class="fragment">geographer + designer</h3>
 		    </section>
 
-				<section class="slide">
-		      <h2>what is <a href="https://leafletjs.org">leaflet</a>?</h2>
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+					<h2>what is <a href="https://leafletjs.org">leaflet</a>?</h2>
   				<h3 class="fragment">open source, <span style="font-size: .75em;">small</span>, popular</h3>
 
 					<aside class="notes">
 						its a JS API, there isn't anything 'out of the box'
 						sites like craigslist, etc.
           </aside>
-
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>so, what is <a href="https://esri.github.io/esri-leaflet"><i>esri</i></a> leaflet?</h2>
   				<h3 class="fragment">leaflet + arcgis = <3</h3>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>a group effort</h2>
 					<h3 class="fragment">supported by our community</h3>
 					<h3 class="fragment">no roadmap or product lifecycle</h3>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h3>over 500 stars/forks</h3>
 					<h3>30+ non-esri contributors!</h3>
 					<h3>doc suggestions, bug fixes, features</h3>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>contributions from</h2>
 					<h3>USGS, State Dept, Netflix, Stanford University, City of Philadelphia, <b>Utah AGRC</b></h3>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>apps from</h2>
 					<h3>Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...</h3>
 		    </section>
 
-		    <section class="slide">
-		      <h2>demo <a href="./demos/index.html">#1</a></h2>
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/1-layer-with-popup.html">#1</a> layer with popup</h2>
 
 					<aside class="notes">
 						just esri leaflet core
@@ -109,12 +108,12 @@ f - full screen (esc to exit)
           </aside>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>more plugins!</h2>
 		    </section>
 
-				<section class="slide">
-		      <h2>demo #2</h2>
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/2-renderers.html">#2</a> using a renderer</h2>
 
 					<aside class="notes">
 						plugin demo
@@ -122,9 +121,8 @@ f - full screen (esc to exit)
           </aside>
 		    </section>
 
-
-				<section class="slide">
-		      <h2>demo <a href="./demos/done.html">#3</a></h2>
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/3-search.html">#3</a> adding search</h2>
 
 					<aside class="notes">
 						search demo
@@ -133,8 +131,8 @@ f - full screen (esc to exit)
           </aside>
 		    </section>
 
-				<section class="slide">
-		      <h2>demo #4</h2>
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/4-editing.html">#4</a> editing</h2>
 					<aside class="notes">
 						editing demo (skip at fed.  let pat know how much time is left)
 					  we handle geojson, even for old services (edit demo is good opp)
@@ -142,7 +140,7 @@ f - full screen (esc to exit)
           </aside>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>but wait <span class="fragment">there's <a href="http://esri.github.io/esri-leaflet/examples/">more!</a></h2>
 
 					<aside class="notes">
@@ -154,11 +152,11 @@ f - full screen (esc to exit)
           </aside>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>upgrading from <a href="https://github.com//Esri/esri-leaflet/wiki/FAQ#upgrading-the-version-of-esri-leaflet-used-in-my-app-broke-everything">0.7.x?</a></h2>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>some people like esri leaflet</h2>
 					<ul>
 						<li>open source mandate</li>
@@ -169,7 +167,7 @@ f - full screen (esc to exit)
 					</ul>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>why you'd choose the JSAPI</h2>
 					<ul>
 						<li>flagship product</li>
@@ -181,7 +179,7 @@ f - full screen (esc to exit)
 					</ul>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>for the path less travelled</h2>
 					<ul>
 						<li>we build esri leaflet in our spare time</li>
@@ -192,7 +190,7 @@ f - full screen (esc to exit)
 					</ul>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>the community is here to help</h2>
 					<ul>
 						<li>github</li>
@@ -203,7 +201,7 @@ f - full screen (esc to exit)
 					</ul>
 		    </section>
 
-				<section class="slide">
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>please fill out a survey!</h2>
 		    </section>
 
