@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load Leaflet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet-src.js"></script>
+
+    <!-- Load Esri Leaflet -->
+    <script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.7/esri-leaflet.js"></script>
+
+    <!-- Load Esri Leaflet Renderers -->
+    <script src="https://cdn.jsdelivr.net/leaflet.esri.renderers/2.0.1/esri-leaflet-renderers.js"></script>
+
+    <!-- Load Esri Leaflet Geocoder -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.css">
+    <script src="//cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.js"></script>
+
+    <!-- Load JQuery -->
+    <script src="http://code.jquery.com/jquery-2.2.1.js"></script>
+
+    <!-- Load Our App Styles -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <div id="panel" class="leaflet-bar">
+      <button class="add-feature">Add Feature</button>
+    </div>
+
+    <template id="popup-template">
+      <h3>{Station_Na}</h3>
+      <p>{Street_Add}<br>
+      {City}, {State}, {ZIP}</p>
+
+      <p><b>Fuel Type:</b> {Fuel_Type}</p>
+      <p><b>Phone:</b> <a href="tel:{Station_Ph}">{Station_Ph}</a></p>
+      <p><b>Open to:</b> {Groups_Wit}</p>
+      <p><b>Hours:</b> {Access_Day}</p>
+      <button class="edit-attributes" data-fid="{FID}">Edit Attributes</button>
+      <button class="edit-location" data-fid="{FID}">Edit Location</button>
+      <button class="delete-feature" data-fid="{FID}">Delete Feature</button>
+    </template>
+
+    <template id="editing-template">
+      <form class="edit-form">
+        <label>
+          Station Name
+          <input type="text" name="Station_Na" placeholder="Name">
+        </label>
+
+        <label>
+          Street Address
+          <input type="text" name="Street_Add" placeholder="Street Address">
+        </label>
+
+        <label>
+          City
+          <input type="text" name="City" placeholder="City">
+        </label>
+
+        <label>
+          State
+          <input type="text" name="State" placeholder="State">
+        </label>
+
+        <label>
+          ZIP
+          <input type="number" name="ZIP" placeholder="ZIP">
+        </label>
+
+        <label>
+          Fuel_Type
+          <select name="Fuel_Type">
+            <option value="CNG">Compressed Natural Gas</option>
+            <option value="HY">Hydrogen</option>
+            <option value="E85">High-level Ethanol Gasoline Blend (E85)</option>
+            <option value="LPG">Propane (Liquefied Petroleum Gas)</option>
+            <option value="BD">Biodiesel</option>
+            <option value="ELEC">Electric</option>
+            <option value="LNG">Liquified Natural Gas</option>
+          </select>
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" name="Station_Ph" placeholder="Phone Number">
+        </label>
+
+        <label>
+          Allowed Groups
+          <input type="text" name="Groups_Wit" placeholder="Access Notes: Public/Private/Government only, key card, ect...">
+        </label>
+
+        <label>
+          Open
+          <input type="text" name="Access_Day" placeholder="Access Notes: Day/Time/Hours">
+        </label>
+
+        <input type="hidden" name="FID">
+        <input type="hidden" name="X">
+        <input type="hidden" name="Y">
+
+        <input type="submit" value="Submit">
+      </form>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
