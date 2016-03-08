@@ -29,7 +29,7 @@
       L.esri.basemapLayer("DarkGray", basemapOptions).addTo(map);
 
       var altFuelStations = L.esri.featureLayer({
-        url: "https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Alternative_Fueling_Stations/FeatureServer/0",
+        url: "http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Alternative_Fueling_Stations/FeatureServer/0",
       }).addTo(map);
 
       var popupTemplate = "<h3>{Station_Na}</h3><p>Fuel Type: {Fuel_Type}<p>";
