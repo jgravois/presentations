@@ -58,10 +58,15 @@ f - full screen (esc to exit)
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>who are we?</h2>
 					<h3 class="fragment">geographer + designer</h3>
+
+					<aside class="notes">
+						maintainers of project, but not the only contributors
+          </aside>
+
 		    </section>
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-					<h2>what is <a href="https://leafletjs.com">leaflet</a>?</h2>
+					<h2>what is <a href="http://leafletjs.com">leaflet</a>?</h2>
   				<h3 class="fragment">open source, <span style="font-size: .75em;">small</span>, popular</h3>
 
 					<aside class="notes">
@@ -74,12 +79,26 @@ f - full screen (esc to exit)
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>so, what is <a href="https://esri.github.io/esri-leaflet"><i>esri</i></a> leaflet?</h2>
   				<h3 class="fragment">leaflet + arcgis = <3</h3>
+
+					<aside class="notes">
+						shouldnt be an either or<br>
+						it should be easy to work with esri services<br>
+						we'll talk more about comparing later
+          </aside>
+
 		    </section>
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>a group effort</h2>
 					<h3 class="fragment">supported by our community</h3>
 					<h3 class="fragment">no roadmap or product lifecycle</h3>
+
+					<aside class="notes">
+						organic open source collaboration<br>
+						pat works evenings weekends<br>
+						i work on monday mornings
+          </aside>
+
 		    </section>
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
@@ -102,9 +121,11 @@ f - full screen (esc to exit)
 		      <h2>demo <a href="./demos/1-layer-with-popup.html">#1</a> layer with popup</h2>
 
 					<aside class="notes">
-						just esri leaflet core
-						basemap, fuel stations, popup
-						snooping network traffic shows we grab features selectively
+						just esri leaflet core<br>
+						LAT, LONG in map constructor<br>
+						L.tileLayer options can be passed in L.esri.basemapLayer constructor<br>
+						basemap, fuel stations, popup<br>
+						snooping network traffic shows we grab features selectively<br>
 						you have to jump back and forth between our doc and leaflet doc
           </aside>
 		    </section>
@@ -117,7 +138,7 @@ f - full screen (esc to exit)
 		      <h2>demo <a href="./demos/2-renderers.html">#2</a> using a renderer</h2>
 
 					<aside class="notes">
-						plugin demo
+						plugin demo<br>
 						add renderers, no more code to display service symbology
           </aside>
 		    </section>
@@ -126,18 +147,18 @@ f - full screen (esc to exit)
 		      <h2>demo <a href="./demos/3-search.html">#3</a> adding search</h2>
 
 					<aside class="notes">
-						search demo
-					  add address search, more code and another plugin
-					  show that the plugin doc is right next to core
+						search demo<br>
+					  add address search, more code and another plugin<br>
+					  show that the plugin doc is right alongside core
           </aside>
 		    </section>
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>demo <a href="./demos/4-editing/">#4</a> editing</h2>
 					<aside class="notes">
-						editing demo (skip at fed.  let pat know how much time is left)
-					  we handle geojson, even for old services (edit demo is good opp)
-					  a normal part of leaflet dev is mixing and matching lots of plugins
+						editing demo<br>
+					  we handle geojson, even for old services<br>
+						a normal part of leaflet dev is mixing and matching lots of plugins
           </aside>
 		    </section>
 
@@ -145,10 +166,10 @@ f - full screen (esc to exit)
 		      <h2>but wait <span class="fragment">there's <a href="http://esri.github.io/esri-leaflet/examples/">more!</a></h2>
 
 					<aside class="notes">
-						clustering
-					  heatmap
-					  map services
-					  image services
+						clustering<br>
+					  heatmap<br>
+					  map services<br>
+					  image services<br>
 						etc.
           </aside>
 		    </section>
@@ -156,6 +177,41 @@ f - full screen (esc to exit)
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>upgrading from <a href="https://github.com//Esri/esri-leaflet/wiki/FAQ#upgrading-the-version-of-esri-leaflet-used-in-my-app-broke-everything">0.7.x?</a></h2>
 		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+					<h2>1.0.0 change</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+// not L.esri.featureLayer("http://services.arcgis.com/uCX../", {})
+
+L.esri.featureLayer( {
+  url: "http://services.arcgis.com/uCX../"
+})
+</code></pre>
+
+<aside class="notes">
+	instead of url + options<br>
+	url **is** an option
+</aside>
+
+				</section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+					<h2>2.0.0-beta.4 change</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+// not L.esri.Tasks.query
+var myQuery = L.esri.query({/**/})
+
+// not L.esri.Layers.featureLayer
+var myLayer = L.esri.featureLayer({/**/})
+</code></pre>
+
+<aside class="notes">
+	nested namespaced removed<br>
+	ES6 module compatability<br>
+	less typing
+</aside>
+
+				</section>
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>some people like esri leaflet</h2>
@@ -193,6 +249,11 @@ f - full screen (esc to exit)
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>want to learn more?</h2>
+
+					<aside class="notes">
+						'deep dive' session coming up next<br>
+						'whats new' friday morning at 9am<br>
+          </aside>
 		    </section>
 
 				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
