@@ -1,0 +1,213 @@
+<!--
+recap of forking and cloning
+never commit/push directly in the master branch
+gh-pages should always be behind or in sync with master
+how to resolve a merge conflict
+you have to keep your local (and fork) master in sync with upstream/master manually
+squashing/rebasing
+
+show them the sandbox, ask their opinion about it being open source?
+should forking be an intermediate topic?
+should working from the commandline be an intermediate topic
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>git-er done</title>
+
+		<meta name="description" content="talkin git">
+		<meta name="author" content="john gravois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="slide">
+		      <h2>lets git-er done</h2>
+					<p><a href="http://twitter.com/geogangster">@geogangster</a></p>
+	        <p><a href="http://jgravois.github.io/presentations/git-er-done-3/">jgravois.github.io/presentations/git-er-done-3/</a></p>
+		    </section>
+
+		    <section class="slide">
+		      <h3>first, lets recap</h3>
+		    </section>
+
+		    <section class="slide">
+		      <h2>fork</h2>
+					<h2 class='fragment'>clone</h2>
+					<h2 class='fragment'>branch</h2>
+          <h2 class='fragment'><a href='https://github.com/jgravois/developer-support/tree/readme-copyedit'>commit</a></h2>
+		    </section>
+
+        <section class="slide">
+		      <h2>when you're ready</h2>
+					<h3 class='fragment'>pull request</h3>
+          <h3 class='fragment'>review/merge</h3>
+          <h3 class='fragment'>rinse &amp; repeat</h3>
+		    </section>
+
+        <section class="slide">
+		      <h3>local master should be behind</h3>
+          <h3>or 'in sync' with upstream master</h3>
+          <p>so we can do that fast-forwarding thing</p>
+		    </section>
+
+        <section class="slide">
+		      <h2><a href='https://github.com/Esri/developer-support/pull/214'>demo</a></h2>
+		    </section>
+
+        <section>
+					<h2>staying in <a href='https://help.github.com/articles/syncing-a-fork/'>sync</a></h2>
+					<pre><code class="hljs" data-trim contenteditable>
+$ git fetch upstream
+$ git checkout master
+
+$ git merge upstream/master
+  Updating 34e91da..16c56ad
+  Fast-forward
+    README.md                 |    5 +++--
+    1 file changed, 3 insertions(+), 2 deletions(-)
+
+$ git push origin/master
+					</code></pre>
+				</section>
+
+        <section class="slide">
+		      <h2>but what is this <a href='http://esri.github.io/developer-support/web-js/wgs-to-webmercator/'>gh-pages</a> branch all about?</h2>
+          <p>spoiler alert: its just .html file hosting</p>
+		    </section>
+
+        <section class="slide">
+		      <h3>gh-pages should be behind or</h3>
+          <h3>'in sync' with upstream master</h3>
+          <p>so we can fast-forward (sound familiar?)</p>
+		    </section>
+
+        <section>
+					<p>we use the exact same workflow to keep in sync</p>
+					<pre><code class="hljs" data-trim contenteditable>
+$ git fetch upstream
+$ git checkout gh-pages
+
+$ git merge upstream/master
+  Updating 34e91da..16c56ad
+  Fast-forward
+    README.md                 |    5 +++--
+    1 file changed, 3 insertions(+), 2 deletions(-)
+
+$ git push upstream/gh-pages
+					</code></pre>
+          <p>caution, gh-pages is a shared branch upstream</p>
+				</section>
+
+        <section class="slide">
+					<h2>demo</h2>
+		    </section>
+
+        <section class="slide">
+					<h2>piece of cake, right?</h2>
+		    </section>
+
+		    <section class="slide">
+					<h1>no.</h1>
+          <h3>sometimes there are <a href='https://github.com/Esri/developer-support/pull/215'>problems</a></h3>
+		    </section>
+
+        <section class="slide">
+		      <h2>1. merge conflicts</h2>
+		    </section>
+
+        <section class="slide">
+		      <h2>2. we forget to make a branch (or stay in sync)</h2>
+		    </section>
+
+        <section class="slide">
+		      <h2><a href='https://github.com/ArcGIS/sandbox'>sandbox</a></h2>
+          <p>open source?</p>
+          <p>save forks for later?</p>
+          <p>commandline?</p>
+		    </section>
+
+        <section class="slide">
+		      <h2>do y'all have questions?</h2>
+		    </section>
+
+    <section class="slide">
+      <h3>resources:</h3>
+      <ul>
+        <li>
+          <a href='https://guides.github.com/introduction/flow/'>https://guides.github.com/introduction/flow/</a>
+        </li>
+        <li>
+          <a href='https://git-scm.com/doc'>https://git-scm.com/doc</a>
+        </li>
+      </ul>
+    </section>
+
+        <section class="slide">
+		      <h2>the end.</h2>
+		    </section>
+			</div>
+
+		</div>
+
+		<script src="../fresher-template/lib/js/head.min.js"></script>
+		<script src="../fresher-template/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../fresher-template/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
