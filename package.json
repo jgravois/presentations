@@ -1,0 +1,26 @@
+{
+  "name": "johns-presentations",
+  "version": "1.0.0",
+  "private": true,
+  "description": "talking",
+  "homepage": "http://johngravois.com/presentations/",
+  "scripts": {
+    "start": "http-server -p 1234"
+  },
+  "author": {
+    "name": "john gravois",
+    "email": "jagravois@gmail.com",
+    "web": "http://johngravois.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jgravois/presentations.git"
+  },
+  "engines": {
+    "node": "~4.1.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "license": "MIT"
+}
