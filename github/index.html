@@ -1,19 +1,16 @@
 <!--
+who am i
 what is github/what is git?
 emailing files > google docs > bonafide version control
-who am i?
 creative uses of github, things Esri is sharing
+
 tour of github.com (issues, commits, branches, pull requests)
 markdown (emoji cheatsheet, live editor)
-demo: clone, branch, commit, push, PR
-show github for mac client, sourcetree, commandline
-what is github pages?
-homework
-announce holistic lab
 
-more advanced stuff
-how to resolve a merge conflict
-keep your local (and fork) master in sync with upstream
+demo: clone, branch, commit, push, PR (show different clients)
+what is gh-pages?
+show the homework assignment (public and private)
+announce holistic lab (4/22)
 -->
 
 <!doctype html>
@@ -58,85 +55,82 @@ keep your local (and fork) master in sync with upstream
 			<div class="slides">
 
 				<section class="slide">
-		      <h2>getting to know&#8230;  github</h2>
-					<p><a href="http://twitter.com/geogangster">@geogangster</a></p>
-	        <p><a href="http://jgravois.github.io/presentations/github/index.html">http://bit.ly/22a8sKh</a></p>
-		    </section>
+		      <h2>getting to know&#8230; git(hub)</h2>
 
-		    <section class="slide">
-		      <h3>first, lets recap</h3>
-		    </section>
-
-		    <section class="slide">
-		      <h2>fork</h2>
-					<h2 class='fragment'>clone</h2>
-					<h2 class='fragment'>branch</h2>
-          <h2 class='fragment'><a href='https://github.com/jgravois/developer-support/tree/readme-copyedit'>commit</a></h2>
-		    </section>
-
-        <section class="slide">
-		      <h2>when you're ready</h2>
-					<h3 class='fragment'>pull request</h3>
-          <h3 class='fragment'>review/merge</h3>
-          <h3 class='fragment'>rinse &amp; repeat</h3>
-		    </section>
-
-        <section class="slide">
-		      <h2><a href='https://github.com/Esri/developer-support/pull/214'>demo</a></h2>
-		    </section>
-
-        <section class="slide">
-		      <h3>local master should be behind</h3>
-          <h3>or 'in sync' with upstream master</h3>
-          <p>so we can do that fast-forwarding thing</p>
-		    </section>
-
-        <section>
-					<h2>staying in <a href='https://help.github.com/articles/syncing-a-fork/'>sync</a></h2>
-					<pre><code class="hljs" data-trim contenteditable>
-$ git fetch upstream
-$ git checkout master
-
+          <pre><code class="hljs" data-trim contenteditable>
 $ git merge upstream/master
   Updating 34e91da..16c56ad
   Fast-forward
     README.md                 |    5 +++--
     1 file changed, 3 insertions(+), 2 deletions(-)
-
-$ git push origin/master
-					</code></pre>
-				</section>
-
-        <section class="slide">
-		      <h2>but what is this <a href='http://esri.github.io/developer-support/web-js/wgs-to-webmercator/'>gh-pages</a> branch all about?</h2>
-          <p>spoiler alert: its just .html file hosting</p>
+...
+$ git push origin/patch
+          </code></pre>
+          <p><a href="http://twitter.com/geogangster">@geogangster</a> / <a href="http://jgravois.github.io/presentations/github/index.html">http://bit.ly/22a8sKh</a></p>
 		    </section>
 
         <section class="slide">
-		      <h3>gh-pages should be behind or</h3>
-          <h3>'in sync' with upstream master</h3>
-          <p>so we can fast-forward (sound familiar?)</p>
+		      <h2>first, who am i?</h2>
+          <p>(briefly)</p>
 		    </section>
 
-        <section>
-					<p>we use the exact same workflow to keep in sync</p>
-					<pre><code class="hljs" data-trim contenteditable>
-$ git fetch upstream
-$ git checkout gh-pages
-
-$ git merge upstream/master
-  Updating 34e91da..16c56ad
-  Fast-forward
-    README.md                 |    5 +++--
-    1 file changed, 3 insertions(+), 2 deletions(-)
-
-$ git push upstream/gh-pages
-					</code></pre>
-          <p>but more caution here, gh-pages is a shared branch upstream</p>
-				</section>
+        <section class="slide">
+		      <h2>what is github<a href='https://github.com/jgravois'>.com?</a></h2 >
+          <p> psst. the yellow part is a clue.</p>
+		    </section>
 
         <section class="slide">
-					<h2>demo</h2>
+          <h2>project hosting</h2>
+          <h3>for users and <a href="https://github.com/Esri">organizations</a></h3>
+		      <p>public == free / <a href="https://github.com/ArcGIS">private</a> == $</p>
+		    </section>
+
+        <section class="slide">
+          <h2>collaboration tools</h2>
+		    </section>
+
+        <section class="slide" data-background="http://media.tumblr.com/tumblr_ljs594lETx1qzofah_frame1.jpg" data-background-size="cover">
+          <h3><strike>attaching files to emails</strike></h3>
+		    </section>
+
+        <section class="slide" data-background="https://googleservices.wikispaces.com/file/view/docs2.png/542003528/docs2.png" data-background-size="cover">
+          <h3 style="color: #B900FF;">google docs</h3>
+		    </section>
+
+        <section class="slide" data-background="http://gregheartsfield.com/files/vcd/vcd_feature_synch.png" data-background-size="50%">
+          <h3><a style="color: #B900FF;" href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">version control</a></h3>
+		    </section>
+
+        <section class="slide">
+          <h3>you'll definitely find code</h3>
+            <ul>
+              <li>linux</li>
+              <li>node</li>
+              <li>.NET</li>
+              <li>git</li>
+            </ul>
+		    </section>
+
+        <section class="slide">
+            <h3>but there are other treasures too</h3>
+            <ul>
+              <li><a href="https://github.com/sinker/tacofancy">recipes</a></li>
+              <li><a href="https://project-open-data.cio.gov/">collaborative governance</a>
+              <li><a href="https://gist.github.com/sippey/4009159">open letters</a>
+          </ul>
+		    </section>
+
+        <section class="slide">
+          <h2>lets take a <a href="https://github.com/sinker/tacofancy">tour!</a></h2>
+		    </section>
+
+        <section class="slide">
+          <h2>what makes GitHub great?</h2>
+          <p>it facilitates productive conversations</p>
+		    </section>
+
+        <section class="slide">
+					<h3>time to get our hands dirty</h3>
 		    </section>
 
         <section class="slide">
@@ -145,43 +139,59 @@ $ git push upstream/gh-pages
 
 		    <section class="slide">
 					<h1>no.</h1>
-          <h3>sometimes there are <a href='https://github.com/Esri/developer-support/pull/215'>problems</a></h3>
+          <h3>it takes awhile to get the hang of all this.</h3>
+          <p class='fragment'>kinda like GIS ;)</p>
 		    </section>
 
         <section class="slide">
-		      <h2>1. merge conflicts</h2>
+            <h3>luckily, you're not alone</h3>
+            <ul>
+              <li>StackOverflow</li>
+              <li><a href='http://www.thespatialcommunity.com/'>Slack</a> #git</li>
+              <li>githubhelp@esri.com</li>
+              <li>holistic lab (April 22 1-5pm PST)</li>
+            </ul>
 		    </section>
 
         <section class="slide">
-		      <h2>2. we forget to make a branch (or stay in sync)</h2>
+		      <h2>there's <a href="https://github.com/ArcGIS/sandbox/issues">homework</a></h2>
 		    </section>
 
         <section class="slide">
-		      <h2><a href='https://github.com/ArcGIS/sandbox'>sandbox</a></h2>
-          <p>open source?</p>
-          <p>save forks for later?</p>
-          <p>commandline?</p>
+		      <h3>questions?</h3>
 		    </section>
 
         <section class="slide">
-		      <h2>do y'all have questions?</h2>
-		    </section>
-
-    <section class="slide">
-      <h3>resources:</h3>
-      <ul>
-        <li><a href='https://guides.github.com/introduction/flow/'>https://guides.github.com/introduction/flow/</a>
-        </li>
-        <li><a href='https://git-scm.com/doc'>https://git-scm.com/doc</a></li>
-        <li><a href='https://github.com/blog/2019-how-to-undo-almost-anything-with-git'>https://github.com/blog/2019-how-to-undo-almost-anything-with-git</a></li>
-      </ul>
-    </section>
+          <h3>more resources:</h3>
+          <ul>
+            <li><a href='https://guides.github.com/introduction/flow/'>GitHub Guides - Flow</a>
+            </li>
+            <li><a href='http://jbt.github.io/markdown-editor/'>live Markdown editor</a>
+            </li>
+            <li><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Markdown cheatsheet</a>
+            </li>
+            <li><a href='  http://www.emoji-cheat-sheet.com/'>Emoji cheatsheet</a>
+            </li>
+            <li><a href='https://git-scm.com/doc'>Git documentation</a></li>
+            <li><a href='https://github.com/blog/2019-how-to-undo-almost-anything-with-git'>How to undo (almost) anything with Git</a></li>
+          </ul>
+        </section>
 
         <section class="slide">
 		      <h2>the end.</h2>
 		    </section>
-			</div>
 
+        <!--section class="slide">
+		      <h2>what are <a href='http://esri.github.io/esri-leaflet/'>gh-pages?</a></h2>
+          <p class='fragment'>spoiler alert: its just <a href='https://github.com/Esri/esri-leaflet/blob/gh-pages/index.html'>.html</a> file hosting</p>
+
+          down the line:
+          forking/keeping in sync
+          how to resolve a merge conflict
+
+		    </section-->
+
+			</div>
 		</div>
 
 		<script src="../fresher-template/lib/js/head.min.js"></script>
@@ -214,3 +224,16 @@ $ git push upstream/gh-pages
 
 	</body>
 </html>
+<!--
+need to share video with...
+makram murad
+jen jacob
+chris d'amour
+charmel menzel
+tripp corbett
+andy huntington
+robert burke
+dawn wright
+evan marshall
+james miller - and customers
+-->
