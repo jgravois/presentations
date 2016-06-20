@@ -1,0 +1,289 @@
+<!--
+
+s - to enter presenter mode
+f - full screen (esc to exit)
+
+no identity manager
+no built in proxy support
+we assume services support CORS
+samples which demonstrate how to use OAuth and pass your own tokens
+no widgets
+no routing services
+webmap support is experimental
+
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>intro esri leaflet</title>
+
+		<meta name="description" content="Talk introducing Esri Leaflet, a series of plugins for working with ArcGIS Services in Leaflet.">
+		<meta name="author" content="john gravois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/esri-dev-summit-2016.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h1 style="font-size:3rem; margin: 6rem auto 0; max-width: 85%">Building Apps with Esri Leaflet</h1>
+					<p>John Gravois</p>
+	        <p><a href="http://twitter.com/geogangster">@geogangster</a></p>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>who am i?</h2>
+					<p>geographer + hack developer</p>
+          <p>tech support</p>
+          <p>jsapi/flex/silverlight</p>
+
+					<aside class="notes">
+						maintainer of project, but not the only contributor
+          </aside>
+
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+					<h2>what is <a href="http://leafletjs.com">leaflet</a>?</h2>
+  				<h3 class="fragment">open source, <span style="font-size: .75em;">small</span>, popular</h3>
+
+					<aside class="notes">
+						its a JavaScript API designed for non-geographers<br>
+						nothing 'out of the box'<br>
+						sites like craigslist, etc.
+          </aside>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>so, what is <a href="https://esri.github.io/esri-leaflet"><i>esri</i></a> leaflet?</h2>
+  				<h3 class="fragment">leaflet + arcgis = <3</h3>
+
+					<aside class="notes">
+						shouldnt be an either or<br>
+						it should be easy to work with esri services<br>
+						we'll talk more about comparing later
+          </aside>
+
+		    </section>
+
+        <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+          <h2>loading esri basemaps</h2>
+<pre><code class="hljs" data-trim contenteditable>
+L.esri.basemapLayer('Topographic').addTo(map);
+</code></pre>
+        </section>
+
+        <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+          <h2>draw some features</h2>
+<pre><code class="hljs" data-trim contenteditable>
+L.esri.featureLayer( {
+  url: "http://server.domain/../MyService/FeatureServer/0"
+}).addTo(map);
+</code></pre>
+        </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>a group effort</h2>
+					<h3 class="fragment">supported by our community</h3>
+					<h3 class="fragment">no roadmap or product lifecycle</h3>
+
+					<aside class="notes">
+						organic open source collaboration<br>
+						pat works evenings weekends<br>
+						i work on monday mornings
+          </aside>
+
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h3>over 500 stars/forks</h3>
+					<h3>30+ non-esri contributors!</h3>
+					<h3>doc suggestions, bug fixes, features</h3>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>contributions from</h2>
+					<h3>USGS, State Dept, Netflix, Stanford University, City of Philadelphia, <b>Utah AGRC</b></h3>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>apps from</h2>
+					<h3>Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...</h3>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/1-layer-with-popup.html">#1</a> layer with popup</h2>
+
+					<aside class="notes">
+						just esri leaflet core<br>
+						LAT, LONG in map constructor<br>
+						L.tileLayer options can be passed in L.esri.basemapLayer constructor<br>
+						basemap, fuel stations, popup<br>
+						snooping network traffic shows we grab features selectively<br>
+						you have to jump back and forth between our doc and leaflet doc
+          </aside>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>more plugins!</h2>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/2-renderers.html">#2</a> using a renderer</h2>
+
+					<aside class="notes">
+						plugin demo<br>
+						add renderers, no more code to display service symbology
+          </aside>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/3-search.html">#3</a> adding search</h2>
+
+					<aside class="notes">
+						search demo<br>
+					  add address search, more code and another plugin<br>
+					  show that the plugin doc is right alongside core
+          </aside>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>demo <a href="./demos/4-editing/">#4</a> editing</h2>
+					<aside class="notes">
+						editing demo<br>
+					  we handle geojson, even for old services<br>
+						a normal part of leaflet dev is mixing and matching lots of plugins
+          </aside>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>but wait <span class="fragment">there's <a href="http://esri.github.io/esri-leaflet/examples/">more!</a></h2>
+
+          <ul>
+						<li>clustering</li>
+						<li>heatmaps</li>
+						<li>map services</li>
+						<li>image services</li>
+					</ul>
+
+					<aside class="notes">
+						clustering<br>
+					  heatmap<br>
+					  map services<br>
+					  image services<br>
+						etc.
+          </aside>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>esri leaflet <3</h2>
+					<ul>
+						<li>open source mandate</li>
+						<li>already familiar with it</li>
+						<li>simpler toolset</li>
+						<li>easy integration with build systems*</li>
+						<li>they're just nerds</li>
+					</ul>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>why choose the JSAPI</h2>
+					<ul>
+						<li>flagship product</li>
+						<li>can be cut lean</li>
+						<li>unlocks the whole platform</li>
+						<li>UI components</li>
+						<li>builders/templates</li>
+						<li>support for custom projections*</li>
+					</ul>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>for the path less travelled</h2>
+					<ul>
+						<li>we build esri leaflet in our spare time</li>
+						<li>only unlocks <span style="color: red;">some</span> of the platform</li>
+						<li>almost no UI components</li>
+						<li>mix and match with other plugins</li>
+						<li>beware of scope creep</li>
+					</ul>
+		    </section>
+
+				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>the community is here to help</h2>
+					<ul>
+						<li>github</li>
+						<li>geonet</li>
+						<li>stack exchange</li>
+						<li>spatial community</li>
+						<li>technical support</li>
+					</ul>
+		    </section>
+
+				<section data-background="../fresher-template/img/end.png" data-background-size="cover"></section>
+
+			</div>
+
+		</div>
+
+		<script src="../fresher-template/lib/js/head.min.js"></script>
+		<script src="../fresher-template/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../fresher-template/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
