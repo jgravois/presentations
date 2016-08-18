@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>CfA / Esri</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1>CfA visit<br>
+      <span style="font-size: .75em;">w/ <a href="https://twitter.com/geogangster">@geogangster</a></span>
+      </h1>
+    </section>
+
+     <section class="slide">
+      <!-- &amp;<br> -->
+      <h1>
+        the <a href='https://twitter.com/henryhadlow/status/522387290778517504'>holy</a> grail.
+      </h1>
+    </section>
+
+    <section class="slide">
+      <h1>so, what <span style="color: #F1F540;">are</span> we<br>gonna cover?</h1>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h1 class="righty-tighty">
+        spatial data is gold<br><span style="color: #F1F540;">map or no map</span><br>
+      </h1>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h1 class="righty-tighty">
+        <a href='http://esri.github.io/esri-leaflet'>leaflet plugins</a><br>for the rest of the time
+      </h1>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h1 class="righty-tighty">
+        whatever else you want
+      </h1>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h1 class="righty-tighty">
+        when i say 'Esri', what do you think of?
+      </h1>
+      <!-- maybe 'what the hell is ezree?' -->
+    </section>
+
+  <!--
+    picture of UC - thousands of happy users
+    not just old school desktop GIS folks
+    they're publishing lots and lots of web services
+
+    mainframes > desktop > mashup web analysis
+
+    the opportunity is to share spatial data more widely, both outside govt and among govt
+    to support data driven decision making
+
+    demo: load gov data and run a census analysis
+    display it in Leaflet
+
+    share result in an app that has no map
+    type in an address and get demographic data back
+    explain that geosearch is always free
+  -->
+
+
+
+    <section class="slide">
+      <h1>
+        alright server, lets <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?geometry=-118.2,34.1&inSR=4326&outSR=4326&geometryType=esriGeometryPoint&outFields=*&f=json'>talk</a>
+      </h1>
+    </section>
+
+    <section class="slide">
+      <h1>ok, but what about <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?where=1=1&outSR=4326&outFields=*&resultOffset=1000&resultRecordCount=1000&f=html'>scraping</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>but do you<br><span style="color: #F1F540;">really</span><br>need ETL?</h1>
+    </section>
+
+    <section class="slide">
+      <h1>open source is free<br>private is free*</h1>
+    </section>
+
+    <section class="slide">
+      <h1>back to that <a href="http://esri.github.io/esri-leaflet">esri leaflet</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>what have you done for me lately esri?</h1>
+    </section>
+
+    <section class="slide">
+      <h1><a href="http://opendata.arcgis.com">opendata.arcgis.com</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>built w/ <a href="http://github.com/koopjs">koop</a></h1>
+    </section>
+
+    <section class="slide">
+      <h1>whats next?</h1>
+    </section>
+
+    <section class="slide">
+      <br><br>
+      <h3>glorious geojson</h3>
+      <script src="http://gist.github.com/jgravois/d20efcec5043c9a6ad67.js"></script>
+      <br><br>
+      <h3>'evil' <a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/The_ArcGIS_REST_API/02r300000054000000/'>geoservices</a> json</h3>
+      <script src="http://gist.github.com/jgravois/eab035258f8157d54618.js"></script>
+    </section>
+
+    <section class="slide">
+      <br><br><br>
+      <h3>resources:</h3>
+
+      <p>esri leaflet - <a href='http://esri.github.io/esri-leaflet'>http://esri.github.io/esri-leaflet</a></p>
+      <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
+      <p>REST Feature Service query doc - <br><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Feature_Service_Layer/02r3000000r1000000/'>http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000</a></p>
+      <p>koop - <br><a href='http://github.com/koopjs'>http://github.com/koopjs</a></p>
+    </section>
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
