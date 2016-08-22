@@ -38,14 +38,38 @@
 
 		<div class="reveal">
 			<div class="slides">
-
 				<section class="slide">
-      <h1>CfA visit<br>
-      <span style="font-size: .75em;">w/ <a href="https://twitter.com/geogangster">@geogangster</a></span>
-      </h1>
+      <h2>
+        visit w/ <a href="https://twitter.com/geogangster">@geogangster</a>
+      </h2>
     </section>
 
-     <section class="slide">
+    <section class="slide">
+      <h2>so, what <span style="color: #F1F540;">are</span> we<br>gonna cover?</h2>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h2>
+        (spatial) context is key<br><span style="color: #F1F540;">(even w/o a map)</span><br>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h2>
+        <a href='http://esri.github.io/esri-leaflet'>leaflet plugins</a><br>for the rest of the time
+      </h2>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h2>
+        anything else you want
+      </h2>
+    </section>
+
+    <section class="slide">
       <!-- &amp;<br> -->
       <h1>
         the <a href='https://twitter.com/henryhadlow/status/522387290778517504'>holy</a> grail.
@@ -53,94 +77,106 @@
     </section>
 
     <section class="slide">
-      <h1>so, what <span style="color: #F1F540;">are</span> we<br>gonna cover?</h1>
-    </section>
-
-    <section class="slide">
       <!-- &amp;<br> -->
-      <h1 class="righty-tighty">
-        spatial data is gold<br><span style="color: #F1F540;">map or no map</span><br>
-      </h1>
-    </section>
-
-    <section class="slide">
-      <!-- &amp;<br> -->
-      <h1 class="righty-tighty">
-        <a href='http://esri.github.io/esri-leaflet'>leaflet plugins</a><br>for the rest of the time
-      </h1>
-    </section>
-
-    <section class="slide">
-      <!-- &amp;<br> -->
-      <h1 class="righty-tighty">
-        whatever else you want
-      </h1>
-    </section>
-
-    <section class="slide">
-      <!-- &amp;<br> -->
-      <h1 class="righty-tighty">
+      <h1>
         when i say 'Esri', what do you think of?
       </h1>
-      <!-- maybe 'what the hell is ezree?' -->
+      <!-- probably 'what the hell is ezree?' -->
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <img src='https://learn.arcgis.com/en/arcgis-book/images/ch10/10-fig-10-2.jpg'>
+      <!--
+        100s of thousands of happy users
+        not just old school desktop GIS folks
+        they're publishing lots and lots of web services
+      -->
+    </section>
+
+    <section class="slide">
+    <ul>
+      <li>
+        creating cadastral fabrics
+      </li>
+      <li>
+        curating route datasets for 911 dispatch
+      </li>
+      <li>
+        isolating water pipe leaks
+      </li>
+      <li>
+        publishing web services
+      </li>
+    </ul>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h2>
+        more data driven decision making is still needed
+      </h2>
+    </section>
+
+    <section class="slide">
+      <!-- &amp;<br> -->
+      <h2>
+        challenges
+      </h2>
+      <ul>
+      <li>
+        interdepartmental politics
+      </li>
+      <li>
+        too many precious snowflakes
+      </li>
+      <li>
+        fear of liability
+      </li>
+    </ul>
+
     </section>
 
   <!--
-    picture of UC - thousands of happy users
-    not just old school desktop GIS folks
-    they're publishing lots and lots of web services
-
-    mainframes > desktop > mashup web analysis
-
-    the opportunity is to share spatial data more widely, both outside govt and among govt
-    to support data driven decision making
-
     demo: load gov data and run a census analysis
     display it in Leaflet
 
     share result in an app that has no map
     type in an address and get demographic data back
-    explain that geosearch is always free
   -->
 
-
-
     <section class="slide">
-      <h1>
-        alright server, lets <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?geometry=-118.2,34.1&inSR=4326&outSR=4326&geometryType=esriGeometryPoint&outFields=*&f=json'>talk</a>
-      </h1>
+      <h2>why <a href="http://opendata.arcgis.com">buy</a> a data portal</h2>
     </section>
 
     <section class="slide">
-      <h1>ok, but what about <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?where=1=1&outSR=4326&outFields=*&resultOffset=1000&resultRecordCount=1000&f=html'>scraping</a></h1>
+      <h1>nothing against <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?where=1=1&outSR=4326&outFields=*&resultOffset=1000&resultRecordCount=1000&f=html'>scraping</a>, but building against live services is more sustainable</h1>
     </section>
 
     <section class="slide">
-      <h1>but do you<br><span style="color: #F1F540;">really</span><br>need ETL?</h1>
+      <h1>so ask yourself, do i <br><span style="color: #F1F540;">really</span><br>need ETL?</h1>
     </section>
 
     <section class="slide">
-      <h1>open source is free<br>private is free*</h1>
+      <h2>open source is free<br>private, also free*</h2>
     </section>
 
     <section class="slide">
-      <h1>back to that <a href="http://esri.github.io/esri-leaflet">esri leaflet</a></h1>
+      <h2>TLA is permissive</h2>
+      <p>no cap on basemap tiles or geosearch</p>
     </section>
 
     <section class="slide">
-      <h1>what have you done for me lately esri?</h1>
+      <h2>whats next?</h2>
     </section>
 
     <section class="slide">
-      <h1><a href="http://opendata.arcgis.com">opendata.arcgis.com</a></h1>
-    </section>
-
-    <section class="slide">
-      <h1>built w/ <a href="http://github.com/koopjs">koop</a></h1>
-    </section>
-
-    <section class="slide">
-      <h1>whats next?</h1>
+      <h3>resources:</h3>
+      <p>cfa@esri.com / @geogangster</p>
+      <p>esri leaflet - <a href='http://esri.github.io/esri-leaflet'>http://esri.github.io/esri-leaflet</a></p>
+      <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
+      <p>REST Feature Service query doc - <br><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Feature_Service_Layer/02r3000000r1000000/'>http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000</a></p>
+      <p>terraformer - <br><a href='http://github.com/Esri/Terraformer'>http://terraformer.io</a></p>
     </section>
 
     <section class="slide">
@@ -153,15 +189,6 @@
       <script src="http://gist.github.com/jgravois/eab035258f8157d54618.js"></script>
     </section>
 
-    <section class="slide">
-      <br><br><br>
-      <h3>resources:</h3>
-
-      <p>esri leaflet - <a href='http://esri.github.io/esri-leaflet'>http://esri.github.io/esri-leaflet</a></p>
-      <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
-      <p>REST Feature Service query doc - <br><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Feature_Service_Layer/02r3000000r1000000/'>http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000</a></p>
-      <p>koop - <br><a href='http://github.com/koopjs'>http://github.com/koopjs</a></p>
-    </section>
 			</div>
 
 		</div>
