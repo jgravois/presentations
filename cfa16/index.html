@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Smart Cities</title>
+
+		<meta name="description" content="talkin git">
+		<meta name="author" content="john gravois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+  <div class="reveal">
+      <div class="slides">
+        <section class="slide">
+      <h2>
+        Collaborating within <br>(and across) Smart Cities
+      </h2>
+    </section>
+
+    <div class="reveal">
+      <div class="slides">
+        <section class="slide">
+      <h2>
+        w/ <a href="https://twitter.com/geogangster">@geogangster</a> &amp; <a href="https://twitter.com/vyki_e">@vyki_e</a>
+      </h2>
+      <!--brief intros
+my name is john gravois.  i do developer outreach for a little company called Esri in southern california.
+
+I've been lucky to work with Vyki off and on for several years at various public civic tech events and we thought it would be fun to do a talk together and give our different 'partial outsider' perspectives on the evolution thats taking place in Los Angeles and other neighboring communities in service delivery and transparency.
+      -->
+    </section>
+
+    <div class="reveal">
+      <div class="slides">
+        <section class="slide">
+      <h2>
+        lets get in the mood
+      </h2>
+      <iframe height="100%" width="100%"
+src="https://youtube.com/embed/JNnX0Hxu494?autoplay=0&controls=0&showinfo=0&autohide=1">
+</iframe>
+    </section>
+
+    <section class="slide">
+      <img src="http://www.easeus.com/resource/drive/images/floppy-2.jpg">
+    </section>
+
+<!-- anecdote about open data, i've been working at Esri for awhile now, but 10 years ago i lived in Sacramento making maps for an Environmental consulting company.  we had projects all over the central valley so as a one kid GIS department (fresh out of school, from a craigslist ad) i got intimately familiar with the different process to request shapefiles from various agencies.
+
+sometimes they had an FTP
+sometimes you had to tell them who you were
+sometimes you had to pay them a little money
+sometimes they wanted a LOT of money
+once i even had to pedal my bike down and pick up a disc in person because the 2' lidar contour lines just wouldn't fit through the pipe between their office and mine
+
+i *know* im rambling, but the point im getting at is this:
+
+beyond making up the bulk of useful open data, GIS folk have been doing it for awhile now.
+
+its an evolution. and today we want to talk about TWO crucial aspects of necessary change.
+-->
+
+  <section class="slide">
+    <h2>we still need to improve <br><span style="color: #F1F540;">intra-</span>agency communication</h2>
+  </section>
+
+<!--
+this can make a tremendous impact.
+  avoid duplication of effort
+  make sure folks know about resources that are available to them
+  team up to share burden
+  collaborate on procurement
+-->
+
+<section class="slide">
+  <img src="http://previews.123rf.com/images/franzidraws/franzidraws1511/franzidraws151100052/48042869-Women-hand-drawn-seamless-pattern-of-a-crowd-of-different-women-from-diverse-ethnic-backgrounds-Stock-Vector.jpg">
+</section>
+
+<!--
+2. when it comes to sharing data publicly, we still need to broaden the conversation to include a wider array of citizens.
+
+because roughneck environmental consultants like me riding around on bikes looking for contour lines isn't really a utopian vision of civic transparency and technology fueled participatory democracy
+-->
+
+<section class="slide">
+  <h2>'how', not 'why'<br>(our case study: LA)</h2>
+</section>
+
+<!--
+vyki and i both adamently agreed that we wanted to do a talk about the 'how' and not the 'why' so we humbly give you 'A Case Study'.
+-->
+
+<section class="slide">
+  <h2>the pothole mayor</h2>
+</section>
+
+<!-- Disclaimer: Eric Garcetti was able to sum this up in a recent interview a lot more succintly than i could.  He said, "People were afraid to open up the data because they were afraid it was going to be used against them.  And you know what?  it **was** used against them!  The LA Times reported that there was a discrepancy in the amount of time households had to wait for large waste pickups.  And we had to own that and see it as an opportunity to improve the way we operate."
+
+1 http://www.latimes.com/local/cityhall/la-me-illegal-dumping-20150815-story.html
+-->
+
+<section class="slide">
+  <img src="latimes.png">
+</section>
+
+<section class="slide">
+  <h2>disparate GIS > <br>Open Data > <br>GeoHub</h2>
+</section>
+
+<!--
+Flashy web pages are great, but this represents a lot of work by a lot of folks to incrementally change the way the city operates. The vision came from mayor Eric Garcetti.
+
+Before the project started, LA was 'unranked' when it came to open data. now they're number #1.
+
+i see nerd spidey sense going off all over the place in here. some of you are thinking, 'by what methodology did you arrive at that tidy conclusion?'
+-->
+
+<section class="slide">
+  <h2>beating FUD</h2>
+</section>
+
+<!--
+to combat fear, uncertainty and doubt, you need to reduce the friction to change.
+
+This is where Esri puts a lot of effort.  One, we believe that anyone that uses our desktop software should be able to spin up an Open Data site for free, so we made sure the capability is there, right out of the box.
+-->
+
+<section class="slide">
+  <h2>open data with a <span style="color: #F1F540;">purpose</span></h2>
+</section>
+
+<!--
+We need to move beyond throwing indigestible data over a wall and checking a box to giving the enterprise actual purpose.
+
+campaigns / initiatives help us define our values and represent our collective identity
+
+we need storytellers to jump into the firehose and come out sharing their insight.  (using open data we can fact check other people's conclusions)
+
+Example: Vision Zero
+-->
+
+<!--section class="slide">
+  <h2>more carrots, less sticks</h2>
+</section-->
+
+<!--
+show and tell:
+open source templates that anyone can share
+samples to embed open data in any webpage
+easy charts from spatial data
+
+'off the shelf'
+enabling discussions regarding individual datasets
+smart templates - map a relevant dataset's attributes once, other templates are ready to go too
+make styling happen automagically
+
+open source developers can build these tools too!
+-->
+
+<section class="slide">
+  <ul>image credits:
+    <li><a href="http://www.easeus.com/resource/drive/floppy-drive.htm">http://www.easeus.com/resource/drive/floppy-drive.htm</a>© EaseUS</li>
+
+    <li><a href="http://www.123rf.com/photo_48042869_stock-vector-women--hand-drawn-seamless-pattern-of-a-crowd-of-different-women-from-diverse-ethnic-backgrounds.html">http://www.123rf.com/photo_48042869</a> © franzidraws</li>
+
+    <li>http://www.latimes.com/local/cityhall/la-me-illegal-dumping-20150815-story.html</li>
+
+  </ul>
+</section>
+
+		<script src="../fresher-template/lib/js/head.min.js"></script>
+		<script src="../fresher-template/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../fresher-template/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
