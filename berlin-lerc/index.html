@@ -1,0 +1,124 @@
+<!--
+LERC (file format)
+
+show export format
+
+show JSAPI demo
+
+show github repo
+	C++ encoder
+  	python and js decoders
+	1.0 release
+
+show leaflet demo
+-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>do the lerc</title>
+
+		<meta name="description" content="talkin esri OSS">
+		<meta name="author" content="john gravois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+<a href="https://github.com/jgravois/presentations/berlin-2016-open"><img style="z-index: 1000; position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+<div class="reveal">
+	<div class="slides">
+
+        <section class="slide">
+	        <h2>what the heck is <a href="https://github.com/Esri/LERC">LERC</a>?</h2>
+		</section>
+
+		<section class="slide">
+	        <h2><a href='https://developers.arcgis.com/javascript/3/samples/layers_raster/'>demo
+            </a></h2>
+		</section>
+
+		<section class="slide">
+	        <h2>four dimensional raw <a href='https://sampleserver6.arcgisonline.com/arcgis/rest/services/ScientificData/SeaTemperature/ImageServer/exportImage?bbox=-25359971.496336058,-8688138.38300402,25359971.496336058,8688138.38300402&bboxSR=3857&size=1296,444&imageSR=3857&time=&format=jpgpng&pixelType=F32&noData=&noDataInterpretation=esriNoDataMatchAny&interpolation= RSP_BilinearInterpolation&compression=0.01&compressionQuality=&bandIds=&mosaicRule={"ascending":false,"multidimensionalDefinition":[{"variableName":"water_temp","dimensionName":"StdZ","values":[0],"isSlice":true},{"variableName":"water_temp","dimensionName":"StdTime","values":[1396828800000],"isSlice":true}]}&renderingRule={"rasterFunction":"None"}&f=html'>request
+            </a></h2>
+		</section>
+
+        <section class="slide">
+		    <h2>github.com/Esri/LERC</h2>
+		</section>
+
+		<section class="slide">
+	        <h2><a href='https://github.com/jgravois/lerc-leaflet'>demo
+            </a></h2>
+		</section>
+
+		<section class="slide">
+	        <h2>where else can you find it?</h2>
+	         <h3>NASA's gdal <a href="https://github.com/nasa-gibs/mrf">mrf driver</a></h3>
+		</section>
+
+		<section class="slide">
+	        <h2>thanks!</h2>
+		</section>
+
+	</div>
+</div>
+
+		<script src="../fresher-template/lib/js/head.min.js"></script>
+		<script src="../fresher-template/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../fresher-template/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+	</body>
+</html>
+
+<!--
+https://esri.box.com/shared/static/x4ncpn6lcnu5f91x5yoryvtpkuv9iibr.mp4
+-->

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alternate Fueling Stations</title>
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+    <!-- Load Leaflet from CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!-- Load PruneCluster from src -->
+    <link rel="stylesheet" href="src/PruneCluster/LeafletStyleSheet.css">
+
+    <!-- App Styles -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header id=header>
+      <h1>Alternate Fueling Stations</h1>
+    </header>
+
+    <section id="map"></section>
+
+    <!--
+      <template> is a new HTML element that can be used to create inactive sections of DOM for later use
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
+    -->
+    <template id="popupTemplate">
+      <article>
+        <h3>{Station_Na}</h3>
+
+        <dl>
+          <dt>Fuel Type:</dt>
+          <dd>{Fuel_Type}</dd>
+
+          <dt>Address:</dt>
+          <dd>
+            <address>
+            {Station_Na}<br>
+            {Street_Add}<br>
+            {City}, {State}, {ZIP}
+            </address>
+          </dd>
+
+          <dt>Phone:</dt>
+          <dd><a href="tel:{Station_Ph}">{Station_Ph}</a></dd>
+
+          <dt>Open to:</dt>
+          <dd>{Groups_Wit}</dd>
+
+          <dt>Hours:</dt>
+          <dd>{Access_Day}</dd>
+        </dl>
+
+        <button class="directions" data-name="{Station_Na}" data-lat="{Latitude}" data-lng="{Longitude}">Get Directions</button>
+      </article>
+    </template>
+
+    <!-- Load Our App -->
+    <script src="bundle.js"></script>
+  </body>
+</html>
