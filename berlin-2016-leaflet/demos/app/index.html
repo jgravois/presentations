@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 
     <!-- Load Leaflet from CDN-->
-    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
 
-    <!-- Load PruneCluster from RawGit -->
+    <!-- Load PruneCluster from src -->
     <link rel="stylesheet" href="src/PruneCluster/LeafletStyleSheet.css">
 
     <!-- App Styles -->
@@ -24,7 +24,7 @@
     <section id="map"></section>
 
     <!--
-      <template> is a new HTML element that  can use used to create inactive sections of DOM for later use
+      <template> is a new HTML element that can be used to create inactive sections of DOM for later use
       https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
     -->
     <template id="popupTemplate">
@@ -60,6 +60,5 @@
 
     <!-- Load Our App -->
     <script src="bundle.js"></script>
-
   </body>
 </html>

@@ -9,7 +9,7 @@ export var Directions = Task.extend({
   // pass through whatever value user passed to the service
   setters: {
     unit: 'directionsLengthUnits',
-    diectionStyle: 'directionsStyleName',
+    directionStyle: 'directionsStyleName',
     directionsOutput: 'directionsOutputType',
     returnRoutes: 'returnRoutes',
     returnStops: 'returnStops',
@@ -83,7 +83,7 @@ export var Directions = Task.extend({
   }
 });
 
-// most Leaflet and Esri Leaflet classes are instanciated through a "factory function"
+// most Leaflet and Esri Leaflet classes are instantiated through a "factory function"
 // that will create a new object. As a rule-of-thumb use the lowercased "factory function"
 // to create new instances and the uppercased class name to extend classes.
 export function directions (options) {

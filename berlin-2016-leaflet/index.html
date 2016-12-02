@@ -42,17 +42,14 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section class="slide" data-background="../fresher-template/img/Berlin_title2016.png" data-background-size="cover">
-					<h1 style="font-size:3rem; margin: 6rem auto 0; max-width: 85%">Esri Leaflet: Advanced Topics</h1>
+			<section class="slide" data-background="../fresher-template/img/Berlin_title2016.png" data-background-size="cover">
+					<!--h1 style="font-size:3rem; margin: 6rem auto 0; max-width: 85%"></h1-->
+					<h2>Esri Leaflet: Advanced Topics</h2>
 					<p>John Gravois / <a href="http://twitter.com/geogangster">@geogangster</a></p>
 	        <p><a href='https://johngravois.com/presentations/berlin-2016-leaflet/'>http://bit.ly/2gs0leH</a></p>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-		      <h3>whats on the docket?</h3>
-		    </section>
-
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <!-- &amp;<br> -->
 		      <h3>build better apps</h3>
 					<h3>extend the project</h3>
@@ -60,21 +57,36 @@
 					<!--stats?-->
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-		      <h2>whats better than sliced bread?</h2>
-					<h3 class="fragment">sourcemaps!</h3>
-
-					<aside class="notes">
-						just because its open source doesn't mean we ship legible code
-          </aside>
-
+		    <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <!-- &amp;<br> -->
+		      <h2>whats new? leaflet <a href="http://leafletjs.com/2016/11/21/leaflet-1.0.2.html">1.0.2</a>!</h2>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		    <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <!-- &amp;<br> -->
+		      <h2>new plugins</h2>
+		      <h3><a href="http://esri.github.io/esri-leaflet/examples/vector-basemap.html">vector tiles</a>! <a href="https://github.com/ynunokawa/L.esri.WebMap">webmaps</a>! </h3>
+		    </section>
+
+		    <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <!-- &amp;<br> -->
+		      <h2>ES6 modules + rollup</h2>
+		      <h3>like <a href="https://d3js.org/">d3</a></h3>
+		    </section>
+
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2>debug built code<h2>
+		      <h3>with sourcemaps</h3>
+
+		      <aside class="notes">
+		        just because its open source doesn't mean we ship legible code
+              </aside>
+		    </section>
+
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 					<h2>what we used to do</h2>
 					<pre><code class="hljs" data-trim contenteditable>
 <!-- Load Esri Leaflet from source-->
-
 <script src="../src/EsriLeaflet.js"></script>
 <script src="../src/Request.js"></script>
 <script src="../src/Util.js"></script>
@@ -84,85 +96,83 @@
 <script src="../src/Services/FeatureLayerService.js"></script>
 <script src="../src/Services/ImageService.js"></script>
 <script src="../src/Services/MapService.js"></script>
-
-<script src="../src/Layers/FeatureLayer/FeatureGrid.js"></script>
-<script src="../src/Layers/FeatureLayer/FeatureManager.js"></script>
-<script src="../src/Layers/FeatureLayer/FeatureLayer.js"></script>
-...
 					</code></pre>
 
-					<aside class="notes">
+			<aside class="notes">
 						you could only debug in the dev environment<br>
 						lots of script tags
-          </aside>
-				</section>
+            </aside>
+			</section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 					<h2>what we do now</h2>
 					<pre><code class="hljs" data-trim contenteditable>
 <!-- Load compiled Esri Leaflet -->
-
-<script src="../dist/esri-leaflet.js"></script>
-// with the help from our trusty friend 'esri-leaflet.js.map'...
+<script src="../dist/esri-leaflet-debug.js"></script>
+// with help from 'esri-leaflet.js.map'...
 </code></pre>
-				</section>
+			</section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 					<h2>just like that, we're <a href='https://esri.github.io/esri-leaflet/examples/index.html'>debugging!</a></h2>
 					<h4>(demo)</h4>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		    <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h2><a href="https://github.com/Esri/esri-leaflet-browserify-example">browserify?</a> <a href="https://github.com/Esri/esri-leaflet-webpack-example">webpack?</a> <a href="https://github.com/Esri/esri-leaflet-bundler">rollup?</a></h2>
+					<h3>sure!</h3>
+		    </section>
+
+		    <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		      <h3>speaking of webpack... <a href="https://github.com/socialradar/react-esri-map/issues/1#issuecomment-239581106">react?</a></h3>
+					<h4>of course!</h4>
+		    </section>
+
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>want to go deeper?</h2>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h3>1. fork</h3>
 					<h3>2. clone</h3>
 					<h3>3. npm install</h3>
 
-					<aside class="notes">
+			<aside class="notes">
 						now you only have to set up the dev environment to make **changes** to the source code
-          </aside>
-
+            </aside>
 		    </section>
 
-				<section class="slide" data-background="./img/fork.png" data-background-size="50%">
+			<section class="slide" data-background="./img/fork.png" data-background-size="40%">
 		    </section>
 
-				<section class="slide" data-background="./img/npmi.png" data-background-size="cover">
+			<section class="slide" data-background="./img/npmi.png" data-background-size="cover">
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>npm start</h2>
 					<h3>(demo)</h3>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>its fun (and safe) to just start breaking things</h2>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-		      <h2>who ever knew tests could be fun?</h2>
-					<h3>(demo)</h3>
-		    </section>
-
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+		    <section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h3>and unlike the real world...</h3>
 					<h3 class="fragment">its <i>not creepy</i> to lurk</h3>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-					<h2>its not just the sourcecode</h2>
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+					<h2>its not just the source code</h2>
 					<h3>the <a href="https://github.com/Esri/esri-leaflet/pull/745"><i>process</i></a> is open</h3>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2><a href="./demos/app/">demo time!</a></h2>
 					<!--p>might tweak this to call map.locate() in the console.</p-->
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h3>too many contribution opportunities to list</h3>
 					<div class="fragment">
 						<p>just kidding</p>
@@ -171,26 +181,23 @@
 							<li>proofreading doc</li>
 							<li>asking for help/helping others</li>
 							<li>fixing bugs/adding features</li>
-							<li>vector tiles/other plugins</li>
+							<li>new plugins</li>
 						</ul>
 				</div>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-		      <h2>we're nice!</h2>
-		    </section>
-
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
-					<blockquote class="twitter-tweet" data-lang="en" align='center'><p lang="en" dir="ltr">hoping to get help from someone new to open source with a small Esri Leaflet bug. <a href="https://t.co/0yNGhW1XXR">https://t.co/0yNGhW1XXR</a>. don&#39;t be shy! <a href="https://twitter.com/yourfirstpr">@yourfirstpr</a></p>&mdash; john gravois (@geogangster) <a href="https://twitter.com/geogangster/status/648589051465850880">September 28, 2015</a></blockquote>
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+					 <h2>we're nice!</h2>
+					 <blockquote class="twitter-tweet" data-lang="en" align='center'><p lang="en" dir="ltr">hoping to get help from someone new to open source with a small Esri Leaflet bug. <a href="https://t.co/0yNGhW1XXR">https://t.co/0yNGhW1XXR</a>. don&#39;t be shy! <a href="https://twitter.com/yourfirstpr">@yourfirstpr</a></p>&mdash; john gravois (@geogangster) <a href="https://twitter.com/geogangster/status/648589051465850880">September 28, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 		    </section>
 
-				<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
+			<section class="slide" data-background="../fresher-template/img/bg-1.png" data-background-size="cover">
 		      <h2>if you are too...</h2>
 					<h3>welcome to the team!</h3>
 		    </section>
 
-				<section data-background="../fresher-template/img/end.png" data-background-size="cover"></section>
+			<section data-background="../fresher-template/img/end.png" data-background-size="cover"></section>
 
 			</div>
 
