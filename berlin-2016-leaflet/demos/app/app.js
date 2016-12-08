@@ -4,10 +4,10 @@ import directions from './src/DirectionsTask.js';
 import { basemapLayer } from 'esri-leaflet';
 
 // create a map with some rough US bounds
-var map = L.map("map").fitBounds([ [20.30, -174.63], [52.32, -17.40] ]);
+var map = L.map("map").fitBounds([ [46.3, -101.1], [50, -90.5] ]);
 
 // locate us on the map
-map.locate({setView: true, maxZoom: 14});
+// map.locate({setView: true, maxZoom: 14});
 
 // create our tile layers
 var tiles = basemapLayer("DarkGray").addTo(map);
@@ -85,11 +85,11 @@ document.body.addEventListener('click', function (e) {
     var name  = button.dataset.name;
 
     // start locating the user
-    map.locate();
+    // map.locate();
 
     // once a location is found get and render the directions.
-    map.once('locationfound', function (e) {
-      var start = e.latlng;
+    // map.once('locationfound', function (e) {
+      var start = L.latLng(49.895, -97.138); // e.latlng;
       var end = L.latLng(lat, lng);
       var bounds = L.latLngBounds(start, end).pad(0.25);
       map.fitBounds(bounds);
@@ -100,7 +100,7 @@ document.body.addEventListener('click', function (e) {
       })
 
       // start at the users location
-      .start(start, 'Your Location')
+      .start(start, 'Winnepeg')
 
       // end at the stop
       .end(end, name)
@@ -128,6 +128,6 @@ document.body.addEventListener('click', function (e) {
         // close the popup so we can see the route
         map.closePopup();
       });
-    });
+    // });
   }
 });
