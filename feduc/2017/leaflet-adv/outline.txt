@@ -1,0 +1,16 @@
+<!--
+// talk about L.Util.bind
+
+L.esri.Service
+L.esri.Task
+
+L.esri.Layers
+
+L.esri.request
+L.esri.Util
+
+demos:
+LERC leaflet
+
+open process/ were nice!
+-->
