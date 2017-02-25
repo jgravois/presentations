@@ -1,0 +1,56 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Cedar Quickstart</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!-- Load D3 and vega -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.1/vega.min.js"></script>
+
+  <!-- Load Cedar -->
+  <script type="text/javascript" src="https://unpkg.com/arcgis-cedar@0.8.2/dist/cedar.js"></script>
+
+</head>
+<body>
+
+<div class="row">
+  <div class="col-lg-12" id="chart"></div>
+</div>
+
+<script>
+
+var chart = new Cedar({"type":"bar"});
+
+var dataset = {
+  "url":"https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/It's_a_Tornado_Map/FeatureServer/0",
+  "query": {
+    "groupByFieldsForStatistics": "EXTRACT(YEAR from Date)",
+    "outStatistics": [{
+      "statisticType": "sum",
+      "onStatisticField": "FATALITIES",
+      "outStatisticFieldName": "FATALITIES_SUM"
+    }]
+  },
+  "mappings":{
+    "x": {"field":"EXPR_1", "label": "Date"},
+    "y": {"field":"FATALITIES_SUM", "label": "Fatalities"},
+    "sort":"EXTRACT(YEAR from Date)"
+  }
+};
+
+chart.tooltip = {
+  "title": "{EXPR_1}",
+  "content": "{FATALITIES_SUM} fatalities"
+};
+
+chart.dataset = dataset;
+//chart.dataset.mappings.sort = "DATE";
+chart.show({
+  elementId: "#chart",
+  autolabels: true
+});
+
+</script>
+</body>
+</html>
