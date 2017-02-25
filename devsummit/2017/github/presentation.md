@@ -2,7 +2,7 @@
 brief intro - john?
 
 meat:
-1. pat finds https://github.com/jgravois/sandbox
+1. pat finds a [cool project](https://github.com/jgravois/sandbox)
 
 points to drive home:
 1. what is a clone
@@ -34,9 +34,9 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ## How is this going to work?
 
-1. ~~code~~
-2. A brief introduction
-3. _In situ_ demo
+1. ~~`code`~~
+2. A *brief* introduction
+3. **In situ** demo
 
 ---
 
