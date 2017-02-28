@@ -1,8 +1,8 @@
-<!-- .slide: data-background="/presentations/template2/images/Slide1.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-title.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
-### _Getting started with_
+### _Building apps with_
 <h1>Esri Leaflet</h1>
 
 ###### John Gravois (@geogangster)
@@ -15,7 +15,7 @@ I'm the primary maintainer of Esri Leaflet, so you're in the right place.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## Agenda
 
@@ -29,7 +29,7 @@ I'm the primary maintainer of Esri Leaflet, so you're in the right place.
 ---
 
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## what is [`Leaflet`](https://leafletjs.com)?
 
@@ -48,7 +48,7 @@ small, stable, popular
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## designed for web developers
 
@@ -80,7 +80,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## How small _is_ Leaflet?
 
@@ -90,7 +90,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### so small it doesn't help<br>you fetch .geojson files
 
@@ -123,7 +123,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### `Leaflet` has a *big* plugin community
 
@@ -132,14 +132,14 @@ things to note:
 ---
 
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### [`Esri Leaflet`](https://esri.github.io/esri-leaflet) is *ours*
 it makes working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
 
 ## Goals
 
@@ -148,13 +148,13 @@ it makes working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
 
 ## Lets take a tour!
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.tileLayer`](http://leafletjs.com/reference-1.0.3.html#tilelayer)
 
@@ -193,7 +193,7 @@ requires manual attribution and knowledge of tiling scheme
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.basemapLayer`](http://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html)
 
@@ -233,7 +233,7 @@ map credits update on pan/zoom<br>
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
 
 `<segway>`
 
@@ -243,7 +243,7 @@ map credits update on pan/zoom<br>
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.Marker`](), [`L.Circle`](), [`L.Polygon`]()
 
@@ -281,7 +281,7 @@ map credits update on pan/zoom<br>
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.Popup`]()
 
@@ -311,7 +311,7 @@ polygon.bindPopup("I am a polygon.");
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.GeoJSON`]()
 
@@ -349,14 +349,14 @@ islands.bindPopup(function (layer) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
 
 ## `Esri Leaflet`
 ### builds on the fundamentals
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.FeatureLayer`]()
 
@@ -384,7 +384,7 @@ gridded spatial queries > GeoJSON
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.FeatureLayer`]()
 
@@ -428,7 +428,7 @@ spatial/sql filtering, custom styling
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.tiledMapLayer`]()
 
@@ -447,7 +447,7 @@ L.esri.tiledMapLayer({ url: '//server.com/BasemapCached/MapServer' });
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.dynamicMapLayer`]()
 
@@ -466,7 +466,7 @@ L.esri.dynamicMapLayer({ url: '//server.com/Basemap/MapServer' });
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.dynamicMapLayer`]()
 
@@ -499,7 +499,7 @@ dynLayer.bindPopup(function (error, featureCollection) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## [`L.esri.imageMapLayer`]()
 
@@ -540,7 +540,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### more `Esri Leaflet` [plugins](http://esri.github.io/esri-leaflet/plugins)
 
@@ -552,7 +552,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### The community has too!
 
@@ -562,7 +562,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### Its a group effort
 
@@ -581,7 +581,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### reasons some people like `Esri Leaflet`
 
@@ -592,7 +592,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### Reasons you'd choose the ArcGIS API for JavaScript
 
@@ -612,7 +612,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### for the path less travelled
 
@@ -629,7 +629,7 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### the community is here to help
 
@@ -641,13 +641,13 @@ custom Raster Functions are also supported
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 _please_ fill out a session survey
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
 
 idea, question, issue, or success story?
 
@@ -655,4 +655,4 @@ idea, question, issue, or success story?
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide6.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-end.png" -->

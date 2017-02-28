@@ -17,7 +17,7 @@ brief outro (show that a PR highlights branches, diff, discussion) - john
 tools/resources
 -->
 
-<!-- .slide: data-background="/presentations/template2/images/Slide1.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-title.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
@@ -30,7 +30,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## How is this going to work?
 
@@ -40,7 +40,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## what _is_ GitHub?
 
@@ -50,7 +50,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## what _is_ Git?
 
@@ -62,7 +62,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ### [esri/esri-leaflet](https://esri.github.io/esri-leaflet)
 
@@ -74,7 +74,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## resources
 
@@ -82,7 +82,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 idea, question, issue, or success story?
 
@@ -90,10 +90,10 @@ idea, question, issue, or success story?
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
 
 _please_ fill out a session survey
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide6.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-end.png" -->
