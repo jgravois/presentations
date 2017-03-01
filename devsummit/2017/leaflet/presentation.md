@@ -17,6 +17,13 @@ I'm the primary maintainer of Esri Leaflet, so you're in the right place.
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
+<!-- community supported -->
+## Disclaimer* 
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
 ## Agenda
 
 1. Background

@@ -10,6 +10,7 @@ points to drive home:
 3. what is a branch
 4. what is a commit
 5. files on disk change when you check out a different branch
+6. you can switch back and forth between terminal git and a UI
 
 you can commit directly on the website
 
@@ -46,7 +47,13 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 (hint: it ends with `.com`)
 
-<small>file hosting, change archiving, communication tool</small>
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+* file hosting
+* change archiving
+* communication tool
 
 ---
 
@@ -56,7 +63,7 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 **distributed** version control
 
-(similar to replicated SDE versioning)
+<small>similar to replicated SDE versioning</small>
 
 <!-- need screenshot -->
 
@@ -64,13 +71,35 @@ John Gravois (@geogangster), Pat Arlt (@patrickarlt), Esri
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### [esri/esri-leaflet](https://esri.github.io/esri-leaflet)
+## lets get to it.
 
-<div class="twos">
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="https://esri.github.io/esri-leaflet"></iframe>
-  </div>
-</div>
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## pat finds a [cool project](https://github.com/jgravois/sandbox)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## pat creates his own *fork* of the project
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## pat clones the repository
+
+to get a copy on his own computer
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## pat creates a branch and makes a commit
+
+to save his own work
 
 ---
 
