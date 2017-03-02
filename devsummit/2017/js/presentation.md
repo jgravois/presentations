@@ -1,17 +1,30 @@
+<!-- outline
+
+JavaScript Basics
+Local Dev Environment, Install node, https-server, start a local server serving a basic html page and an external script (5 minutes, jg)
+
+Variables and Objects (5 minutes. jg)
+Functions (5 minutes, jg)
+Closures and `this` (5 minutes, jg)
+Async (5 minutes, pat)
+Modules (5 minutes, pat)
+The DOM and Browser Development (5 minutes, jg)
+Debugging (5 minutes, jg)
+Walk through a few JS API samples (5 minutes, jg)
+The JavaScript Ecosystem (5 minutes, pat)
+A note about ES 2015 (pat)
+“Opinions” About JavaScript (5 minutes, pat)
+Resources to Keep Learning (2 minutes, jg)
+
+-->
+
 <!-- .slide: data-background="/presentations/template2/images/2017-title.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
-### _Getting started with_
-<h1>Esri Leaflet</h1>
-
-###### John Gravois (@geogangster)
-
-<aside class="notes">
-
-I'm the primary maintainer of Esri Leaflet, so you're in the right place.
-
-</aside>
+# JavaScript <small> *for Geographers*</small>
+<br>
+John (@geogangster) & Pat (@patrickarlt), Esri
 
 ---
 
@@ -139,7 +152,7 @@ it makes working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## Goals
 
@@ -148,7 +161,7 @@ it makes working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## Lets take a tour!
 
@@ -233,7 +246,7 @@ map credits update on pan/zoom<br>
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 `<segway>`
 
@@ -349,7 +362,7 @@ islands.bindPopup(function (layer) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 ## `Esri Leaflet`
 ### builds on the fundamentals
@@ -564,85 +577,6 @@ custom Raster Functions are also supported
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### Its a group effort
-
-* open source
-* community supported
-* no roadmap, no product lifecycle
-* 50+ contributors (and counting!)
-
-<aside class="notes">
-  contributions from
-  USGS, State Dept, Netflix, Stanford University, City of Philadelphia, Utah AGRC
-
-  apps from
-  Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### reasons some people like `Esri Leaflet`
-
-* oss mandate
-* previous experience
-* simpler toolset
-* easy integration with build systems*
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### Reasons you'd choose the ArcGIS API for JavaScript
-
-* flagship product
-* can be cut lean
-* unlocks the _whole_ Platform
-* UI components are built in
-* builders/templates
-* support for custom projections*
-
-<aside class="notes">
-  supports Arcade
-  UI components
-  custom routing services
-  print services
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### for the path less travelled
-
-* we build `Esri Leaflet` in our spare time
-* only unlocks _some_ of the platform
-* almost no UI components
-* mix and match with other plugins
-* beware of scope creep
-
-<aside class="notes">
-  other plugins need to be evaluated individually
-  to see if they are any good and are up to date
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### the community is here to help
-
-* GitHub
-* Geonet
-* Stack Exchange
-* Slack (spatial community)
-* Technical Support
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
 _please_ fill out a session survey
 
 ---
@@ -655,4 +589,4 @@ idea, question, issue, or success story?
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide6.png" -->
+<!-- .slide: data-background="/presentations/template2/images/2017-end.png" -->

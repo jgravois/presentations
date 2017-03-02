@@ -23,11 +23,11 @@
       }
     }
 
-    var islands = L.geoJSON(data)
+    var islands = L.geoJSON(data);
 
-    islands.bindPopup(function (layer) {
-        return layer.feature.properties.name;
-    }).addTo(map);
+    islands.bindPopup((layer) => 
+       layer.feature.properties.name
+    ).addTo(map);
 
   }
   </script>

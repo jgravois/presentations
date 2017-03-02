@@ -11,7 +11,6 @@
     var map = L.map("mapDiv").setView([-25, -65], 3);
     var dynLayer = L.esri.dynamicMapLayer({
       url: 'http://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer',
-      layers: [0,1],
       layerDefs: {0:'POP_RANK < 2'}
     }).addTo(map);
 

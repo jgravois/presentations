@@ -2,23 +2,8 @@
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
-### _Building apps with_
-<h1>Esri Leaflet</h1>
-
-###### John Gravois (@geogangster)
-
-<aside class="notes">
-
-I'm the primary maintainer of Esri Leaflet, so you're in the right place.
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-<!-- community supported -->
-## Disclaimer* 
+# <small>*building apps with*</small> Esri Leaflet
+John (@geogangster), Esri
 
 ---
 
@@ -26,15 +11,36 @@ I'm the primary maintainer of Esri Leaflet, so you're in the right place.
 
 ## Agenda
 
-1. Background
-  - What is Leaflet?
-  - Esri Leaflet?
-  - Why?
-2. Jungle boat cruise
-3. How does the project stack up?
+1. Fundamentals
+2. Whats new!
+3. Jungle boat cruise
 
 ---
 
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
+
+## Disclaimer* 
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+### Its a group effort
+
+* open source, community supported
+* no roadmap, no product lifecycle
+* 50+ contributors (and counting!)
+
+<aside class="notes">
+  contributions from
+  USGS, State Dept, Netflix, Stanford University, City of Philadelphia, Utah AGRC
+
+  apps from
+  Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...
+</aside>
+
+---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
@@ -77,7 +83,7 @@ small, stable, popular
   </div>
 </div>
 
-Y,X coordinates are passed to the map<br>not X,Y
+coordinates are passed in Y,X order
 
 <aside class="notes">
 
@@ -121,7 +127,7 @@ things to note:
   </div>
 </div>
 
-an extra plugin just to load a file!
+an extra plugin *just to load a file*!
 <aside class="notes">
 
 things to note:
@@ -132,7 +138,7 @@ things to note:
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### `Leaflet` has a *big* plugin community
+### luckily `Leaflet` has a *big* plugin community
 
 ![happy](https://techtalk.vn/wp-content/uploads/2016/06/Screen-Shot-2015-12-08-at-5.44.32-PM-644x320.png)
 
@@ -141,8 +147,8 @@ things to note:
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### [`Esri Leaflet`](https://esri.github.io/esri-leaflet) is *ours*
-it makes working with the most<br>popular ArcGIS Services a **pleasure**
+### [`Esri Leaflet`](https://esri.github.io/esri-leaflet) is *our* plugin(s)
+to make working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
@@ -151,7 +157,7 @@ it makes working with the most<br>popular ArcGIS Services a **pleasure**
 ## Goals
 
 1. sensible defaults
-2. keep things simple
+2. keep it simple
 
 ---
 
@@ -169,8 +175,8 @@ it makes working with the most<br>popular ArcGIS Services a **pleasure**
   <div class="snippet">
   <pre><code class="lang-js hljs javascript">
 
-  // leaflet.css
-  // leaflet.js
+  // /lib/leaflet.css
+  // /lib/leaflet.js
 
   var url = '//{s}.tile.osm.org/{z}/{x}/{y}.png';
 
@@ -190,14 +196,6 @@ it makes working with the most<br>popular ArcGIS Services a **pleasure**
 
 requires manual attribution and knowledge of tiling scheme
 
-<aside class="notes">
-
- subdomains
- tile scheme
- static attribution
-
-</aside>
-
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
@@ -208,10 +206,10 @@ requires manual attribution and knowledge of tiling scheme
   <div class="snippet">
   <pre><code class="lang-js hljs javascript">
 
-  // leaflet.css
-  // leaflet.js
+  // /lib/leaflet.css
+  // /lib/leaflet.js
 
-  // <script src="/lib/esri-leaflet.js"></script>
+  // /lib/esri-leaflet.js
 
   L.esri.basemapLayer('Streets').addTo(map);
 
@@ -228,15 +226,7 @@ requires manual attribution and knowledge of tiling scheme
 </div>
 
 map credits update on pan/zoom<br>
-`L.TileLayer` properties, methods and events are honored
-
-<aside class="notes">
-
- one liner
- dynamic attribution
-
-
-</aside>
+`L.TileLayer` properties, methods and events are inherited
 
 ---
 
@@ -247,74 +237,6 @@ map credits update on pan/zoom<br>
 ## some `Leaflet` fundamentals
 
 `</segway>`
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.Marker`](), [`L.Circle`](), [`L.Polygon`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-  var marker = L.marker([51.5, -0.09]).addTo(map);
-
-  var circle = L.circle([51.508, -0.11], {
-      color: 'red',
-      fillColor: '#f03',
-      fillOpacity: 0.5,
-      radius: 500
-  }).addTo(map);
-
-  var polygon = L.polygon([
-      [51.509, -0.08],
-      [51.503, -0.06],
-      [51.51, -0.047]
-  ]).addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/marker.html"></iframe>
-  </div>
-</div>
-
-<aside class="notes">
-
- extends TileLayer
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.Popup`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-// more method chaining
-marker
-  .bindPopup("<b>Hi!</b><br>I am a popup.")
-  .openPopup();
-
-circle.bindPopup("I am a circle.");
-
-polygon.bindPopup("I am a polygon.");
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/popup.html"></iframe>
-  </div>
-</div>
-
-<aside class="notes">
-
-</aside>
 
 ---
 
@@ -339,9 +261,9 @@ var data = {
 
 var islands = L.geoJSON(data)
 
-islands.bindPopup(function (layer) {
-    return layer.feature.properties.name;
-}).addTo(map);
+islands.bindPopup((layer) => 
+  layer.feature.properties.name
+).addTo(map);
 
 </code></pre>
   </div>
@@ -371,52 +293,13 @@ islands.bindPopup(function (layer) {
   <div class="snippet">
   <pre><code class="lang-js hljs javascript">
 var buses = L.esri.featureLayer({
-    url: '//website.com/../services/Buses/MapServer/0'
-  }).addTo(map);
-
-buses.bindPopup('I am a popup!');
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/fl.html"></iframe>
-  </div>
-</div>
-
-gridded spatial queries > GeoJSON
-
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.FeatureLayer`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-// lets get fancy
-var busIcon = L.icon({
-    iconUrl: '/img/bus-stop.png',
-    iconRetinaUrl: '/img/bus-stop@2x.png',
+    url: '../services/Buses/MapServer/0',
+    where: "direction='North'"
   })
 
-var buses = L.esri.featureLayer({
-    url: '//website.com/../services/Buses/MapServer/0',
-    where: "direction='North'",
-    pointToLayer: function (geojson, latlng) {
-      return L.marker(latlng, {
-        icon: busIcon
-      });
-    },
-  })
-
-buses.bindPopup(function (layer) {
-    return layer.feature.properties.stop_name;
-  });
+buses.bindPopup((layer) => 
+    layer.feature.properties.stop_name;
+);
 
 buses.addTo(map);
 
@@ -427,11 +310,7 @@ buses.addTo(map);
   </div>
 </div>
 
-spatial/sql filtering, custom styling
-
-<aside class="notes">
-  bindPopup isn't triggered until a feature is clicked
-</aside>
+spatial/sql filtering, popups bound when feature is clicked
 
 ---
 
@@ -459,38 +338,16 @@ L.esri.tiledMapLayer({ url: '//server.com/BasemapCached/MapServer' });
 ## [`L.esri.dynamicMapLayer`]()
 
 <div class="twos">
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/dynamic.html"></iframe>
-  </div>
-</div>
-
-```js
-L.esri.dynamicMapLayer({ url: '//server.com/Basemap/MapServer' });
-```
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.dynamicMapLayer`]()
-
-<div class="twos">
   <div class="snippet">
   <pre><code class="lang-js hljs javascript">
 
-// or get fancy
-
 var dynLayer = L.esri.dynamicMapLayer({
     url: '../services/SampleWorldCities/MapServer',
-    layers: [0,1],
-    layerDefs: {0:'POP_RANK < 2'}
+    layerDefs: { 0:'POP_RANK < 2' }
   }).addTo(map);
 
-dynLayer.bindPopup(function (error, featureCollection) {
-    return featureCollection.features[0].properties.NAME;
+dynLayer.bindPopup(function (error, collection) {
+    return collection.features[0].properties.NAME;
 });
 
 </code></pre>
@@ -540,10 +397,7 @@ L.esri.imageMapLayer({
   </div>
 </div>
 
-custom Raster Functions are also supported
-<aside class="notes">
-
-</aside>
+custom raster functions are supported
 
 ---
 
@@ -551,11 +405,11 @@ custom Raster Functions are also supported
 
 ### more `Esri Leaflet` [plugins](http://esri.github.io/esri-leaflet/plugins)
 
-* geocoding
-* vector basemaps
+* address search
 * server side renderers
-* using geoprocessing services
-* driving [directions](http://github.com/jgravois/lrm-esri)
+* geoprocessing services
+* vector basemaps*
+* driving [directions](http://github.com/jgravois/lrm-esri)*
 
 ---
 
@@ -563,76 +417,394 @@ custom Raster Functions are also supported
 
 ### The community has too!
 
-* displaying ArcGIS Online [webmaps](http://esri.github.io/esri-leaflet/plugins)
-* [Stream Layers](http://esri.github.io/esri-leaflet/plugins) (from GeoEvent)
-* creating Legends
+* ArcGIS Online [web maps](http://esri.github.io/esri-leaflet/plugins)
+* [Stream Layers](http://esri.github.io/esri-leaflet/plugins) from GeoEvent
+* Legends
 
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### Its a group effort
+## whats new with [Leaflet](https://leafletjs.com)? [`v1.0.3`](http://leafletjs.com/2017/01/23/leaflet-1.0.3.html)!
 
-* open source
-* community supported
-* no roadmap, no product lifecycle
-* 50+ contributors (and counting!)
+bugfixes for browsers with `PointerEvents`
+
+   <aside class="notes">
+
+   code is mature, patch release cycle is faster now.
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## what about us?
+
+* [`L.esri.webMap`](https://github.com/ynunokawa/L.esri.WebMap)
+
+* [`L.esri.vector`](https://github.com/Esri/esri-leaflet-vector)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## `L.esri.webMap`
+
+<div class="twos">
+  <div class="snippet">
+  <pre><code class="lang-js hljs javascript">
+  var id = '13750b8b548d48bfa99a9731f2a93ba0';
+
+  var webmap = L.esri.webMap(id, { 
+      map: L.map("mapDiv") 
+  });
+
+</code></pre>
+  </div>
+  <div class="snippet-preview">
+    <iframe id="frame-2d-parallel" data-src="./snippets/webmap.html"></iframe>
+  </div>
+</div>
 
 <aside class="notes">
-  contributions from
-  USGS, State Dept, Netflix, Stanford University, City of Philadelphia, Utah AGRC
 
-  apps from
-  Stanford University, Forest Service, Ride Amigos, Mapillary, Storymaps team...
+things to note:
+  WGS84 projection is assumed. map is web mercator
 </aside>
 
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### reasons some people like `Esri Leaflet`
+## [`L.esri.Vector`](https://github.com/esri/esri-leaflet-vector)
 
-* oss mandate
-* previous experience
-* simpler toolset
-* easy integration with build systems*
+<div class="twos">
+  <div class="snippet">
+  </div>
+  <div class="snippet-preview">
+    <iframe id="frame-2d-parallel" data-src="./snippets/vector-basemap.html"></iframe>
+  </div>
+</div>
 
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### Reasons you'd choose the ArcGIS API for JavaScript
-
-* flagship product
-* can be cut lean
-* unlocks the _whole_ Platform
-* UI components are built in
-* builders/templates
-* support for custom projections*
-
+```js
+L.esri.Vector.basemap('Newspaper').addTo(map);
+```
 <aside class="notes">
-  supports Arcade
-  UI components
-  custom routing services
-  print services
 </aside>
 
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### for the path less travelled
+## bug fixes / improvements
 
-* we build `Esri Leaflet` in our spare time
-* only unlocks _some_ of the platform
-* almost no UI components
-* mix and match with other plugins
-* beware of scope creep
+* ~~Powered by Esri~~ logo
+* geosearch UX
+* MultiPolygon GeoJSON queries
+* base64 images
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## more modular dependencies
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## [npmjs.com/packages/arcgis-to-geojson-utils](https://npmjs.com/packages/arcgis-to-geojson-utils)
+
+```js
+// convert ArcGIS JSON to GeoJSON
+var geojson = arcgisToGeoJSON({
+    "x":-122.6764,
+    "y":45.5165,
+    "spatialReference": {
+      "wkid": 4326
+    }
+  });
+
+// GeoJSON to ArcGIS JSON
+var arcgis = geojsonToArcGIS({
+  "type": "Point",
+  "coordinates": [45.5165, -122.6764]
+});
+```
+ES6 (shipped as a UMD)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## [npmjs.com/packages/leaflet-virtual-grid](https://npmjs.com/packages/leaflet-virtual-grid)
+
+A DOM-less tile layer that can be used<br>to query APIs with bounding boxes or center/radius.
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+```js
+var vg = new VirtualGrid();
+
+vg.on("cellenter", function(e){
+  console.log(e.type, e); // listen for when cells reenter the current view
+});
+```
+
+![vector-grid](https://github.com/patrickarlt/leaflet-virtual-grid/raw/master/example.jpg)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## [npmjs.com/packages/tiny-binary-search](https://npmjs.com/packages/tiny-binary-search)
+
+```js
+npm install tiny-binary-search
+
+var index = new BinarySearchIndex([
+  { value: 0, id: "A" },
+  { value: 1, id: "B" },
+  { value: 2, id: "C" },
+  { value: 3, id: "D" }
+]);
+
+// get the item with a value of 5
+index.query(2);
+// get all items with values between 1 and 3 (inclusive)
+index.between(1, 3);
+
+// add an array of items to the index
+index.bulkAdd([
+  { value: 1.5, id: "BB" },
+  { value: 2.5, id: "CC" },
+]);
+```
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## Whats really new?
+
+```js
+import {Map} from './Map'; // ES6 + rollup = <3
+```
+### [Leaflet/pull/4989](https://github.com/Leaflet/Leaflet/pull/4989)
+
+---
+
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## Lets check out some new demos!
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## [dynamic labels](./snippets/labels.html)!
+
+<div class="twos">
+  <div class="snippet">
+  <pre><code class="lang-js hljs javascript">
+// <script src='./lib/rbush.js'></script>
+// <script src='./lib/labelgun.js'></script>
+
+function calculateLabelWeight (pop) {
+  switch (true) {
+    case (pop > 20000000):
+      return 4
+    case (pop > 10000000):
+      return 3
+    case (pop > 1000000):
+      return 2
+    default:
+      return 1
+  }
+}
+
+// higher population == greater precedence
+</code></pre>
+  </div>
+  <div class="snippet-preview">
+    <iframe id="frame-2d-parallel" data-src="./snippets/labels.html"></iframe>
+  </div>
+</div>
 
 <aside class="notes">
-  other plugins need to be evaluated individually
-  to see if they are any good and are up to date
 </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## _weighted_ collision detection!
+
+```js
+labelEngine = new labelgun.default(hideLabel, showLabel);
+
+function addLabel(layer, id, weight) {
+  // ...
+  var boundingBox = {
+      bottomLeft : [bottomLeft.lng, bottomLeft.lat],
+      topRight   : [topRight.lng, topRight.lat]
+  };
+
+  labelEngine.ingestLabel(
+    boundingBox,
+    id,
+    weight,
+    label, // labelObject
+    STATE_NAME, // labelName
+    false // isDragged
+  )
+}
+```
+
+<aside class="notes">
+</aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## [driving directions](https://johngravois.com/lrm-esri/examples/index.html)!
+
+<div class="twos">
+  <div class="snippet-preview">
+    <iframe id="frame-2d-parallel" data-src="https://johngravois.com/lrm-esri/examples/index.html"></iframe>
+  </div>
+</div>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## driving directions!
+
+```html
+<link rel="stylesheet" href="./lib/leaflet-routing-machine.css" />
+<script src="./lib/leaflet-routing-machine.js"></script>
+<script src="./lib/leaflet-control-geocoder.js"></script>
+
+<!-- this one is ours -->
+<script src="/lib/lrm-esri.js"></script>
+```
+```js
+// additional profiles: Walking, Driving Distance etc.
+
+var directions = L.Routing.control({
+    router: L.Routing.esri({
+    liveTraffic: true,
+    profile: 'Trucking'
+  })
+}).addTo(map);
+```
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## under the hood
+
+```js
+require('leaflet-routing-machine');
+
+var profiles = require('./profiles.js');
+
+module.exports = L.Class.extend({
+  options: {
+    // a rate limited proxied url can be substituted
+    serviceUrl: 'https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World',
+    timeout: 30 * 1000,
+    routingOptions: {
+      profile: 'Driving',
+      liveTraffic: true
+    }
+  }
+// ...
+})
+```
+service proxy [doc](https://developers.arcgis.com/authentication/working-with-proxies/)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## make the request
+
+```js
+var completeServiceUrl = this.options.serviceUrl + '/solve?' +
+'f=json&' +
+'returnStops=true&' +
+'directionsLengthUnits=esriNAUMeters&' +
+'directionsOutputType=esriDOTComplete';
+
+if (this.options.liveTraffic) {
+  completeServiceUrl += '&startTimeisUTC=true&startTime=' + new Date().getTime();
+}
+if (this.options.profile) {
+  completeServiceUrl += '&travelMode=' + profiles[this.options.profile];
+}
+if (this.options.token) {
+  completeServiceUrl += '&token=' + this.options.token;
+}
+completeServiceUrl += '&stops=' + locs.join(';');
+```
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## parse the result
+
+```js
+// "compressedGeometry": "+bdqjf+48g5lf+kk35fh+0+0",
+
+_esriDecodePolyline: function(str) {
+  // ...
+  for (var j = 1; j < strings.length; j += 2) {
+    // j is the offset for the x value
+    // Convert the value from base 32 and add the previous x value
+    x = (parseInt(strings[j], 32) + xDiffPrev);
+    xDiffPrev = x;
+
+    // j+1 is the offset for the y value
+    // Convert the value from base 32 and add the previous y value
+    y = (parseInt(strings[j + 1], 32) + yDiffPrev);
+    yDiffPrev = y;
+
+    points.push(L.latLng([y / coefficient, x / coefficient]));
+  }
+
+  return points;
+}
+```
+lifted from [terraformer-arcgis-parser](https://github.com/Esri/terraformer-arcgis-parser)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+### whatever your build system
+
+* [browserify](https://github.com/Esri/esri-leaflet-browserify-example)
+* [webpack](https://github.com/Esri/esri-leaflet-webpack-example)
+* [rollup](https://github.com/Esri/esri-leaflet-bundler)
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+### whatever your goal
+
+* build better apps
+* extend the project
+* contribute back!
 
 ---
 
@@ -650,7 +822,7 @@ custom Raster Functions are also supported
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-_please_ fill out a session survey
+please, _please_, **please** fill out a session survey
 
 ---
 
