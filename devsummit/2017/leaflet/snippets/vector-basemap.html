@@ -1,0 +1,22 @@
+<head>
+  <style>
+    body { margin:0; padding:0; }
+    #mapDiv { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
+  <!-- load the latest release from the cdn -->
+  <script src="https://unpkg.com/esri-leaflet-vector"></script>
+
+</head>
+<body>
+  <div id="mapDiv"></div>
+  <script>
+    var map = L.map("mapDiv").setView([-25, -65], 3);
+    L.esri.Vector.basemap("Newspaper").addTo(map);
+  </script>
+</body>

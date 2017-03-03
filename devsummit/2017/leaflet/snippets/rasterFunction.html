@@ -1,0 +1,97 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>ImageMapLayer RenderingRule</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!-- Load Leaflet from CDN-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+
+    #raster-functions {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        padding: 1em;
+        background: white;
+        max-width: 250px;
+        text-align: right;
+    }
+    #raster-functions input, #raster-functions select {
+        display: inline-block;
+        border: 1px solid #999;
+        font-size: 14px;
+        border-radius: 4px;
+        height: 28px;
+        line-height: 28px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+<div id="raster-functions" class="leaflet-bar">
+    <form action="#" id="form">
+        <label for="input">
+            Raster Function:
+            <select id='input' type="string">
+                <option>Natural Color</option>
+                <option>Agriculture with DRA</option>
+                <option>Geology</option>
+                <option>NDVI Raw</option>
+                <option>NDVI Colorized</option>
+                <option>Short-wave Infrared</option>
+                <option>NBR Raw</option>
+            </select>
+        </label>
+        <br><br>
+        <span id='description'></span>
+    </form>
+</div>
+
+<script>
+    // https://landsat.arcgis.com/arcgis/rest/services/LandsatGLS/MS/ImageServer?f=json
+
+    var map = L.map('map').setView([33.741114, -116.184826], 6);
+
+    var rule = { "rasterFunction": 'Natural Color' };
+    var landsat = L.esri.imageMapLayer({
+      url: 'https://landsat.arcgis.com/arcgis/rest/services/LandsatGLS/MS/ImageServer',
+      renderingRule: rule,
+      from: new Date('2000'),
+      to: new Date('2000'),
+      attribution: 'United States Geological Survey (USGS), National Aeronautics and Space Administration (NASA)'
+    }).addTo(map);
+
+    landsat.metadata(function (err, res, raw) {
+      landsat._info = res.rasterFunctionInfos;
+      getCurrentDescription(landsat._info);
+    })
+
+    input.addEventListener('change', function updateTimeRange(e){
+        rule.rasterFunction = input.value;
+        landsat.setRenderingRule(rule);
+        getCurrentDescription(landsat._info)
+        e.preventDefault();
+    });
+
+    function getCurrentDescription (supportedRasterFunctions) {
+      for (var i=0; i < supportedRasterFunctions.length; i++) {
+         if (supportedRasterFunctions[i].name === input.value) {
+           document.getElementById('description').innerHTML = supportedRasterFunctions[i].description;
+           break;
+         }
+      }
+    }
+</script>
+
+</body>
+</html>

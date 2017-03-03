@@ -1,0 +1,41 @@
+<head>
+  <style>
+    body { margin:0; padding:0; }
+    #mapDiv { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+</head>
+<body>
+  <div id="mapDiv"></div>
+  <script>
+  function init() {
+    var map = L.map('mapDiv').setView([45.526, -122.667], 14);
+
+    L.esri.basemapLayer('Streets').addTo(map);
+
+    var busIcon = L.icon({
+        iconUrl: '//esri.github.io/esri-leaflet/img/bus-stop-north.png',
+        iconSize: [27, 31],
+        iconAnchor: [13.5, 17.5],
+        popupAnchor: [0, -11]
+      })
+
+    var buses = L.esri.featureLayer({
+        url: 'https://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Trimet_Transit_Stops/FeatureServer/0',
+        where: "direction='North'",
+        pointToLayer: function (geojson, latlng) {
+          return L.marker(latlng, {
+            icon: busIcon
+          });
+        },
+      })
+
+    buses.bindPopup(function (layer) {
+        return layer.feature.properties.stop_name;
+      });
+
+    buses.addTo(map);
+  }
+  </script>
+
+  <script src="./support/snippet.js"></script>
+</body>

@@ -1,0 +1,45 @@
+<!-- outline
+
+JavaScript is fun (and useful!)
+Variables and Objects (5 minutes. jg)
+operators
+Arrays
+loops
+Functions (5 minutes, jg)
+
+Closures and `this` (5 minutes, jg)
+Async (5 minutes, pat)
+Modules / libraries (5 minutes, pat)
+Local Dev Environment, Install node, https-server, start a local server serving a basic html page and an external script (5 minutes, jg)
+CDNs
+The DOM and Browser Development (5 minutes, jg)
+Debugging (5 minutes, jg)
+Walk through a few JS API samples (5 minutes, jg)
+The JavaScript Ecosystem (5 minutes, pat)
+A note about ES 2015 (pat)
+“Opinions” About JavaScript (5 minutes, pat)
+Resources to Keep Learning (2 minutes, jg)
+
+https://twitter.com/hoverbird/status/750826785781063680
+https://twitter.com/thomasfuchs/status/708675139253174273?lang=en
+
+how can we help GIS folks identify?
+
+variables pointing at something else - red exclamation points in .MXDs
+strings, integers, booleans - datatypes for feature class attribute columns
+conditional operators = field calculator / definition expressions
+
+functions accepting arguments - gp tools with input parameters
+asynchronous = background geoprocessing
+
+project dependencies - ArcMap license level? (yuck)
+dev Environment
+  ArcMap
+  ArcCatalog
+  online documentation
+  
+opinions - GIS folks definitely know about those
+ which projection is the best?
+ back in the day
+
+-->

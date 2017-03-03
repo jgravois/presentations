@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Git for geographers</title>
+
+        <link rel="stylesheet" href="/presentations/template2/css/reveal.css">
+        <link rel="stylesheet" href="/presentations/template2/css/theme/esri-dev-summit-2017.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="/presentations/template2/lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+          var link = document.createElement( 'link' );
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = window.location.search.match(/print-pdf/gi ) ? '/presentations/template2/css/print/pdf.css' : '/presentations/template2/css/print/paper.css';
+          document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown="presentation.md"></section>
+            </div>
+        </div>
+        <script src="/presentations/template2/lib/js/head.min.js"></script>
+        <script src="/presentations/template2/js/reveal.js"></script>
+        <script>
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          window.Reveal.initialize({
+            //controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            controls: false,
+            width: 1366,
+            height: 768,
+            transition: 'fade', // none/fade/slide/convex/concave/zoom
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: '/presentations/template2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: '/presentations/template2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: '/presentations/template2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: '/presentations/template2/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+              { src: '/presentations/template2/plugin/zoom-js/zoom.js', async: true },
+              { src: '/presentations/template2/plugin/notes/notes.js', async: true }
+            ]
+          });
+          window.Reveal.addEventListener('ready', function(event) {
+            var playButtons = document.querySelectorAll('[data-play-frame]');
+            for (var i = 0; i < playButtons.length; i++) {
+              playButtons[i].addEventListener('click', (function(frameName) {
+                return function() {
+                  window.frames[frameName].contentWindow.postMessage({ play: true }, '*');
+                };
+              })(playButtons[i].getAttribute('data-play-frame')));
+            }
+          });
+        </script>
+    </body>
+</html>
