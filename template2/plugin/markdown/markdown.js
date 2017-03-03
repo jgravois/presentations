@@ -205,7 +205,7 @@
 	 * multi-slide markdown into separate sections and
 	 * handles loading of external markdown.
 	 */
-	function processSlides() {
+	function processSlides(/*callback*/) {
 
 		var sections = document.querySelectorAll( '[data-markdown]'),
 			section;
@@ -250,6 +250,9 @@
 						}
 					}
 				};
+				// https://github.com/hakimel/reveal.js/pull/1458
+				// xhr.onload = callback;
+				// xhr.open( 'GET', url, true );
 
 				xhr.open( 'GET', url, false );
 
@@ -390,6 +393,12 @@
 		initialize: function() {
 			processSlides();
 			convertSlides();
+		
+			// processSlides(function() {
+  			// 	convertSlides();
+  			// 	Reveal.sync();
+  			// 	Reveal.slide();
+  			// });
 		},
 
 		// TODO: Do these belong in the API?

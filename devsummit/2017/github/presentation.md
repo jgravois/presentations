@@ -198,17 +198,17 @@ and resolves the conflict manually
 
 ---
 
+<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
+
+please, _please_, **please** fill out a session survey
+
+---
+
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
 idea, question, issue, or success story?
 
 @geogangster / @patrickarlt
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide3.png" -->
-
-please, _please_, **please** fill out a session survey
 
 ---
 

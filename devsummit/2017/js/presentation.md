@@ -1,26 +1,6 @@
-<!-- outline
-
-JavaScript Basics
-Local Dev Environment, Install node, https-server, start a local server serving a basic html page and an external script (5 minutes, jg)
-
-Variables and Objects (5 minutes. jg)
-Functions (5 minutes, jg)
-Closures and `this` (5 minutes, jg)
-Async (5 minutes, pat)
-Modules (5 minutes, pat)
-The DOM and Browser Development (5 minutes, jg)
-Debugging (5 minutes, jg)
-Walk through a few JS API samples (5 minutes, jg)
-The JavaScript Ecosystem (5 minutes, pat)
-A note about ES 2015 (pat)
-“Opinions” About JavaScript (5 minutes, pat)
-Resources to Keep Learning (2 minutes, jg)
-
--->
-
 <!-- .slide: data-background="/presentations/template2/images/2017-title.png" -->
 
-<!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
+<!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 100%; background: rgba(30,30,30,0.9)"/-->
 
 # JavaScript <small> *for Geographers*</small>
 <br>
@@ -32,30 +12,23 @@ John (@geogangster) & Pat (@patrickarlt), Esri
 
 ## Agenda
 
-1. Background
-  - What is Leaflet?
-  - Esri Leaflet?
-  - Why?
-2. Jungle boat cruise
-3. How does the project stack up?
+1. Fundamentals
+2. Sharing JavaScript
+3. _Opinions_ aka 'the Ecosystem'
 
 ---
 
-
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-## what is [`Leaflet`](https://leafletjs.com)?
+## variables
 
-the leading open-source JavaScript library<br>for mobile-friendly interactive maps
+```js
+var dog;
 
-small, stable, popular
+> undefined
+```
 
    <aside class="notes">
-
-   beginner friendly (kinda)
-     JS code isn't complex, managing dependencies can be
-
-   Washington Post, Craigslist, GitHub, Flickr, (Facebook?)
 
    </aside>
 
@@ -63,521 +36,252 @@ small, stable, popular
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-## designed for web developers
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-  var map = L.map("mapDiv").setView([-45, -120], 10);
-
-
-  // do the same thing without method chaining
-
-  var map = L.map("mapDiv");
-  map.setView([45, -120], 10)
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/map.html"></iframe>
-  </div>
-</div>
-
-Y,X coordinates are passed to the map<br>not X,Y
-
-<aside class="notes">
-
-things to note:
-  WGS84 projection is assumed. map is web mercator
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## How small _is_ Leaflet?
-
-![one-tile](http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/6/24/18)
-
-## [`36kb`](https://unpkg.com/leaflet@1.0.3/dist/leaflet.js)!
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### so small it doesn't help<br>you fetch .geojson files
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-  // leaflet.css
-  // leaflet.js
-
-  // then a plugin
-  // <script src="https://unpkg.com/leaflet-ajax@2.1.0"></script>
-
-  L.GeoJson.ajax("/data/giraffes.geojson").addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <!-- show a button and fetch GeoJSON -->
-    <iframe id="frame-2d-parallel" data-src="./snippets/ajax.html"></iframe>
-  </div>
-</div>
-
-an extra plugin just to load a file!
-<aside class="notes">
-
-things to note:
-  no wrapper for xmlHttpRequest
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### `Leaflet` has a *big* plugin community
-
-![happy](https://techtalk.vn/wp-content/uploads/2016/06/Screen-Shot-2015-12-08-at-5.44.32-PM-644x320.png)
-
----
-
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-### [`Esri Leaflet`](https://esri.github.io/esri-leaflet) is *ours*
-it makes working with the most<br>popular ArcGIS Services a **pleasure**
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## Goals
-
-1. sensible defaults
-2. keep things simple
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## Lets take a tour!
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.tileLayer`](http://leafletjs.com/reference-1.0.3.html#tilelayer)
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-  // leaflet.css
-  // leaflet.js
-
-  var url = '//{s}.tile.osm.org/{z}/{x}/{y}.png';
-
-  var tiled = L.tileLayer(url, {
-      attribution: '&copy; <a href="http://osm.org/copyright">
-      OpenStreetMap</a> contributors'
-  })
-
-  tiled.addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/map.html"></iframe>
-  </div>
-</div>
-
-requires manual attribution and knowledge of tiling scheme
-
-<aside class="notes">
-
- subdomains
- tile scheme
- static attribution
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.basemapLayer`](http://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html)
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-  // leaflet.css
-  // leaflet.js
-
-  // <script src="/lib/esri-leaflet.js"></script>
-
-  L.esri.basemapLayer('Streets').addTo(map);
-
-  // or
-  L.esri.basemapLayer('Streets', {
-      minZoom: 3
-  }).addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/e-map.html"></iframe>
-  </div>
-</div>
-
-map credits update on pan/zoom<br>
-`L.TileLayer` properties, methods and events are honored
-
-<aside class="notes">
-
- one liner
- dynamic attribution
-
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-`<segway>`
-
-## some `Leaflet` fundamentals
-
-`</segway>`
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.Marker`](), [`L.Circle`](), [`L.Polygon`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-  var marker = L.marker([51.5, -0.09]).addTo(map);
-
-  var circle = L.circle([51.508, -0.11], {
-      color: 'red',
-      fillColor: '#f03',
-      fillOpacity: 0.5,
-      radius: 500
-  }).addTo(map);
-
-  var polygon = L.polygon([
-      [51.509, -0.08],
-      [51.503, -0.06],
-      [51.51, -0.047]
-  ]).addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/marker.html"></iframe>
-  </div>
-</div>
-
-<aside class="notes">
-
- extends TileLayer
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.Popup`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-// more method chaining
-marker
-  .bindPopup("<b>Hi!</b><br>I am a popup.")
-  .openPopup();
-
-circle.bindPopup("I am a circle.");
-
-polygon.bindPopup("I am a polygon.");
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/popup.html"></iframe>
-  </div>
-</div>
-
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.GeoJSON`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-var data = {
-  "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [125.6, 10.1]
-  },
-  "properties": {
-    "color": "green",
-    "name": "Dinagat Islands"
-  }
-}
-
-var islands = L.geoJSON(data)
-
-islands.bindPopup(function (layer) {
-    return layer.feature.properties.name;
-}).addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/dinagat.html"></iframe>
-  </div>
-</div>
-
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## `Esri Leaflet`
-### builds on the fundamentals
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.FeatureLayer`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-var buses = L.esri.featureLayer({
-    url: '//website.com/../services/Buses/MapServer/0'
-  }).addTo(map);
-
-buses.bindPopup('I am a popup!');
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/fl.html"></iframe>
-  </div>
-</div>
-
-gridded spatial queries > GeoJSON
-
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.FeatureLayer`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-// lets get fancy
-var busIcon = L.icon({
-    iconUrl: '/img/bus-stop.png',
-    iconRetinaUrl: '/img/bus-stop@2x.png',
-  })
-
-var buses = L.esri.featureLayer({
-    url: '//website.com/../services/Buses/MapServer/0',
-    where: "direction='North'",
-    pointToLayer: function (geojson, latlng) {
-      return L.marker(latlng, {
-        icon: busIcon
-      });
-    },
-  })
-
-buses.bindPopup(function (layer) {
-    return layer.feature.properties.stop_name;
-  });
-
-buses.addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/fl-filtered.html"></iframe>
-  </div>
-</div>
-
-spatial/sql filtering, custom styling
-
-<aside class="notes">
-  bindPopup isn't triggered until a feature is clicked
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.tiledMapLayer`]()
-
-<div class="twos">
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/tiled.html"></iframe>
-  </div>
-</div>
+## operators - assignment
 
 ```js
-L.esri.tiledMapLayer({ url: '//server.com/BasemapCached/MapServer' });
-```
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.dynamicMapLayer`]()
-
-<div class="twos">
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/dynamic.html"></iframe>
-  </div>
-</div>
-
-```js
-L.esri.dynamicMapLayer({ url: '//server.com/Basemap/MapServer' });
-```
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.dynamicMapLayer`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-
-// or get fancy
-
-var dynLayer = L.esri.dynamicMapLayer({
-    url: '../services/SampleWorldCities/MapServer',
-    layers: [0,1],
-    layerDefs: {0:'POP_RANK < 2'}
-  }).addTo(map);
-
-dynLayer.bindPopup(function (error, featureCollection) {
-    return featureCollection.features[0].properties.NAME;
-});
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/dynamic-filtered.html"></iframe>
-  </div>
-</div>
-
-<aside class="notes">
-
-</aside>
-
----
-
-<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
-
-## [`L.esri.imageMapLayer`]()
-
-<div class="twos">
-  <div class="snippet">
-  <pre><code class="lang-js hljs javascript">
-L.esri.imageMapLayer({
-    url: landsatUrl,
-    bandIds: [4,3,2],
-    from: new Date('2000'),
-    to: new Date('2000')
-  }).addTo(map);
-
+dog = 423532.323223;
+// or 
+dog = true
 // or
+dog = 'spot';
+```
 
-var rule = {
-  "rasterFunction": 'NDVI Colorized'
-};
+   <aside class="notes">
 
-L.esri.imageMapLayer({
-    url: landsatUrl,
-    renderingRule: rule,
-    from: new Date('2000'),
-    to: new Date('2000')
-  }).addTo(map);
-
-</code></pre>
-  </div>
-  <div class="snippet-preview">
-    <iframe id="frame-2d-parallel" data-src="./snippets/rasterFunction.html"></iframe>
-  </div>
-</div>
-
-custom Raster Functions are also supported
-<aside class="notes">
-
-</aside>
+   </aside>
 
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### more `Esri Leaflet` [plugins](http://esri.github.io/esri-leaflet/plugins)
+## objects - properties
 
-* geocoding
-* vector basemaps
-* server side renderers
-* using geoprocessing services
-* driving [directions](http://github.com/jgravois/lrm-esri)
+   <aside class="notes">
+
+   </aside>
 
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-### The community has too!
+## operators - arithmetic
 
-* displaying ArcGIS Online [webmaps](http://esri.github.io/esri-leaflet/plugins)
-* [Stream Layers](http://esri.github.io/esri-leaflet/plugins) (from GeoEvent)
-* creating Legends
+
+   <aside class="notes">
+
+   </aside>
 
 ---
 
 <!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
 
-_please_ fill out a session survey
+## operators - comparison
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## operators - logical
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## operators - conditional
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## arrays
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## for loops
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## functions
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## anonymous functions
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## arguments
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## objects - methods
+
+   <aside class="notes">
+     methods = functions!
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## JavaScript is _Asynchronous_
+
+   <aside class="notes">
+     
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## closures / _this_
+
+   <aside class="notes">
+     
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## sharing code - modules
+
+   <aside class="notes">
+     
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## lets set up a JS development environment
+
+   <aside class="notes">
+     good time to talk about CDNs
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## the DOM
+
+   <aside class="notes">
+     
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## debugging
+
+   <aside class="notes">
+     
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## lets put all this to use!
+
+   <aside class="notes">
+     step through a JSAPI sample
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## the JavaScript ecosystem
+
+   <aside class="notes">
+    
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## a note about ES 2015
+
+   <aside class="notes">
+    
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## _Opinions_
+
+   <aside class="notes">
+    
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+## learn more!
+
+* http://wesbos.com/
+* [you don't know JS](https://github.com/getify/You-Dont-Know-JS)
+* [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+* [eloquent JavaScript](http://eloquentjavascript.net/)
+
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="/presentations/template2/images/2017-slide2.png" -->
+
+please, _please_, **please** fill out a session survey
 
 ---
 
