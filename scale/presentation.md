@@ -10,8 +10,23 @@ john (@geogangster) & vyki (@vyki_e)
 
 ---
 
-## less ETL 
+## _less_ ETL 
 (extract, transform, load)
+
+---
+
+## combatting FUD
+for the non-wonks
+
+---
+
+## the [pothole](http://www.latimes.com/local/cityhall/la-me-illegal-dumping-20150815-story.html) mayor
+![pothole](./latimes.png)
+
+---
+
+## ~~spreadsheets on the web~~
+[_verifyable_](http://visionzero.geohub.lacity.org/) narratives
 
 ---
 
@@ -20,9 +35,25 @@ john (@geogangster) & vyki (@vyki_e)
 
 ---
 
+## data standards
+
+sticks >= [carrots](http://ladot.maps.arcgis.com/apps/MapJournal/index.html?appid=a45d3efd7b1d4ef49f362caadb4754b0)
+
+---
+
 ## you can't *buy* trust
 
 ---
+
+## _beware_ relentless incrementalists
+[in praise of maintenance](http://freakonomics.com/podcast/in-praise-of-maintenance/)
+
+---
+
+## case study: chronic absenteeism
+
+---
+
 
 ## everyone brings 
 ## *bias* to the table
