@@ -1,4 +1,4 @@
-<!-- .slide: data-background="/presentations/template2/images/Slide1.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide1.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
@@ -11,7 +11,7 @@ John Gravois (@geogangster), Andy Gup (@agup), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide5.png" -->
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ John Gravois (@geogangster), Andy Gup (@agup), Esri
 ---
 
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Core modules
 
@@ -35,7 +35,7 @@ New core classes to get the job done
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## `esri/core/Accessor`
 
@@ -48,7 +48,7 @@ New core classes to get the job done
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Accessor - Properties watching
 
@@ -69,7 +69,7 @@ no more listening for events!
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Accessor - Autocast
 
@@ -97,7 +97,7 @@ fewer modules passed to `require()`
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Accessor - Autocast
 
@@ -123,7 +123,7 @@ fewer modules passed to `require()`
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [Implementing Accessor](https://developers.arcgis.com/javascript/latest/guide/implementing-accessor/index.html)
 
@@ -154,7 +154,7 @@ class Subclass extends declared(Accessor) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Promises
 
@@ -176,7 +176,7 @@ class Subclass extends declared(Accessor) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Promises
 
@@ -200,7 +200,7 @@ view.then(function() {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Loadables
 
@@ -210,7 +210,7 @@ view.then(function() {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 Query a FeatureLayer from a WebMap
 
@@ -241,7 +241,7 @@ without displaying it
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [`esri/core/Collection`](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Collection.html)
 
@@ -252,7 +252,7 @@ without displaying it
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [`esri/core/Collection`](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Collection.html)
 
@@ -272,13 +272,13 @@ var point = collection.getItemAt(0);
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # Lets set up [TypeScript](https://github.com/Esri/jsapi-resources/tree/master/4.x/typescript/demo)!
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # Prereqs
 
@@ -288,7 +288,7 @@ var point = collection.getItemAt(0);
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Steps
 
@@ -299,7 +299,7 @@ var point = collection.getItemAt(0);
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ```js
 import Collection = require("esri/core/Collection");
@@ -322,10 +322,10 @@ view.then(function() {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 _please_ fill out a session survey
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide6.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide6.png" -->

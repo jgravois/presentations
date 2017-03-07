@@ -2,7 +2,7 @@
 FeatureServer/FeatureServer?
 -->
 
-<!-- .slide: data-background="/presentations/template2/images/Slide1.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide1.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
@@ -15,7 +15,7 @@ John Gravois (@geogangster), Nick Furness (@geeknixta), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide5.png" -->
 
 ## Table of contents
 
@@ -25,14 +25,14 @@ John Gravois (@geogangster), Nick Furness (@geeknixta), Esri
 ---
 
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [github.com/esri/...](https://github.com/Esri)
 ### disclaimer*
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [esri/esri-leaflet](https://esri.github.io/esri-leaflet)
 
@@ -44,7 +44,7 @@ John Gravois (@geogangster), Nick Furness (@geeknixta), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [esri/LERC](https://github.com/Esri/Lerc)
 
@@ -55,7 +55,7 @@ John Gravois (@geogangster), Nick Furness (@geeknixta), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [esri/LERC](https://github.com/Esri/Lerc)
 
@@ -67,7 +67,7 @@ John Gravois (@geogangster), Nick Furness (@geeknixta), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### four dimensional ocean temperature
 
@@ -79,7 +79,7 @@ John Gravois (@geogangster), Nick Furness (@geeknixta), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [3d world elevation tiles](https://github.com/jgravois/lerc-leaflet)
 
@@ -93,7 +93,7 @@ more extensive tile service doc is coming soon.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [jgravois/lerc-leaflet](https://github.com/jgravois/lerc-leaflet)
 
@@ -126,7 +126,7 @@ createTile: function (coords, done) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [npmjs.com/packages/lerc](https://npmjs.com/packages/lerc)
 
@@ -144,7 +144,7 @@ Lerc.decode(xhrResponse, {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [esri/cedar](https://esri.github.io/cedar)
 
@@ -188,7 +188,7 @@ chart.show({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [koopjs/koop](http://koop.dc.esri.com/) (ETL on the fly)
 
@@ -197,7 +197,7 @@ chart.show({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [koopjs/koop](http://koop.dc.esri.com/) (ETL on the fly)
 
@@ -209,7 +209,7 @@ chart.show({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [koopjs/koop](http://koop.dc.esri.com/) (ETL on the fly)
 
@@ -244,7 +244,7 @@ chart.show({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### [esridc/opendata-search-component](http://esridc.github.io/opendata-search-component/examples/)
 
@@ -256,13 +256,13 @@ chart.show({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### the building blocks for [Esri Open Data](http://opendata.dc.gov/)
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # More from node land...
 * [esri/Terraformer](https://terraformer.io)
@@ -270,7 +270,7 @@ chart.show({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # [esri/Terraformer](http://terraformer.io)
 
@@ -292,7 +292,7 @@ var arcgisPoint = Terraformer.ArcGIS.convert({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # [esri/Terraformer](http://terraformer.io)
 
@@ -320,7 +320,7 @@ Terraformer.Tools.polygonContainsPoint(polygon.coordinates, pt2);
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # [esri/geoservices-js](http://github.com/Esri/geoservices-js)
 
@@ -346,13 +346,13 @@ also wraps CRUD operations for FeatureServer
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 # [esri/geometry-api-java](http://esri.github.io/geometry-api-java/doc/Buffer.html)
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## tools for _Big_ data
 * [esri/gis-tools-for-hadoop](http://github.com/Esri/gis-tools-for-hadoop)
@@ -360,14 +360,14 @@ also wraps CRUD operations for FeatureServer
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [esri/i3s-spec](http://github.com/Esri/i3s-spec)
 _Scene Layers Service and Package Specification_
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [esri/arcgis-cookbook](http://github.com/Esri/arcgis-cookbook)
 
@@ -375,7 +375,7 @@ to simplify/automate install and config of desktop, server, geoevent, pro etc.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [esri/raster-functions](http://github.com/Esri/raster-functions)
 
@@ -387,7 +387,7 @@ A curated set of lightweight but powerful tools<br>for on-the-fly image processi
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [esri/raster-functions](http://github.com/Esri/raster-functions)
 
@@ -401,7 +401,7 @@ A curated set of lightweight but powerful tools<br>for on-the-fly image processi
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## do we have time for more?
 
@@ -414,13 +414,13 @@ A curated set of lightweight but powerful tools<br>for on-the-fly image processi
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide5.png" -->
 
 thats just the tip of the iceberg
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide5.png" -->
 
 idea, question, issue, or success story?
 
@@ -428,10 +428,10 @@ idea, question, issue, or success story?
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 _please_ fill out a session survey
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide6.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide6.png" -->

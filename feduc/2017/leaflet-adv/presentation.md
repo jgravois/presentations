@@ -1,4 +1,4 @@
-<!-- .slide: data-background="/presentations/template2/images/Slide1.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide1.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
@@ -18,7 +18,7 @@ I'm an Esri Leaflet maintainer, so you're in the right place.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide5.png" -->
 
 ## Agenda
 
@@ -28,7 +28,7 @@ I'm an Esri Leaflet maintainer, so you're in the right place.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## whats new with [Leaflet](https://leafletjs.com)?
 
@@ -44,7 +44,7 @@ I'm an Esri Leaflet maintainer, so you're in the right place.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## whats new for us?
 
@@ -60,7 +60,7 @@ I'm an Esri Leaflet maintainer, so you're in the right place.
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## `L.esri.webMap`
 
@@ -88,7 +88,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [`L.esri.Vector`](https://github.com/esri/esri-leaflet-vector)
 
@@ -108,7 +108,7 @@ L.esri.Vector.basemap('Newspaper').addTo(map);
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## bug fixes / improvements
 
@@ -122,13 +122,13 @@ L.esri.Vector.basemap('Newspaper').addTo(map);
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## more modular dependencies
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [npmjs.com/packages/arcgis-to-geojson-utils](https://npmjs.com/packages/arcgis-to-geojson-utils)
 
@@ -155,7 +155,7 @@ written in ES6, packaged as UMD
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [npmjs.com/packages/leaflet-virtual-grid](https://npmjs.com/packages/leaflet-virtual-grid)
 
@@ -166,7 +166,7 @@ A DOM-less tile layer that can be used<br>to query APIs with bounding boxes or c
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ```js
 var vg = new VirtualGrid();
@@ -183,7 +183,7 @@ vg.on("cellenter", function(e){
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## [npmjs.com/packages/tiny-binary-search](https://npmjs.com/packages/tiny-binary-search)
 
@@ -214,7 +214,7 @@ index.bulkAdd([
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Whats really new?
 
@@ -225,7 +225,7 @@ import {Map} from './Map'; // ES6 + rollup = <3
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## `L.esri.request()`
 
@@ -236,7 +236,7 @@ import {Map} from './Map'; // ES6 + rollup = <3
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Demo: [dynamic labels](./snippets/labels.html)!
 
@@ -272,7 +272,7 @@ function calculateLabelWeight (pop) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## weighted collision detection!
 
@@ -302,7 +302,7 @@ function addLabel(layer, id, weight) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## Demo: [driving directions](https://johngravois.com/lrm-esri/examples/index.html)!
 
@@ -314,7 +314,7 @@ function addLabel(layer, id, weight) {
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## driving directions!
 
@@ -342,7 +342,7 @@ var control = L.Routing.control({
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## driving directions!
 
@@ -371,7 +371,7 @@ service proxy [doc](https://developers.arcgis.com/authentication/working-with-pr
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## make the request
 
@@ -399,7 +399,7 @@ completeServiceUrl += '&stops=' + locs.join(';');
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ## parse the result
 
@@ -432,7 +432,7 @@ pretty much lifted from [terraformer-arcgis-parser](https://github.com/Esri/terr
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### whatever your build system
 
@@ -442,7 +442,7 @@ pretty much lifted from [terraformer-arcgis-parser](https://github.com/Esri/terr
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### whatever your goal
 
@@ -452,7 +452,7 @@ pretty much lifted from [terraformer-arcgis-parser](https://github.com/Esri/terr
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 ### the community is here to help
 
@@ -464,13 +464,13 @@ pretty much lifted from [terraformer-arcgis-parser](https://github.com/Esri/terr
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide2.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
 _please_ fill out a session survey
 
 ---
 
-<!-- .slide: data-background="/presentations/template2/images/Slide5.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide5.png" -->
 
 idea, question, issue, or success story?
 
@@ -479,4 +479,4 @@ idea, question, issue, or success story?
 ---
 
 
-<!-- .slide: data-background="/presentations/template2/images/Slide6.png" -->
+<!-- .slide: data-background="/presentations/fresher-template/images/Slide6.png" -->
