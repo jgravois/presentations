@@ -1,5 +1,10 @@
 <!-- outline
 
+Intro (5 minutes)
+  * what this talk is and isn't (pat)
+  * dont be overwhelmed (pat)
+  * you are technically minded enough to learn this (pat)
+
 JavaScript is fun (and useful!)
 Variables and Objects (5 minutes. jg)
 operators
@@ -7,14 +12,13 @@ Arrays
 loops
 Functions (5 minutes, jg)
 
-Closures and `this` (5 minutes, jg)
+Closures and `this` (5 minutes, pat)
 Async (5 minutes, pat)
+Local Dev Environment, Install node, https-server, start a local server serving a basic html page (CDN) and an external script (5 minutes, jg) https://momentjs.com/docs/#/displaying/from/
+The DOM and Browser Development (5 minutes, pat)
+Debugging (5 minutes, pat)
 Modules / libraries (5 minutes, pat)
-Local Dev Environment, Install node, https-server, start a local server serving a basic html page and an external script (5 minutes, jg)
-CDNs
-The DOM and Browser Development (5 minutes, jg)
-Debugging (5 minutes, jg)
-Walk through a few JS API samples (5 minutes, jg)
+Walk through a few JS API samples (5 minutes, jg) (with event and promise)
 The JavaScript Ecosystem (5 minutes, pat)
 A note about ES 2015 (pat)
 “Opinions” About JavaScript (5 minutes, pat)
@@ -37,7 +41,7 @@ dev Environment
   ArcMap
   ArcCatalog
   online documentation
-  
+
 opinions - GIS folks definitely know about those
  which projection is the best?
  back in the day
