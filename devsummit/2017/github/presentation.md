@@ -15,10 +15,12 @@ files on disk change when you check out a different branch
 you can switch back and forth between terminal git and a UI at will
 you can commit directly on the website
 pull requests compare branches (wherever they live)
-pull request as a discussion
+pull request as a discussion, no need to close if its not perfect
 markdown is used in issues and pull requests
 you can browse diffs for commits and pull requests
 
+
+![zappa](http://www.themarysue.com/wp-content/uploads/2014/02/zappa.jpg)
 -->
 
 <!-- .slide: data-background="/presentations/fresher-template/images/2017-title.png" -->
@@ -45,7 +47,7 @@ John (@geogangster) & Pat (@patrickarlt), Esri
 
 ## what _is_ GitHub?
 
-(hint: it ends with `.com`)
+(hint: it ends with [`.com`](https://github.com))
 
 ---
 
@@ -71,7 +73,7 @@ John (@geogangster) & Pat (@patrickarlt), Esri
 
 <!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
 
-## lets get to it.
+## lets get collaborating!
 
 ---
 
@@ -182,6 +184,11 @@ and resolves the conflict manually
 
 ---
 
+<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+
+lets [whiteboard](https://twitter.com/cthydng/status/575483540202106880) it
+
+---
 
 <!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
 
