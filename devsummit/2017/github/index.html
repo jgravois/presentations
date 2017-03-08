@@ -5,18 +5,18 @@
 
         <title>Git for geographers</title>
 
-        <link rel="stylesheet" href="/presentations/fresher-template/css/reveal.css">
-        <link rel="stylesheet" href="/presentations/fresher-template/css/theme/esri-dev-summit-2017.css" id="theme">
+        <link rel="stylesheet" href="../../../fresher-template/css/reveal.css">
+        <link rel="stylesheet" href="../../../fresher-template/css/theme/esri-dev-summit-2017.css" id="theme">
 
         <!-- Code syntax highlighting -->
-        <link rel="stylesheet" href="/presentations/fresher-template/lib/css/zenburn.css">
+        <link rel="stylesheet" href="../../../fresher-template/lib/css/zenburn.css">
 
         <!-- Printing and PDF exports -->
         <script>
           var link = document.createElement( 'link' );
           link.rel = 'stylesheet';
           link.type = 'text/css';
-          link.href = window.location.search.match(/print-pdf/gi ) ? '/presentations/fresher-template/css/print/pdf.css' : '/presentations/fresher-template/css/print/paper.css';
+          link.href = window.location.search.match(/print-pdf/gi ) ? '../../../fresher-template/css/print/pdf.css' : '../../../fresher-template/css/print/paper.css';
           document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
 
@@ -30,8 +30,8 @@
                 <section data-markdown="presentation.md"></section>
             </div>
         </div>
-        <script src="/presentations/fresher-template/lib/js/head.min.js"></script>
-        <script src="/presentations/fresher-template/js/reveal.js"></script>
+        <script src="../../../fresher-template/lib/js/head.min.js"></script>
+        <script src="../../../fresher-template/js/reveal.js"></script>
         <script>
           // Full list of configuration options available at:
           // https://github.com/hakimel/reveal.js#configuration
@@ -46,12 +46,12 @@
             transition: 'fade', // none/fade/slide/convex/concave/zoom
             // Optional reveal.js plugins
             dependencies: [
-              { src: '/presentations/fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: '/presentations/fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: '/presentations/fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: '/presentations/fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-              { src: '/presentations/fresher-template/plugin/zoom-js/zoom.js', async: true },
-              { src: '/presentations/fresher-template/plugin/notes/notes.js', async: true }
+              { src: '../../../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: '../../../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: '../../../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: '../../../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+              { src: '../../../fresher-template/plugin/zoom-js/zoom.js', async: true },
+              { src: '../../../fresher-template/plugin/notes/notes.js', async: true }
             ]
           });
           window.Reveal.addEventListener('ready', function(event) {
