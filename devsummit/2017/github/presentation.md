@@ -294,6 +294,8 @@ idea, question, issue, or success story?
 
 [@geogangster](https://twitter.com/geogangster) / [@patrickarlt](https://twitter.com/patrickarlt)
 
+Slides: [`http://bit.ly/2mCMd5o`](http://bit.ly/2mCMd5o)
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-end.png" -->
