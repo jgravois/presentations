@@ -3,7 +3,7 @@
 Intro (5 minutes)
   * what this talk is and isn't (pat)
   * dont be overwhelmed (pat)
-  * you are technically minded enough to learn this (pat)
+  * you are technically minded enough to learn this (john)
 
 JavaScript is fun (and useful!)
 Variables and Objects (5 minutes. jg)

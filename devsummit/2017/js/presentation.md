@@ -21,7 +21,31 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ---
 
+## JS is a big scary place
+
+---
+
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## This talk
+
+* Intro some basics
+* Step through confusing parts
+* Guide to the ecosystem
+* How to not get overwhelmed
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## You are already familar with a lot of this!
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+## variables
+
+---
 
 ## declaring [variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
@@ -552,31 +576,83 @@ require([
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
+## ES2015 <small>formerly ES6</small>
+
+New version of the JavaScript language.
+
+Updates every year (ES2015, ES2016, ES2017).
+
+LOADS of new featues.
+
+Refuse to learn anything else.
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
 ## the JavaScript ecosystem
 
-   <aside class="notes">
+You don't know what you don't know.
 
-   </aside>
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## a note about ES 2015
-
-   <aside class="notes">
-
-   </aside>
+<p class="fragment">and that is great.</p>
 
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## _Opinions_
+## the JavaScript ecosystem
 
-   <aside class="notes">
+* Package Managers - NPM and Bower
+* Module Formats - CommonJS, AMD, ES 2015
 
-   </aside>
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## the JavaScript ecosystem
+
+* Comilers - Babel, TypeScript
+* Bundlers - Rollup, WebPack, SystemJS
+* Minifiers - UglifyJS
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## JavaScript Fatigue
+
+> Look, it’s easy. Code everything in Typescript. All modules that use Fetch compile them to target ES6, transpile them with Babel on a stage-3 preset, and load them with SystemJS. If you don’t have Fetch, polyfill it, or use Bluebird, Request or Axios, and handle all your promises with await.
+
+> We have very different definitions of easy.
+
+[How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.sl06jvo9z)
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Dealing with JavaScript Fatigue
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">First do it, then do it right, then do it better - this is my mantra for successfully getting things done. It&#39;s all about the iteration.</p>&mdash; Addy Osmani (@addyosmani) <a href="https://twitter.com/addyosmani/status/314785735171518464">March 21, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Opinions
+
+You will hear lots opinions about the "right" way to do JavsScript
+
+These are not always super helpful.
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+> learn and deeply understand all of JavaScript
+
+> Kyle Simpson - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/preface.md#mission)
 
 ---
 
@@ -584,8 +660,8 @@ require([
 
 ## learn more!
 
-* [MDN: Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
 * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+* [MDN: Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 * [Eloquent JavaScript](http://eloquentjavascript.net/)
 * http://wesbos.com/
