@@ -21,7 +21,9 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ---
 
-## JS is a big scary place
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
+
+## JS can feel like a big scary place
 
 ---
 
@@ -29,7 +31,7 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ## This talk
 
-* Intro some basics
+* Introduce some basics
 * Step through confusing parts
 * Guide to the ecosystem
 * How to not get overwhelmed
@@ -43,9 +45,6 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-## variables
-
----
 
 ## declaring [variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
@@ -88,7 +87,7 @@ value type is **not** explicitly declared
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+## [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) operators
 
 ```js
 (age / 7) // 3
@@ -104,7 +103,7 @@ value type is **not** explicitly declared
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+## [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) operators
 
 ```js
 12 % 5 // 2 (modulus)
@@ -126,7 +125,7 @@ y-- // 2
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - [comparison](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+## [comparison](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) - operators
 
 ```js
 3 === 3   // true
@@ -145,7 +144,7 @@ y-- // 2
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - [logical](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+## [logical](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators) operators
 ```js
 // logical 'and'
 true && anotherTruthy
@@ -355,7 +354,15 @@ setTimeout(function () {
 // executes immediately, still in the same "turn" of the event loop
 //
 console.log('Thanks!');
+```
 
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## JavaScript Event Loop
+
+```
 // done executing and we will start executing the event loop
 
 > Hello Dev Summit
@@ -364,10 +371,6 @@ console.log('Thanks!');
 > JavaScript
 > Lets Learn
 ```
-
-   <aside class="notes">
-
-   </aside>
 
 ---
 
@@ -387,23 +390,7 @@ button.addEventListener('click', function () {
 });
 ```
 
-callback are functions that are called when
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## Callbacks
-
-```js
-let button = document.getElementById('button');
-
-button.addEventListener('click', function () {
-  console.log('The button was clicked');
-});
-```
-
-callback are functions that are called when things happen.
+callback are functions that are called when things happen
 
 ---
 
