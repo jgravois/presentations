@@ -476,6 +476,8 @@ person.fullName() // > Casey Jones
 
 ## lets set up a JS development environment
 
+* [do i have a web server running?](https://gist.github.com/jgravois/5e73b56fa7756fd00b89)
+* [`demo.html`](https://github.com/jgravois/presentations/blob/12ad63798193bd32950809996c9825067a742aa7/devsummit/2017/js/snippets/demo.html)
    <aside class="notes">
      good time to talk about CDNs
    </aside>
@@ -538,6 +540,9 @@ require([
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## lets put all this to use!
+
+* [../sample-code/chaining-promises/](https://developers.arcgis.com/javascript/latest/sample-code/tasks-query/index.html)
+* [../sample-code/chaining-promises/](https://developers.arcgis.com/javascript/latest/sample-code/chaining-promises/index.html)
 
    <aside class="notes">
      step through a JSAPI sample
