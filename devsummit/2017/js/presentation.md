@@ -23,7 +23,7 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## [variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+## declaring [variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
 ```js
 var dog;
@@ -45,10 +45,29 @@ const notGonnaChange;
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
+## defining values
+
+```js
+var dogName = 'spot';
+
+var age = 21;
+
+var canBark = true;
+
+```
+value type is **not** explicitly declared
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
 ## operators - [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
 
 ```js
-(spot.age / 7) // 3
+(age / 7) // 3
 
 5 + 5 // 10
 
@@ -128,11 +147,11 @@ true || somethingFalsy
 ```js
 var dogs = ['Spot', 'Lassie'];
 
-fruits[0] // 'Spot'
+dogs[0] // 'Spot'
 
-fruits.push('Fido');
+dogs.push('Fido');
 
-fruits.length // 3
+dogs.length // 3
 ```
    <aside class="notes">
 
