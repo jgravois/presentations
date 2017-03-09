@@ -10,12 +10,12 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## Agenda
 
 1. Fundamentals
-2. Building Web Apps
+2. <span style="white-space: nowrap;">Building Web Apps</span>
 3. JS API
 4. JavaScript Fatigue
 
@@ -60,9 +60,6 @@ const notGonnaChange;
 > undefined
 ```
 
-   <aside class="notes">
-
-   </aside>
 
 ---
 
@@ -390,7 +387,7 @@ button.addEventListener('click', function () {
 });
 ```
 
-callback are functions that are called when things happen
+Callback are functions that are called when things happen.
 
 ---
 
@@ -419,11 +416,13 @@ function anyErrors (error) {
 
 Promises represent a future value that will be "resolved".
 
+[Demo](http://jsbin.com/qisiki/edit?js,console)
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## closures
+## Lexical Scope
 
 ```
 var message = 'Hello World!';
@@ -435,33 +434,17 @@ function go () {
 go();
 ```
 
-when functions are called they remember the variables around them
+When functions are called they remember the variables around them, this is refered to as "lexical scope".
 
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## closures and scope
+## Closures
 
-```js
-function makeAdder(amountToAdd) {
-  // Each time we call makeAdder we get a new closure
-  // which will remember all the variables around it.
-  // We can use any of those variables in our adder function.
-  return function adder (amount) {
-    return amount + amountToAdd;
-  }
-}
+Since every function has its own scope you can make functions that return functions. These are refered to as "closures".
 
-const add5 = makeAdder(5);
-const add10 = makeAdder(5);
-
-add5(1);
-> 6
-
-add10(1);
-> 11
-```
+[Demo](http://jsbin.com/favaqig/edit?js,console)
 
 ---
 
@@ -470,7 +453,7 @@ add10(1);
 ## What is `this`?
 
 ```js
-var person = {
+var user = {
   firstName: "Casey",
   lastName: "Jones",
   fullName: function () {
@@ -480,6 +463,28 @@ var person = {
 
 person.fullName() // > Casey Jones
 ```
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## What is `this`?
+
+The `this` vaiable changes context sometimes. This can be confusing.
+
+[Demo](http://jsbin.com/rowofi/edit?js,console)
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+
+## Solving `this`
+
+* ES 2015 arrow functions
+* `bind`, `call` and `apply`
+
+[Demo](http://jsbin.com/yabicu/edit?js,console)
 
 ---
 
