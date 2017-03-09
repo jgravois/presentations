@@ -367,6 +367,7 @@ go();
 ```
 
 when functions are called they remember the variables around them
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
