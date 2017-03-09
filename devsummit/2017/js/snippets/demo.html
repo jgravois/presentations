@@ -1,0 +1,45 @@
+<head>
+  <style>
+    body { margin:0; padding:0; }
+    #mapDiv { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+
+  <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.2/css/calcite-web.min.css">
+  <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.2/js/calcite-web.min.js"></script>
+</head>
+<body>
+
+    <div class="column-8 pre-8 post-8">
+      <h1>fun with forms!</h1>
+      <form action="" method="post">
+        <label>
+            Email
+            <input type="email" required placeholder="bob@example.com">
+        </label>
+
+        <label>
+            Friend or Foe?
+            <select name="friendfoe" required>
+            <option value="friend">Friend</option>
+            <option value="foe">Foe</option>
+            </select>
+        </label>
+
+        <label>
+            Birthday
+            <input type="date" placeholder="mm/dd/yyyy" required>
+        </label>
+
+        <label>
+            Message
+            <textarea placeholder="Briefly describe what isn't working, max 240 characters" rows="5" required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  <script>
+    console.log("we havent added any JavaScript yet");
+    calcite.init();
+  </script>
+</body>

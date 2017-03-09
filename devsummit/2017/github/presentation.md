@@ -136,7 +136,7 @@ git checkout -b updates
 to save his edits
 
 ```
-git commit -am"update friends.geojson"
+git commit -am "update friends.geojson"
 ```
 
 ---
