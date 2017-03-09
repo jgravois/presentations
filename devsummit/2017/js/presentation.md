@@ -22,7 +22,7 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## variables
+## [variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
 ```js
 var dog;
@@ -44,48 +44,7 @@ const notGonnaChange;
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## objects
-
-```js
-let dog = {
-  age: 7,
-  canBark: true,
-  _ssshhh: 'top secret'
-}
-
-> Object {age: 7, canBark: true }
-
-```
-
-   <aside class="notes">
-
-   </aside>
-
----
-
-## objects
-
-```html
-<script src="./doglibrary.js"></script>
-```
-
-```js
-let spot = new Dog()
-
-> Object { canBark: true }
-
-spot.age = 21;
-```
-
-   <aside class="notes">
-
-   </aside>
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## operators - arithmetic
+## operators - [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
 
 ```js
 (spot.age / 7) // 3
@@ -101,7 +60,7 @@ spot.age = 21;
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - arithmetic
+## operators - [arithmetic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
 
 ```js
 12 % 5 // 2 (modulus)
@@ -123,7 +82,7 @@ y-- // 2
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - comparison
+## operators - [comparison](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
 
 ```js
 3 === 3   // true
@@ -142,7 +101,7 @@ y-- // 2
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## operators - logical
+## operators - [logical](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
 ```js
 // logical 'and'
 true && anotherTruthy
@@ -164,7 +123,7 @@ true || somethingFalsy
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## arrays
+## [arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 ```js
 var dogs = ['Spot', 'Lassie'];
 
@@ -182,7 +141,7 @@ fruits.length // 3
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## functions
+## [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 ```js
 function dogYears(age) {
@@ -214,8 +173,55 @@ function () {
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
+## [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
+```js
+let dog = {
+  age: 7,
+  canBark: true,
+  _ssshhh: 'top secret'
+}
+
+> Object {age: 7, canBark: true, _ssshhh: 'top secret' }
+
+```
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
+```html
+<script src="./doglibrary.js"></script>
+```
+
+```js
+let spot = new Dog()
+
+> Object { canBark: true }
+
+spot.age = 21;
+```
+
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
 ## objects - methods
 
+```
+// Buffer point by 1000 feet
+var ptBuff = geometryEngine.buffer(point, 1000, "feet");
+```
    <aside class="notes">
      methods == functions!
    </aside>
@@ -224,8 +230,41 @@ function () {
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## for loops
+## [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) loops
 
+```js
+for (var i = 0; i < 6; i++) {
+   console.log(i);
+}
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5
+```
+   <aside class="notes">
+
+   </aside>
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## looping through an array
+
+```js
+var dogs = ['Spot', 'Lassie', 'Fido'];
+
+for (var i = 0; i < dogs.length; i++) {
+   console.log(dogs[i]);
+}
+
+> 'Spot'
+> 'Lassie'
+> 'Fido'
+```
    <aside class="notes">
 
    </aside>
@@ -354,7 +393,7 @@ please, _please_, **please** fill out a session survey
 
 1. download the Esri Events App
 2. select Dev Summit
-3. search for "Git/GitHub for Geographers"
+3. search for "JavaScript for Geographers"
 4. leave feedback!
 
 ---
@@ -368,7 +407,6 @@ idea, question, issue, or success story?
 john@esri.com / parlt@esri.com
 
 Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
-
 
 ---
 
