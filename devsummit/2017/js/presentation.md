@@ -3,8 +3,8 @@
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 100%; background: rgba(30,30,30,0.9)"/-->
 
 # JavaScript <small> *for Geographers*</small>
-<br>
-John (@geogangster) & Pat (@patrickarlt), Esri
+
+John ([@geogangster](https://twitter.com/geogangster)) & Pat ([@patrickarlt](https://twitter.com/patrickarlt)), Esri
 
 Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
@@ -15,8 +15,9 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 ## Agenda
 
 1. Fundamentals
-2. Sharing JavaScript
-3. _Opinions_ aka 'the Ecosystem'
+2. Building Web Apps
+3. JS API
+4. JavaScript Fatigue
 
 ---
 
@@ -275,29 +276,180 @@ for (var i = 0; i < dogs.length; i++) {
 
 ## JavaScript is _Asynchronous_
 
+* JavaScript is _single threaded_
+* Only does 1 thing at a time
+* Lots of things might happen at once
+
    <aside class="notes">
-     
+
    </aside>
 
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## closures / _this_
+## JavaScript Event Loop
+
+```
+// program starts, event loop is empty
+console.log('Hello Dev Summit');
+
+// call setTimeout, add a function to the event loop after a delay
+setTimeout(function () {
+  console.log('Lets Learn');
+}, 100);
+
+// now we call setTimeout again
+setTimeout(function () {
+  console.log('JavaScript');
+}, 10);
+
+// and again, still goes into the event loop after 0 milliseconds
+setTimeout(function () {
+  console.log('Async');
+}, 0);
+
+// executes immediately, still in the same "turn" of the event loop
+//
+console.log('Thanks!');
+
+// done executing and we will start executing the event loop
+
+> Hello Dev Summit
+> Thanks!
+> Async
+> JavaScript
+> Lets Learn
+```
 
    <aside class="notes">
-     
+
    </aside>
 
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## sharing JavaScript - modules
+## Callbacks
 
-   <aside class="notes">
-     
-   </aside>
+```html
+<button id="button">Click Me!</button>
+```
+
+```js
+let button = document.getElementById('button');
+
+button.addEventListener('click', function () {
+  console.log('The button was clicked');
+});
+```
+
+callback are functions that are called when
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Callbacks
+
+```js
+let button = document.getElementById('button');
+
+button.addEventListener('click', function () {
+  console.log('The button was clicked');
+});
+```
+
+callback are functions that are called when things happen.
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Promises
+
+```js
+let user = fetch('https://randomuser.me/api/')
+  .then(processResponse)
+  .then(doSomethingWithUser)
+  .catch(anyErrors);
+
+function processResponse (response) {
+  return response.json();
+}
+
+function doSomethingWithUser (user) {
+  console.log(user); // prints a bunch of user info
+}
+
+function anyErrors (error) {
+  console.error('what have you done!', error);
+}
+```
+
+Promises represent a future value that will be "resolved".
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## closures
+
+```
+var message = 'Hello World!';
+
+function go () {
+  console.log(message);
+}
+
+go();
+```
+
+when functions are called they remember the variables around them
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## closures and scope
+
+```js
+function makeAdder(amountToAdd) {
+  // Each time we call makeAdder we get a new closure
+  // which will remember all the variables around it.
+  // We can use any of those variables in our adder function.
+  return function adder (amount) {
+    return amount + amountToAdd;
+  }
+}
+
+const add5 = makeAdder(5);
+const add10 = makeAdder(5);
+
+add5(1);
+> 6
+
+add10(1);
+> 11
+```
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## What is `this`?
+
+```js
+var person = {
+  firstName: "Casey",
+  lastName: "Jones",
+  fullName: function () {
+    console.log(this.firstName + " " + this.lastName);
+  }
+}
+
+person.fullName() // > Casey Jones
+```
 
 ---
 
@@ -315,10 +467,6 @@ for (var i = 0; i < dogs.length; i++) {
 
 ## the DOM
 
-   <aside class="notes">
-     
-   </aside>
-
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -326,8 +474,45 @@ for (var i = 0; i < dogs.length; i++) {
 ## debugging
 
    <aside class="notes">
-     
+
    </aside>
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## sharing JavaScript - modules
+
+As applications grow it is helpful to divide code into different files to organize. You can just use `<script>` tags for small apps.
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## ES2015 Modules
+
+```
+import { something } from 'some-module';
+```
+
+This is the future as you learn JavaScript you will encourter this more often.
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## AMD Modules (JS API)
+
+```
+require([
+  "esri/Map",
+  "esri/views/MapView",
+], function (Map, MapView) {
+  // Map and MapView have been loaded!
+});
+```
+
+`require` is a fancy way of adding `<script>` tags to load code on demand.
 
 ---
 
@@ -346,7 +531,7 @@ for (var i = 0; i < dogs.length; i++) {
 ## the JavaScript ecosystem
 
    <aside class="notes">
-    
+
    </aside>
 
 ---
@@ -356,7 +541,7 @@ for (var i = 0; i < dogs.length; i++) {
 ## a note about ES 2015
 
    <aside class="notes">
-    
+
    </aside>
 
 ---
@@ -366,7 +551,7 @@ for (var i = 0; i < dogs.length; i++) {
 ## _Opinions_
 
    <aside class="notes">
-    
+
    </aside>
 
 ---
@@ -375,11 +560,11 @@ for (var i = 0; i < dogs.length; i++) {
 
 ## learn more!
 
+* [MDN: Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+* [Eloquent JavaScript](http://eloquentjavascript.net/)
 * http://wesbos.com/
-* [you don't know JS](https://github.com/getify/You-Dont-Know-JS)
-* [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-* [eloquent JavaScript](http://eloquentjavascript.net/)
-
 
    <aside class="notes">
 
@@ -391,10 +576,10 @@ for (var i = 0; i < dogs.length; i++) {
 
 please, _please_, **please** fill out a session survey
 
-1. download the Esri Events App
-2. select Dev Summit
-3. search for "JavaScript for Geographers"
-4. leave feedback!
+1. Download the Esri Events App
+2. Select Dev Summit
+3. Search for "JavaScript for Geographers"
+4. Leave feedback!
 
 ---
 
@@ -403,8 +588,6 @@ please, _please_, **please** fill out a session survey
 idea, question, issue, or success story?
 
 [@geogangster](https://twitter.com/geogangster) / [@patrickarlt](https://twitter.com/patrickarlt)
-
-john@esri.com / parlt@esri.com
 
 Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
