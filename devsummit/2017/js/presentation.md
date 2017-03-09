@@ -318,10 +318,7 @@ for (var i = 0; i < dogs.length; i++) {
 * JavaScript is _single threaded_
 * Only does 1 thing at a time
 * Lots of things might happen at once
-
-   <aside class="notes">
-
-   </aside>
+* This is the "Event Loop"
 
 ---
 
@@ -329,45 +326,11 @@ for (var i = 0; i < dogs.length; i++) {
 
 ## JavaScript Event Loop
 
-```
-// program starts, event loop is empty
-console.log('Hello Dev Summit');
+1. Exectues 1 function at a time
+2. <span style="white-space: nowrap;">Run the entire function</spann>
+3. Start the next function
 
-// call setTimeout, add a function to the event loop after a delay
-setTimeout(function () {
-  console.log('Lets Learn');
-}, 100);
-
-// now we call setTimeout again
-setTimeout(function () {
-  console.log('JavaScript');
-}, 10);
-
-// and again, still goes into the event loop after 0 milliseconds
-setTimeout(function () {
-  console.log('Async');
-}, 0);
-
-// executes immediately, still in the same "turn" of the event loop
-//
-console.log('Thanks!');
-```
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## JavaScript Event Loop
-
-```
-// done executing and we will start executing the event loop
-
-> Hello Dev Summit
-> Thanks!
-> Async
-> JavaScript
-> Lets Learn
-```
+[Demo](http://jsbin.com/bezusuk/edit?js,console)
 
 ---
 
@@ -388,6 +351,8 @@ button.addEventListener('click', function () {
 ```
 
 Callback are functions that are called when things happen.
+
+[Demo](http://jsbin.com/qovotex/edit?html,js,console,output)
 
 ---
 
@@ -422,7 +387,7 @@ Promises represent a future value that will be "resolved".
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## Lexical Scope
+## Function Scope
 
 ```
 var message = 'Hello World!';
@@ -470,7 +435,7 @@ person.fullName() // > Casey Jones
 
 ## What is `this`?
 
-The `this` vaiable changes context sometimes. This can be confusing.
+The value of `this` depends on how the function was called.
 
 [Demo](http://jsbin.com/rowofi/edit?js,console)
 
@@ -504,15 +469,23 @@ The `this` vaiable changes context sometimes. This can be confusing.
 
 ## the DOM
 
+* select elements
+* listen for events
+* change elements
+
+[A simple form](http://jsbin.com/qojodez/edit?html,js,console,output);
+[Finished example](http://jsbin.com/viconot/edit?html,js,console,output);
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## debugging
 
-   <aside class="notes">
+Get used to your dev tools!
 
-   </aside>
+* `console.log` - print things to the console
+* `debugger` - stops the application so you can look around
 
 ---
 
