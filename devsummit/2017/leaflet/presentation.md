@@ -1,4 +1,4 @@
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-title.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-title.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 80%; background: rgba(30,30,30,0.9)"/-->
 
@@ -7,7 +7,7 @@ John (@geogangster), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## Agenda
 
@@ -18,13 +18,13 @@ John (@geogangster), Esri
 ---
 
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 ## Disclaimer* 
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### Its a group effort
 
@@ -42,7 +42,7 @@ John (@geogangster), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## what is [`Leaflet`](https://leafletjs.com)?
 
@@ -61,7 +61,7 @@ small, stable, popular
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## designed for web developers
 
@@ -93,7 +93,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## How small _is_ Leaflet?
 
@@ -103,7 +103,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### so small it doesn't help<br>you fetch .geojson files
 
@@ -136,7 +136,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### luckily `Leaflet` has a *big* plugin community
 
@@ -145,14 +145,14 @@ things to note:
 ---
 
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### [`Esri Leaflet`](https://esri.github.io/esri-leaflet) is *our* plugin(s)
 to make working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 ## Goals
 
@@ -161,13 +161,13 @@ to make working with the most<br>popular ArcGIS Services a **pleasure**
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 ## Lets take a tour!
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.tileLayer`](http://leafletjs.com/reference-1.0.3.html#tilelayer)
 
@@ -198,7 +198,7 @@ requires manual attribution and knowledge of tiling scheme
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.esri.basemapLayer`](http://esri.github.io/esri-leaflet/api-reference/layers/basemap-layer.html)
 
@@ -230,7 +230,7 @@ map credits update on pan/zoom<br>
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 `<segway>`
 
@@ -240,7 +240,7 @@ map credits update on pan/zoom<br>
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.GeoJSON`]()
 
@@ -278,14 +278,14 @@ islands.bindPopup((layer) =>
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 ## `Esri Leaflet`
 ### builds on the fundamentals
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.esri.FeatureLayer`]()
 
@@ -314,7 +314,7 @@ spatial/sql filtering, popups bound when feature is clicked
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.esri.tiledMapLayer`]()
 
@@ -333,7 +333,7 @@ L.esri.tiledMapLayer({ url: '//server.com/BasemapCached/MapServer' });
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.esri.dynamicMapLayer`]()
 
@@ -363,7 +363,7 @@ dynLayer.bindPopup(function (error, collection) {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.esri.imageMapLayer`]()
 
@@ -401,7 +401,7 @@ custom raster functions are supported
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### more `Esri Leaflet` [plugins](http://esri.github.io/esri-leaflet/plugins)
 
@@ -413,7 +413,7 @@ custom raster functions are supported
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### The community has too!
 
@@ -423,7 +423,7 @@ custom raster functions are supported
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## whats new with [Leaflet](https://leafletjs.com)? [`v1.0.3`](http://leafletjs.com/2017/01/23/leaflet-1.0.3.html)!
 
@@ -437,7 +437,7 @@ bugfixes for browsers with `PointerEvents`
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## what about us?
 
@@ -447,7 +447,7 @@ bugfixes for browsers with `PointerEvents`
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## `L.esri.webMap`
 
@@ -475,7 +475,7 @@ things to note:
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [`L.esri.Vector`](https://github.com/esri/esri-leaflet-vector)
 
@@ -495,7 +495,7 @@ L.esri.Vector.basemap('Newspaper').addTo(map);
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## bug fixes / improvements
 
@@ -506,13 +506,13 @@ L.esri.Vector.basemap('Newspaper').addTo(map);
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## more modular dependencies
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [npmjs.com/packages/arcgis-to-geojson-utils](https://npmjs.com/packages/arcgis-to-geojson-utils)
 
@@ -536,7 +536,7 @@ ES6 (shipped as a UMD)
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [npmjs.com/packages/leaflet-virtual-grid](https://npmjs.com/packages/leaflet-virtual-grid)
 
@@ -544,7 +544,7 @@ A DOM-less tile layer that can be used<br>to query APIs with bounding boxes or c
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ```js
 var vg = new VirtualGrid();
@@ -558,7 +558,7 @@ vg.on("cellenter", function(e){
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [npmjs.com/packages/tiny-binary-search](https://npmjs.com/packages/tiny-binary-search)
 
@@ -586,7 +586,7 @@ index.bulkAdd([
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## Whats really new?
 
@@ -598,13 +598,13 @@ import {Map} from './Map'; // ES6 + rollup = <3
 ---
 
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## Lets check out some new demos!
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [dynamic labels](./snippets/labels.html)!
 
@@ -640,7 +640,7 @@ function calculateLabelWeight (pop) {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## _weighted_ collision detection!
 
@@ -670,7 +670,7 @@ function addLabel(layer, id, weight) {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## [driving directions](https://johngravois.com/lrm-esri/examples/index.html)!
 
@@ -682,7 +682,7 @@ function addLabel(layer, id, weight) {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## driving directions!
 
@@ -707,7 +707,7 @@ var directions = L.Routing.control({
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## under the hood
 
@@ -733,7 +733,7 @@ service proxy [doc](https://developers.arcgis.com/authentication/working-with-pr
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## make the request
 
@@ -758,7 +758,7 @@ completeServiceUrl += '&stops=' + locs.join(';');
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## parse the result
 
@@ -788,7 +788,7 @@ lifted from [terraformer-arcgis-parser](https://github.com/Esri/terraformer-arcg
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### whatever your build system
 
@@ -798,7 +798,7 @@ lifted from [terraformer-arcgis-parser](https://github.com/Esri/terraformer-arcg
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### whatever your goal
 
@@ -808,7 +808,7 @@ lifted from [terraformer-arcgis-parser](https://github.com/Esri/terraformer-arcg
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ### the community is here to help
 
@@ -820,13 +820,13 @@ lifted from [terraformer-arcgis-parser](https://github.com/Esri/terraformer-arcg
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 please, _please_, **please** fill out a session survey
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 idea, question, issue, or success story?
 
@@ -834,4 +834,4 @@ idea, question, issue, or success story?
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-end.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-end.png" -->
