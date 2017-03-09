@@ -10,12 +10,12 @@ Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## Agenda
 
 1. Fundamentals
-2. Building Web Apps
+2. <span style="white-space: nowrap;">Building Web Apps</span>
 3. JS API
 4. JavaScript Fatigue
 
@@ -60,9 +60,6 @@ const notGonnaChange;
 > undefined
 ```
 
-   <aside class="notes">
-
-   </aside>
 
 ---
 
@@ -321,10 +318,7 @@ for (var i = 0; i < dogs.length; i++) {
 * JavaScript is _single threaded_
 * Only does 1 thing at a time
 * Lots of things might happen at once
-
-   <aside class="notes">
-
-   </aside>
+* This is the "Event Loop"
 
 ---
 
@@ -332,45 +326,11 @@ for (var i = 0; i < dogs.length; i++) {
 
 ## JavaScript Event Loop
 
-```
-// program starts, event loop is empty
-console.log('Hello Dev Summit');
+1. Exectues 1 function at a time
+2. <span style="white-space: nowrap;">Run the entire function</spann>
+3. Start the next function
 
-// call setTimeout, add a function to the event loop after a delay
-setTimeout(function () {
-  console.log('Lets Learn');
-}, 100);
-
-// now we call setTimeout again
-setTimeout(function () {
-  console.log('JavaScript');
-}, 10);
-
-// and again, still goes into the event loop after 0 milliseconds
-setTimeout(function () {
-  console.log('Async');
-}, 0);
-
-// executes immediately, still in the same "turn" of the event loop
-//
-console.log('Thanks!');
-```
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## JavaScript Event Loop
-
-```
-// done executing and we will start executing the event loop
-
-> Hello Dev Summit
-> Thanks!
-> Async
-> JavaScript
-> Lets Learn
-```
+[Demo](http://jsbin.com/bezusuk/edit?js,console)
 
 ---
 
@@ -390,7 +350,9 @@ button.addEventListener('click', function () {
 });
 ```
 
-callback are functions that are called when things happen
+Callback are functions that are called when things happen.
+
+[Demo](http://jsbin.com/qovotex/edit?html,js,console,output)
 
 ---
 
@@ -419,11 +381,13 @@ function anyErrors (error) {
 
 Promises represent a future value that will be "resolved".
 
+[Demo](http://jsbin.com/qisiki/edit?js,console)
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## closures
+## Function Scope
 
 ```
 var message = 'Hello World!';
@@ -435,33 +399,17 @@ function go () {
 go();
 ```
 
-when functions are called they remember the variables around them
+When functions are called they remember the variables around them, this is refered to as "lexical scope".
 
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## closures and scope
+## Closures
 
-```js
-function makeAdder(amountToAdd) {
-  // Each time we call makeAdder we get a new closure
-  // which will remember all the variables around it.
-  // We can use any of those variables in our adder function.
-  return function adder (amount) {
-    return amount + amountToAdd;
-  }
-}
+Since every function has its own scope you can make functions that return functions. These are refered to as "closures".
 
-const add5 = makeAdder(5);
-const add10 = makeAdder(5);
-
-add5(1);
-> 6
-
-add10(1);
-> 11
-```
+[Demo](http://jsbin.com/favaqig/edit?js,console)
 
 ---
 
@@ -470,7 +418,7 @@ add10(1);
 ## What is `this`?
 
 ```js
-var person = {
+var user = {
   firstName: "Casey",
   lastName: "Jones",
   fullName: function () {
@@ -480,6 +428,28 @@ var person = {
 
 person.fullName() // > Casey Jones
 ```
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## What is `this`?
+
+The value of `this` depends on how the function was called.
+
+[Demo](http://jsbin.com/rowofi/edit?js,console)
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+
+## Solving `this`
+
+* ES 2015 arrow functions
+* `bind`, `call` and `apply`
+
+[Demo](http://jsbin.com/yabicu/edit?js,console)
 
 ---
 
@@ -499,15 +469,23 @@ person.fullName() // > Casey Jones
 
 ## the DOM
 
+* select elements
+* listen for events
+* change elements
+
+[A simple form](http://jsbin.com/qojodez/edit?html,js,console,output);
+[Finished example](http://jsbin.com/viconot/edit?html,js,console,output);
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## debugging
 
-   <aside class="notes">
+Get used to your dev tools!
 
-   </aside>
+* `console.log` - print things to the console
+* `debugger` - stops the application so you can look around
 
 ---
 
