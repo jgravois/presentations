@@ -1,4 +1,4 @@
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-title.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-title.png" -->
 
 <!--div style="margin: auto; padding-top: 50px; padding-bottom: 50px; width: 100%; background: rgba(30,30,30,0.9)"/-->
 
@@ -6,9 +6,11 @@
 <br>
 John (@geogangster) & Pat (@patrickarlt), Esri
 
+Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
+
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 ## Agenda
 
@@ -18,7 +20,7 @@ John (@geogangster) & Pat (@patrickarlt), Esri
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## variables
 
@@ -40,7 +42,7 @@ const notGonnaChange;
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## objects
 
@@ -81,7 +83,7 @@ spot.age = 21;
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## operators - arithmetic
 
@@ -97,7 +99,7 @@ spot.age = 21;
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## operators - arithmetic
 
@@ -119,7 +121,7 @@ y-- // 2
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## operators - comparison
 
@@ -138,7 +140,7 @@ y-- // 2
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## operators - logical
 ```js
@@ -160,7 +162,7 @@ true || somethingFalsy
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## arrays
 ```js
@@ -178,7 +180,7 @@ fruits.length // 3
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## functions
 
@@ -196,7 +198,7 @@ dogYears(3);
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## anonymous functions
 ```js
@@ -210,7 +212,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## objects - methods
 
@@ -220,7 +222,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## for loops
 
@@ -230,7 +232,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## JavaScript is _Asynchronous_
 
@@ -240,7 +242,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## closures / _this_
 
@@ -250,7 +252,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## sharing JavaScript - modules
 
@@ -260,7 +262,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## lets set up a JS development environment
 
@@ -270,7 +272,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## the DOM
 
@@ -280,7 +282,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## debugging
 
@@ -290,7 +292,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## lets put all this to use!
 
@@ -300,7 +302,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## the JavaScript ecosystem
 
@@ -310,7 +312,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## a note about ES 2015
 
@@ -320,7 +322,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## _Opinions_
 
@@ -330,7 +332,7 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## learn more!
 
@@ -346,18 +348,28 @@ function () {
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 please, _please_, **please** fill out a session survey
 
+1. download the Esri Events App
+2. select Dev Summit
+3. search for "Git/GitHub for Geographers"
+4. leave feedback!
+
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 idea, question, issue, or success story?
 
-@geogangster / [john@esri.com](mailto:john@esri.com)
+[@geogangster](https://twitter.com/geogangster) / [@patrickarlt](https://twitter.com/patrickarlt)
+
+john@esri.com / parlt@esri.com
+
+Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
+
 
 ---
 
-<!-- .slide: data-background="/presentations/fresher-template/images/2017-end.png" -->
+<!-- .slide: data-background="../../../fresher-template/images/2017-end.png" -->
