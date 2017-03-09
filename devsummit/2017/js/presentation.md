@@ -6,7 +6,7 @@
 
 John ([@geogangster](https://twitter.com/geogangster)) & Pat ([@patrickarlt](https://twitter.com/patrickarlt)), Esri
 
-Slides: [`http://bit.ly/2lF9owy`](http://bit.ly/2lF9owy)
+Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ---
 
@@ -367,11 +367,6 @@ go();
 ```
 
 when functions are called they remember the variables around them
-
-   <aside class="notes">
-
-   </aside>
-
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -552,9 +547,9 @@ please, _please_, **please** fill out a session survey
 
 idea, question, issue, or success story?
 
-John ([@geogangster](https://twitter.com/geogangster)) & Pat ([@patrickarlt](https://twitter.com/patrickarlt)), Esri
+[@geogangster](https://twitter.com/geogangster) / [@patrickarlt](https://twitter.com/patrickarlt)
 
-Slides: [`http://bit.ly/2lF9owy`](http://bit.ly/2lF9owy)
+Slides: [`http://bit.ly/2m4A6ei`](http://bit.ly/2m4A6ei)
 
 ---
 
