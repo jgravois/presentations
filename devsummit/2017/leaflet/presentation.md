@@ -5,6 +5,8 @@
 # <small>*building apps with*</small> Esri Leaflet
 John (@geogangster), Esri
 
+slides: [`http://bit.ly/2m7D6Xh`](slides: `http://bit.ly/2m7D6Xh`)
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -824,6 +826,11 @@ lifted from [terraformer-arcgis-parser](https://github.com/Esri/terraformer-arcg
 
 please, _please_, **please** fill out a session survey
 
+1. download the Esri Events App
+2. select Dev Summit
+3. search for "Leaflet"
+4. leave feedback!
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
@@ -831,6 +838,8 @@ please, _please_, **please** fill out a session survey
 idea, question, issue, or success story?
 
 @geogangster / [john@esri.com](mailto:john@esri.com)
+
+slides: [`http://bit.ly/2m7D6Xh`](slides: `http://bit.ly/2m7D6Xh`)
 
 ---
 
