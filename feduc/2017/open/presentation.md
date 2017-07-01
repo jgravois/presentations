@@ -246,11 +246,11 @@ chart.show({
 
 <!-- .slide: data-background="/presentations/fresher-template/images/Slide2.png" -->
 
-### [esridc/opendata-search-component](http://esridc.github.io/opendata-search-component/examples/)
+### [esridc/opendata-search-component](https://esridc.github.io/opendata-search-component/examples/)
 
 <div class="twos">
   <div class="snippet-preview">
-    <iframe src="http://esridc.github.io/opendata-search-component/examples/"></iframe>
+    <iframe src="https://esridc.github.io/opendata-search-component/examples/"></iframe>
   </div>
 </div>
 
@@ -393,7 +393,7 @@ A curated set of lightweight but powerful tools<br>for on-the-fly image processi
 
 <div class="twos">
   <div class="snippet-preview">
-    <iframe src="/geodev/dcds-17-leaflet/snippets/rasterFunction.html"></iframe>
+    <iframe src="/presentations/feduc/2017/leaflet/snippets/rasterFunction.html"></iframe>
   </div>
 </div>
 
