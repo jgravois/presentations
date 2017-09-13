@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CSULA/Esri</title>
+
+		<meta name="description" content="talkin git">
+		<meta name="author" content="john gravois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="slide">
+          <h2>
+            CSULA Senior Design Program
+          </h2>
+          <h4>
+            visit w/ <a href="https://twitter.com/geogangster">@geogangster</a>
+          </h4>
+        </section>
+
+        <section class="slide">
+          <h2>
+            lets get in the mood
+          </h2>
+          <iframe height="100%" width="100%"
+    src="https://youtube.com/embed/JNnX0Hxu494?autoplay=0&controls=0&showinfo=0&autohide=1">
+          </iframe>
+        </section>
+
+        <section class="slide">
+          <h2>who am <span style="color: #F1F540;">i</span>?</h2>
+        </section>
+
+        <section class="slide">
+          <!-- &amp;<br> -->
+          <h2>
+            when i say <span style="color: #F1F540;">Esri</span>, what do you think of?
+          </h2>
+          <!-- probably 'what the hell is ezree?' -->
+        </section>
+
+        <section class="slide">
+          <!-- &amp;<br> -->
+          <img src='https://learn.arcgis.com/en/arcgis-book/images/ch10/10-fig-10-2.jpg'>
+          <!--
+            Fedex
+            UPS
+            Apple
+            Nike
+            Starbucks
+            Farmers
+            Real Estate
+            the government
+            military
+            oil and gas
+            water and electric utilities
+          -->
+        </section>
+
+        <section class="slide">
+        <ul>
+          <li>
+            delivering packages
+          </li>
+          <li>
+            simulating disasters
+          </li>
+          <li>
+            protecting habitat
+          </li>
+          <li>
+            managing property boundaries
+          </li>
+          <li>
+            routing for 911 dispatch
+          </li>
+          <li>
+            isolating water pipe leaks
+          </li>
+          <li>
+            precision agriculture
+          </li>
+        </ul>
+        </section>
+
+        <section class="slide">
+          <!-- &amp;<br> -->
+          <h2>
+            (spatial) context is key<br>even <a href='https://twitter.com/henryhadlow/status/522387290778517504'>w/o</a> a map<br>
+          </h2>
+        </section>
+
+        <!--
+          demo: load gov data and run a census analysis
+          display it in Leaflet
+
+          share result in an app that has no map
+          type in an address and get demographic data back
+        -->
+
+        <section class="slide">
+          <!-- &amp;<br> -->
+          <h2>
+            y'all are programmers<br>so lets talk <a href='http://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_Counties_Generalized/FeatureServer/0/query?where=POP2012+%3C+POP2010&objectIds=&time=&geometry=-180%2C0%2C-130%2C60&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&resultType=none&distance=&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=true&returnCentroid=false&multipatchOption=none&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnDistinctValues=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&quantizationParameters=&sqlFormat=none&f=html&token='>JSON</a>
+          </h2>
+        </section>
+
+        <section class="slide">
+          <ul>
+            <li>
+              SQL filters
+            </li>
+            <li>
+              spatial predicates
+            </li>
+            <li>
+              generalization
+            </li>
+            <li>
+              reprojection
+            </li>
+            <li>
+              multiple output formats
+            </li>
+          </ul>
+        </section>
+
+        <section class="slide">
+          <h2>all server-side!</h2>
+        </section>
+
+        <section class="slide">
+          <h2>open is free<br>private, also free*</h2>
+        </section>
+
+        <section class="slide">
+          <h2>permissive TLA</h2>
+          <p>plenty of basemap tiles, unlimited geosearch</p>
+        </section>
+
+        <section class="slide">
+          <h3>resources:</h3>
+          <p>john@esri.com / @geogangster</p>
+          <p>esri leaflet - <a href='http://esri.github.io/esri-leaflet'>http://esri.github.io/esri-leaflet</a></p>
+          <p>developers site - <a href='http://developers.arcgis.com'>http://developers.arcgis.com</a></p>
+          <p>REST Feature Service query doc - <br><a href='http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Query_Feature_Service_Layer/02r3000000r1000000/'>http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000</a></p>
+          <p>terraformer - <br><a href='http://github.com/Esri/Terraformer'>http://terraformer.io</a></p>
+        </section>
+
+        <section class="slide">
+          <h2>nice to meet you!</h2>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="../fresher-template/lib/js/head.min.js"></script>
+    <script src="../fresher-template/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+          { src: '../fresher-template/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+	</body>
+</html>
