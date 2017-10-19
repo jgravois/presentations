@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>@esri/rest-js</title>
+
+		<meta name="description" content="talkin git">
+		<meta name="author" content="john gravois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../fresher-template/css/reveal.css">
+		<link rel="stylesheet" href="../fresher-template/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../fresher-template/lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../fresher-template/css/print/pdf.css' : '../fresher-template/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+    <!-- 
+
+      Concept & Goals. And concrete use cases from Products, other projects and customers/partners
+
+      Projects:
+ - Koop - integrate 3rd party API and Platforms with ArcGIS (Node) - used in Hub, Insights, PS
+ - Sonar - Chatbot for Facebook, Slack, Text SMS (Node) - used by PS for customers, future: Hub
+ - Cedar - chart library - used in Hub, by Customer Developers (edited)
+
+
+[10:49] 
+Example Partners/Customers:
+- MarkLogic - embed Koop and components into MarkLogic V8 (Node) engine
+- OpenDataNation - Startup Partner building municipal health & safety data analytics for Hub customers
+- US Census CitySDK - open-source library to integrate Census data for developers (edited)
+
+
+[10:53] 
+Goals:
+- Javascript library that works for in Node server environments and Map-less Browser apps
+- Integrate into existing projects (above)
+  - open-source for inclusion in these projects
+  - attract new developers and remove competitive comparisons
+- Supported by Hub and StoryMaps product teams (and Developers.arcgis.com?)
+
+    -->
+    <div class="reveal">
+      <div class="slides">
+        <section class="slide">
+          <h2>
+            @esri/rest-js
+          </h2>
+        </section>
+
+        <section class="slide">
+          <h2>Projects</h2>
+          <ul>
+            <li>Koop - integrate 3rd party API and Platforms with ArcGIS (Node) - used in Hub, Insights, Pro Services</li>
+            <li>Sonar - Chatbot for Facebook, Slack, Text SMS (Node) - used by PS for customers, future: Hub</li>
+            <li>Cedar - chart library - used in Hub, by Customer Developers (edited)</li>
+            <li>AGO Assistant? - supplemantary admin tool</li>
+          </ul>
+        </section>
+
+        <section class="slide">
+            <h2>Example Partners</h2>
+            <ul>
+              <li>MarkLogic - embed Koop and components into MarkLogic V8 (Node) engine</li>
+              <li>OpenDataNation - Startup Partner building municipal health &amp; safety data analytics for Hub customers</li>
+              <li>US Census CitySDK - open-source library to integrate Census data for developers (edited)</li>
+            </ul>
+        </section>
+
+        <section class="slide">
+            <h2>Goals</h2>
+            <ul>
+              <li>JavaScript library that works for in Node server environments and Map-less Browser apps</li>
+              <li>OpenDataNation - Startup Partner building municipal health &amp; safety data analytics for Hub customers</li>
+              <li>Supported by Hub, StoryMaps product teams (and developers.arcgis.com?)</li>
+              <li>attract new developers and remove competitive comparisons</li>
+              <li>open-source for inclusion in these projects</li>
+            </ul>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="../fresher-template/lib/js/head.min.js"></script>
+    <script src="../fresher-template/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../fresher-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../fresher-template/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../fresher-template/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../fresher-template/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../fresher-template/plugin/zoom-js/zoom.js', async: true },
+          { src: '../fresher-template/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+	</body>
+</html>
