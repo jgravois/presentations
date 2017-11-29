@@ -4,10 +4,10 @@ https://gist.github.com/jgravois/2099fbcaf9fbca0f0ae2b45e9cdd544d
 
 -->
 
-# Git/GitHub <small> *for Geographers*</small>
+# *ArcGIS* Hub
 
 
-John ([@geogangster](@https://twitter.com/geogangster)) & Pat ([@patrickarlt](http://twitter.com/patrickarlt)), Esri
+John ([@geogangster](@https://twitter.com/geogangster)) <br>Patrick ([@hamhandedly](https://twitter.com/hamhandedly))
 
 
 Slides: [`http://bit.ly/2mCMd5o`](http://bit.ly/2mCMd5o)
