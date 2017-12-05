@@ -10,7 +10,7 @@ https://gist.github.com/jgravois/2099fbcaf9fbca0f0ae2b45e9cdd544d
 John ([@geogangster](@https://twitter.com/geogangster)) <br>Patrick ([@hamhandedly](https://twitter.com/hamhandedly))
 
 
-Slides: [`http://bit.ly/2mCMd5o`](http://bit.ly/2mCMd5o)
+Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 ---
 
