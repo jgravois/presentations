@@ -63,7 +63,7 @@ idea, question, issue, or success story?
 
 [@geogangster](https://twitter.com/geogangster) / [@hamhandedly](https://twitter.com/hamhandedly)
 
-Slides: [`http://bit.ly/2mCMd5o`](http://bit.ly/2mCMd5o)
+Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 ---
 
