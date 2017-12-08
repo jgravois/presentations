@@ -29,6 +29,17 @@ notes: emphasis on civic tech outsiders collaborating with gov
  * within a city
  * across the :earth_americas:
 
+<!--
+john:
+product introduction to set context
+focusing on extensibility points
+something for folks with different skill levels
+stuff for folks that work in government
+stuff for civic transparency nerds
+
+lots of demos and external links, we'll share urls at the end
+-->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -37,8 +48,23 @@ notes: emphasis on civic tech outsiders collaborating with gov
 
 its... <span class="fragment"> the :bomb:</span>
 
+Open Data + Initiatives + Community
+
 * Demo [browsing a Hub page as a user]
-* open data as a means to an end
+
+<!--
+  patrick:
+  Hub is brand new!
+  Open Data is a capability of Hub that is included in ArcGIS Online subscriptions
+  Hub has addtional capabilities that cost $
+    Initiatives
+    Community
+  An evolution that sees Open Data as a means to an end
+  Goal: make operationalizing Open Data easier
+  Goal: Broaden the scope of engagement beyond computer folk
+  Goal: break down silos between departments
+  Goal: Measure success (and catch failure early)
+-->
 
 ---
 
@@ -46,14 +72,17 @@ its... <span class="fragment"> the :bomb:</span>
 
 ## Lets write some code against it!
 
+<!-- john -->
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-# Python Demo
+# [Python Demo]
 
 * counter narrative?
 * proposing a solution?
+
+<!-- john -->
 
 ---
 
@@ -65,6 +94,26 @@ its... <span class="fragment"> the :bomb:</span>
 * can be installed with Conda
 * integrates with your favorite open source packages
 
+<!--
+john:
+analyze bicycle and pedestrian fatalities
+steer priorities
+rally around an initiative
+isolate root causes
+
+open data means that the community can use the Python API to interact with arcgis.com anonymously
+
+Hub community engagement tools mean that premium capability can be unlocked by the public as well.
+
+volunteer field crews can conduct surveys
+run analysis on esri servers
+publishing new derived spatial data
+geocoding addresses
+
+facebook and google logins are supported
+
+-->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -75,6 +124,18 @@ its... <span class="fragment"> the :bomb:</span>
 
 * Demo [creating a new initiative page using a template]
 
+<!--patrick -->
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Demo [customizing a page]
+
+<!--
+patrick:
+the tools are relevant to open data and Hub pages
+leaning on https://hub.arcgis.com/pages/site-customization
+-->
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -83,23 +144,49 @@ its... <span class="fragment"> the :bomb:</span>
 
 * adlib automates creating new items behind the scenes
 
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## Demo [customizing a page]
-
+<!-- john (or axed)-->
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
 ## Demo [community admin tools]
 
+<!-- patrick -->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## Way down under the hood...
+## Under the hood...
+
+```bash
+git clone https://github.com/Esri/cedar.git
+```
+* Sharing charts across the platform
+* New UX on the way for users to customize directly in the browser
+* Built on top of D3
+
+<!-- john -->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+* Better support for multi-series charts
+* joining datasets
+* better default styling
+
+[show ember-cli-cedar wrapper demo]
+
+<!-- john -->
+
+---
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## _Way down_ under the hood...
 
 ```bash
 git clone https://github.com/Esri/arcgis-rest-js.git
@@ -107,6 +194,8 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 * Node.js and browser agnostic
 * TypeScript / Vanilla JS
 * Promise based
+
+<!-- john -->
 
 ---
 
@@ -118,9 +207,7 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 * show search in Hub (ember)
 * show arcgis-rest-js geocoding doc
 
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- john
 
 ## History
 
@@ -128,6 +215,7 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 * node-arcgis
 * ember-arcgis-*
 * lots of one-off projects
+-->
 
 ---
 
@@ -140,6 +228,16 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 * no map
 * _very_ low-level
 
+<!--
+
+john:
+very much a work in progress
+http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000
+its an extremely extensive API
+brave men have gone down this path before
+
+-->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -147,6 +245,8 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 ## Hub Ready Apps
 
 a continuum.
+
+<!--john-->
 
 ---
 
@@ -158,6 +258,8 @@ a continuum.
 * **Durable State** using URL of current view
 * **Accessibility** for impaired users following WCAG & a11y
 * **Indicator Aware** for Initiative configuration
+
+<!--john-->
 
 ---
 
@@ -171,6 +273,8 @@ a continuum.
 * **Global** Profile for saving views and collaboration
 * **Versions** for collaborative editing and publishing
 
+<!--john-->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
@@ -181,19 +285,46 @@ a continuum.
 * they _can_ improve data literacy and data quality
 * they work best when lots of _different_ stakeholders participate
 
+<!--
+patrick:
+come to jesus moment for gov folks to set expectations about community events
+this seems useful to me, but happy to rethink
+-->
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## How do i keep up?
+
+* https://hub.arcgis.com/pages/changelog
+
+<!--
+john:
+practicing what we preach
+transparency into release cycle
+release cycle is RAPID
+-->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
 
 ## resources
 
-* https://blogs.esri.com/esri/arcgis/2017/06/27/welcome-to-arcgis-hub/
-* https://www.youtube.com/watch?v=7OrvBKEqQiU
-* https://github.com/esridc/Hub-Tutorials/
-* https://developers.arcgis.com/python/
-* http://notebooks.esri.com/
-* http://arcgis-rest-js.surge.sh/
-* https://developers.arcgis.com/labs/
+Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
+
+* [Welcome to ArcGIS Hub Blog](https://blogs.esri.com/esri/arcgis/2017/06/27/welcome-to-arcgis-hub/)
+* [Video from 2017 UC](https://www.youtube.com/watch?v=7OrvBKEqQiU)
+* [Hub Python Tutorials](https://github.com/esridc/Hub-Tutorials/)
+* [Python API Documentation](https://developers.arcgis.com/python/)
+* [hosted Jupyter Notebooks](http://notebooks.esri.com/)
+* [`arcgis-rest-js` Documentation](http://arcgis-rest-js.surge.sh/)
+* [Developers Site](https://developers.arcgis.com/labs/)
+* [StoryMap accessiblity blog](https://blogs.esri.com/esri/arcgis/2017/12/07/map-journal-accessibility/)
+* [Customizing Hub pages](https://hub.arcgis.com/pages/site-customization)
+* [ArcGIS REST API doc](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000) - new port coming soon
+
+<!-- john self explanatory -->
 
 ---
 
@@ -205,6 +336,12 @@ idea, question, issue, or success story?
 
 Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
+<!--
+john:
+surveys will go out soon
+we have thick skin
+let us know what else you'd like to see!
+-->
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-end.png" -->
