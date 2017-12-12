@@ -1,15 +1,7 @@
-<!-- outline
+<!--
+notes
 
-https://gist.github.com/jgravois/2099fbcaf9fbca0f0ae2b45e9cdd544d
-
-dry run notes
 make sure to advance slides!
-
-notes for patrick
-background on background
-before we talk about what Hub is, what is Open Data?
-
-give Patrick control _after_ his intro slides
 
 the spectrum
   1. hardcoded app in space - python app
@@ -20,10 +12,22 @@ the spectrum
   3 hub ready app
     my street?
     refer to survey123, WAB,
-    be honest about the current state of doc
+
     https://mystreet.surge.sh/
 
+notes from dry run #2
+
+story time is good!
+what could we use for slide content? picture of floppy disk?
+i like the transition from open data to Hub
+
+sandwich
+tell em what youre gonna tell em
+tell em
+tell em what you told em
 -->
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
 
 # ***ArcGIS* Hub** for GeoDevs
 
@@ -34,17 +38,19 @@ slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
 
-notes: emphasis on civic tech outsiders collaborating with gov
+![screenshot of webinar tools](gotomeeting.png)
 
--->
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
 
 ## Agenda
 
 1. What _is_ Hub?
-2. How the public can program against it
-3. How you can customize it
+2. How you can customize it
+3. How the public can program against it
 4. How we can **all** collaborate
  * within a city
  * across the :earth_americas:
@@ -60,23 +66,8 @@ stuff for folks that work in government
 stuff for civic transparency nerds
 
 lots of demos and external links, we'll share urls at the end
--->
 
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## first, _why_ **ArcGIS Hub**?
-
-Story time!
-
-<!--
-  patrick:
-
-  before there was Open Data, gov operations were opaque
-  ArcGIS Open Data sought to bridge the gap between operations and the public
-  It has always been included with ArcGIS Online
-  Open Data is now a capability of Hub that is included in ArcGIS Online subscriptions
+ideal: emphasis on civic tech outsiders collaborating with gov
 -->
 
 ---
@@ -92,34 +83,13 @@ Story time!
 <!--
   patrick:
 
+  before we talk about what Hub is, what is Open Data?
+
   before there was Open Data, gov operations were opaque
   ArcGIS Open Data sought to bridge the gap between operations and the public
   It has always been included with ArcGIS Online
   Open Data is now a capability of Hub that is included in ArcGIS Online subscriptions
--->
 
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## what _is_ **ArcGIS Hub**?
-
-Open Data + Initiatives + Community
-
-* Demo [browsing a Hub page as a user]
-
-<!--
-  patrick:
-  Hub is brand new!
-  Hub seeks to solve problems that Open Data on its own doesn't
-  Hub has addtional capabilities that cost $
-    Initiatives
-    Community
-  Open Data underpins Hub
-  Goal: make operationalizing Open Data easier
-  Goal: Broaden the scope of engagement beyond computer folk
-  Goal: break down silos between departments
-  Goal: Measure success (and catch failure early)
 -->
 
 ---
@@ -128,7 +98,7 @@ Open Data + Initiatives + Community
 
 ## Demo
 
-* browsing Hub as a user
+* Introducing Hub initiatives
 
 <!--
   patrick:
@@ -142,6 +112,19 @@ Open Data + Initiatives + Community
   Goal: Broaden the scope of engagement beyond computer folk
   Goal: break down silos between departments
   Goal: Measure success (and catch failure early)
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## ArcGIS Hub
+
+* Data + Initiatives + Community
+
+<!--
+  john
+  recap patricks talking points above
 -->
 
 ---
@@ -157,7 +140,10 @@ git clone https://github.com/Esri/cedar.git
 * New UX on the way for users to customize directly in the browser
 * Built on top of D3
 
-<!-- john -->
+<!-- john
+  https://esri.github.io/ember-cli-cedar/#/charts/line
+  dig into the line chart (both live and JSON)
+-->
 
 ---
 
@@ -177,7 +163,7 @@ git clone https://github.com/Esri/cedar.git
 
 ## How do i _turn on_ ArcGIS Hub :bulb:?
 
-* Demo - creating a new initiative page using a template
+* Demo - creating Initiative pages
 
 <!--
 
@@ -191,12 +177,16 @@ we're more flexible than ever about what data you give us
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## Demo [customizing a page]
+* bring your own data
+* more flexible, automated configuration
+* we guide you to citizen engagement
+* pages are [customizable](https://hub.arcgis.com/pages/site-customization)
 
-<!--
-patrick:
-the tools are relevant to open data and Hub pages
-leaning on https://hub.arcgis.com/pages/site-customization
+
+<!--john
+  quicker deployment of useful tools
+  page design is customizable
+  custom apps and OSS can live side by side with what we ship
 -->
 
 ---
@@ -208,11 +198,15 @@ leaning on https://hub.arcgis.com/pages/site-customization
 * load data dynamically
 * use [shared themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
 
-use Viewer as example?
-* show live app eat two app ids
-* show JSON
+<!-- john
 
-<!-- john (or axed)-->
+show live app eat two app ids / show JSON
+https://www.arcgis.com/apps/View/index.html?appid=a0633500540b4d8f878bdbdc479cdcac
+https://www.arcgis.com/apps/View/index.html?webmap=158cebd41f5c4005842283b39e84826c
+https://www.arcgis.com/sharing/content/items/a0633500540b4d8f878bdbdc479cdcac/data?f=json
+https://www.arcgis.com/sharing/content/items/158cebd41f5c4005842283b39e84826c/data?f=json
+https://github.com/Esri/configurable-app-examples-4x-js
+-->
 
 ---
 
@@ -226,18 +220,7 @@ use Viewer as example?
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## Lets write some code!
-
-<!-- john -->
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-# [Python Demo]
-
-* counter narrative?
-* proposing a solution?
+## What about citizen coders?
 
 <!-- john -->
 
@@ -252,31 +235,57 @@ use Viewer as example?
 * integrates with your favorite open source packages
 
 <!--
+
+john:
+we want to broaden engagement, but we have great tools for devs and data scientists too
+cross promote Python API webinar for more info
+
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+# [Python API Demo]
+
+<!--
+
 john:
 analyze bicycle and pedestrian fatalities
+jupyter notebook not the only way to run the Python API, but visually compelling
+making the analysis reproducible and transparent
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+# Anonymous _or_ Identified
+
+* citizens can interact with datasets anonymously
+
+* Hub engagement tools allow folks to unlock premium capabilities too
+
+<!--
+
+john:
+
 steer priorities
 rally around an initiative
 isolate root causes
-cross promote Python API webinar for more info
-jupyter notebook not the only way to run the Python API, but visually compelling
-making the analysis reproducible and transparent
-
-open data means that the community can use the Python API to interact with arcgis.com anonymously
-
-Hub community engagement tools mean that premium capability can be unlocked by the public as well.
+propose solutions
+create counter narratives
 
 volunteer field crews can conduct surveys
 run analysis on esri servers
-publishing new derived spatial data
-geocoding addresses
+create drivetimes, analyze demographics
+publish new derived spatial data
 
 facebook and google logins are supported
 
 -->
 
 ---
-
-
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
@@ -295,11 +304,8 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## Demo [arcgis-rest-js]
-
-* show feature service creating on developers site (angular)
-* show search in Hub (ember)
-* show arcgis-rest-js geocoding doc
+* ArcGIS for Developers (angular)
+* ArcGIS Hub (ember)
 
 <!-- john
 
@@ -309,22 +315,7 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 * node-arcgis
 * ember-arcgis-*
 * lots of one-off projects
--->
 
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## Strengths/Weaknesses
-
-* Node.js
-* no JS framework dependencies
-* no map
-* _very_ low-level
-
-<!--
-
-john:
 very much a work in progress
 http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000
 its an extremely extensive API
@@ -340,7 +331,13 @@ brave men have gone down this path before
 
 a continuum.
 
-<!--john-->
+hardcoded > configurable > _hub ready_
+
+<!--john
+
+all of the above can co-exist
+
+-->
 
 ---
 
@@ -377,7 +374,9 @@ a continuum.
 
 [MyStreet](https://github.com/Esri/MyStreet/)
 
-<!--john-->
+<!--john
+ be honest about the current state of doc
+-->
 
 ---
 
@@ -385,9 +384,6 @@ a continuum.
 
 ## more lego pieces
 
-```bash
-git clone https://github.com/Esri/arcgis-rest-js.git
-```
 * [sonar](https://github.com/Esri/sonar)
 * [koop](koopjs.github.io)
 
@@ -443,7 +439,8 @@ Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 * [Customizing Hub pages](https://hub.arcgis.com/pages/site-customization)
 * [ArcGIS REST API doc](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000) - new port coming soon
 * [Configurable app examples](https://github.com/Esri/configurable-app-examples-4x-js)
-
+* [Ice Age Flooding](https://wadnr.maps.arcgis.com/apps/Cascade/index.html?appid=84ea4016ce124bd9a546c5cbc58f9e29
+)
 <!-- john self explanatory -->
 
 ---
