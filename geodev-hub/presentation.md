@@ -2,15 +2,35 @@
 
 https://gist.github.com/jgravois/2099fbcaf9fbca0f0ae2b45e9cdd544d
 
+dry run notes
+make sure to advance slides!
+
+notes for patrick
+background on background
+before we talk about what Hub is, what is Open Data?
+
+give Patrick control _after_ his intro slides
+
+the spectrum
+  1. hardcoded app in space - python app
+
+  2. configurable app embedded in page - locator web app builder
+    developer demo is pointing it at a different webmap
+
+  3 hub ready app
+    my street?
+    refer to survey123, WAB,
+    be honest about the current state of doc
+    https://mystreet.surge.sh/
+
 -->
 
-# *ArcGIS* Hub
-
+# ***ArcGIS* Hub** for GeoDevs
 
 John ([@geogangster](@https://twitter.com/geogangster)) <br>Patrick ([@hamhandedly](https://twitter.com/hamhandedly))
 
 
-Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
+slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 ---
 
@@ -29,6 +49,8 @@ notes: emphasis on civic tech outsiders collaborating with gov
  * within a city
  * across the :earth_americas:
 
+<small>slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
+
 <!--
 john:
 product introduction to set context
@@ -44,9 +66,24 @@ lots of demos and external links, we'll share urls at the end
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## what _is_ ArcGIS Hub?
+## first, _why_ **ArcGIS Hub**?
 
-its... <span class="fragment"> the :bomb:</span>
+A long time ago, in a galaxy far far away...
+
+<!--
+  patrick:
+
+  before there was Open Data, gov operations were opaque
+  ArcGIS Open Data sought to bridge the gap between operations and the public
+  It has always been included with ArcGIS Online
+  Open Data is now a capability of Hub that is included in ArcGIS Online subscriptions
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## what _is_ **ArcGIS Hub**?
 
 Open Data + Initiatives + Community
 
@@ -55,11 +92,11 @@ Open Data + Initiatives + Community
 <!--
   patrick:
   Hub is brand new!
-  Open Data is a capability of Hub that is included in ArcGIS Online subscriptions
+  Hub seeks to solve problems that Open Data on its own doesn't
   Hub has addtional capabilities that cost $
     Initiatives
     Community
-  An evolution that sees Open Data as a means to an end
+  Open Data underpins Hub
   Goal: make operationalizing Open Data easier
   Goal: Broaden the scope of engagement beyond computer folk
   Goal: break down silos between departments
@@ -70,88 +107,23 @@ Open Data + Initiatives + Community
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
-## Lets write some code against it!
+## Demo
 
-<!-- john -->
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-# [Python Demo]
-
-* counter narrative?
-* proposing a solution?
-
-<!-- john -->
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## ArcGIS API for Python
-
-* no license required
-* can be installed with Conda
-* integrates with your favorite open source packages
+* browsing Hub as a user
 
 <!--
-john:
-analyze bicycle and pedestrian fatalities
-steer priorities
-rally around an initiative
-isolate root causes
-
-open data means that the community can use the Python API to interact with arcgis.com anonymously
-
-Hub community engagement tools mean that premium capability can be unlocked by the public as well.
-
-volunteer field crews can conduct surveys
-run analysis on esri servers
-publishing new derived spatial data
-geocoding addresses
-
-facebook and google logins are supported
-
+  patrick:
+  Hub is brand new!
+  Hub seeks to solve problems that Open Data on its own doesn't
+  Hub has addtional capabilities that cost $
+    Initiatives
+    Community
+  Open Data underpins Hub
+  Goal: make operationalizing Open Data easier
+  Goal: Broaden the scope of engagement beyond computer folk
+  Goal: break down silos between departments
+  Goal: Measure success (and catch failure early)
 -->
-
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## How do i _turn on_ ArcGIS Hub?
-
-its... <span class="fragment"> the :bomb:</span>
-
-* Demo [creating a new initiative page using a template]
-
-<!--patrick -->
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## Demo [customizing a page]
-
-<!--
-patrick:
-the tools are relevant to open data and Hub pages
-leaning on https://hub.arcgis.com/pages/site-customization
--->
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## Demo [dig into an oss configurable app]
-
-* adlib automates creating new items behind the scenes
-
-<!-- john (or axed)-->
----
-
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
-
-## Demo [community admin tools]
-
-<!-- patrick -->
 
 ---
 
@@ -182,7 +154,110 @@ git clone https://github.com/Esri/cedar.git
 
 ---
 
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## How do i _turn on_ ArcGIS Hub :bulb:?
+
+* Demo - creating a new initiative page using a template
+
+<!--
+
+patrick
+show spinning up an opioid inititiave
+add a preconfigured app to the new page
+we're more flexible than ever about what data you give us
+-->
+
 ---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Demo [customizing a page]
+
+<!--
+patrick:
+the tools are relevant to open data and Hub pages
+leaning on https://hub.arcgis.com/pages/site-customization
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Demo [dig into an oss configurable app]
+
+* load data dynamically
+* use [shared themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
+
+use Viewer as example?
+* show live app eat two app ids
+* show JSON
+
+<!-- john (or axed)-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Demo [community admin tools]
+
+<!-- patrick -->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## Lets write some code!
+
+<!-- john -->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+# [Python Demo]
+
+* counter narrative?
+* proposing a solution?
+
+<!-- john -->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## ArcGIS API for Python
+
+* no license required
+* can be installed with Conda
+* integrates with your favorite open source packages
+
+<!--
+john:
+analyze bicycle and pedestrian fatalities
+steer priorities
+rally around an initiative
+isolate root causes
+cross promote Python API webinar for more info
+jupyter notebook not the only way to run the Python API, but visually compelling
+making the analysis reproducible and transparent
+
+open data means that the community can use the Python API to interact with arcgis.com anonymously
+
+Hub community engagement tools mean that premium capability can be unlocked by the public as well.
+
+volunteer field crews can conduct surveys
+run analysis on esri servers
+publishing new derived spatial data
+geocoding addresses
+
+facebook and google logins are supported
+
+-->
+
+---
+
+
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
@@ -279,6 +354,30 @@ a continuum.
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
+## A _Hub Ready_ example/prototype
+
+[MyStreet](https://github.com/Esri/MyStreet/)
+
+<!--john-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
+## more lego pieces
+
+```bash
+git clone https://github.com/Esri/arcgis-rest-js.git
+```
+* [sonar](https://github.com/Esri/sonar)
+* [koop](koopjs.github.io)
+
+<!-- john -->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" >
+
 ## Collaboration between government and the public
 
 * weekend hackathons _don't_ generate business ready apps
@@ -289,8 +388,9 @@ a continuum.
 patrick:
 come to jesus moment for gov folks to set expectations about community events
 this seems useful to me, but happy to rethink
--->
----
+->
+
+-- -->
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
@@ -314,15 +414,16 @@ release cycle is RAPID
 Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 * [Welcome to ArcGIS Hub Blog](https://blogs.esri.com/esri/arcgis/2017/06/27/welcome-to-arcgis-hub/)
-* [Video from 2017 UC](https://www.youtube.com/watch?v=7OrvBKEqQiU)
+* [2017 UC Teaser](https://www.youtube.com/watch?v=7OrvBKEqQiU)
 * [Hub Python Tutorials](https://github.com/esridc/Hub-Tutorials/)
 * [Python API Documentation](https://developers.arcgis.com/python/)
-* [hosted Jupyter Notebooks](http://notebooks.esri.com/)
+* [Hosted Jupyter Notebooks](http://notebooks.esri.com/)
 * [`arcgis-rest-js` Documentation](http://arcgis-rest-js.surge.sh/)
-* [Developers Site](https://developers.arcgis.com/labs/)
+* [ArcGIS for Developers](https://developers.arcgis.com/labs/)
 * [StoryMap accessiblity blog](https://blogs.esri.com/esri/arcgis/2017/12/07/map-journal-accessibility/)
 * [Customizing Hub pages](https://hub.arcgis.com/pages/site-customization)
 * [ArcGIS REST API doc](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000) - new port coming soon
+* [Configurable app examples](https://github.com/Esri/configurable-app-examples-4x-js)
 
 <!-- john self explanatory -->
 
@@ -342,6 +443,7 @@ surveys will go out soon
 we have thick skin
 let us know what else you'd like to see!
 -->
+
 ---
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-end.png" -->
