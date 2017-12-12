@@ -27,35 +27,35 @@ tell em
 tell em what you told em
 -->
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png"-->
 
 # ***ArcGIS* Hub** for GeoDevs
 
 John ([@geogangster](@https://twitter.com/geogangster)) <br>Patrick ([@hamhandedly](https://twitter.com/hamhandedly))
 
 
-slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
+slides: [`http://bit.ly/2AOXtk8`](http://bit.ly/2AOXtk8)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png"-->
 
 ![screenshot of webinar tools](gotomeeting.png)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png"-->
 
 ## Agenda
 
 1. What _is_ Hub?
 2. How you can customize it
-3. How the public can program against it
+3. How citizens can program against it
 4. How we can **all** collaborate
  * within a city
  * across the :earth_americas:
 
-<small>slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 john:
@@ -72,13 +72,15 @@ ideal: emphasis on civic tech outsiders collaborating with gov
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## first, _why_ **ArcGIS Hub**?
 
 Story time!
 
 ![removable storage](https://upload.wikimedia.org/wikipedia/commons/7/79/Forty_years_of_Removable_Storage.jpg)
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
   patrick:
@@ -94,11 +96,13 @@ Story time!
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## Demo
 
 * Introducing Hub initiatives
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
   patrick:
@@ -116,11 +120,13 @@ Story time!
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## ArcGIS Hub
 
 * Data + Initiatives + Community
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
   john
@@ -129,7 +135,7 @@ Story time!
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## Under the hood...
 
@@ -137,8 +143,10 @@ Story time!
 git clone https://github.com/Esri/cedar.git
 ```
 * Sharing charts across the platform
-* New UX on the way for users to customize directly in the browser
+* New interactive browser chart building experience is coming
 * Built on top of D3
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!-- john
   https://esri.github.io/ember-cli-cedar/#/charts/line
@@ -147,23 +155,25 @@ git clone https://github.com/Esri/cedar.git
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 * Better support for multi-series charts
 * joining datasets
 * better default styling
 
-[show ember-cli-cedar wrapper demo]
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!-- john -->
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-## How do i _turn on_ ArcGIS Hub :bulb:?
+## How do i _turn on_ :bulb: ArcGIS Hub ?
 
 * Demo - creating Initiative pages
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 
@@ -175,13 +185,14 @@ we're more flexible than ever about what data you give us
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 * bring your own data
 * more flexible, automated configuration
 * we guide you to citizen engagement
 * pages are [customizable](https://hub.arcgis.com/pages/site-customization)
 
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--john
   quicker deployment of useful tools
@@ -191,12 +202,14 @@ we're more flexible than ever about what data you give us
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## Demo [dig into an oss configurable app]
 
-* load data dynamically
+* maps loaded dynamically
 * use [shared themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!-- john
 
@@ -210,29 +223,35 @@ https://github.com/Esri/configurable-app-examples-4x-js
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## Demo [community admin tools]
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!-- patrick -->
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## What about citizen coders?
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!-- john -->
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## ArcGIS API for Python
 
 * no license required
-* can be installed with Conda
+* distributed via Conda
 * integrates with your favorite open source packages
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 
@@ -244,9 +263,11 @@ cross promote Python API webinar for more info
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 # [Python API Demo]
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 
@@ -254,17 +275,21 @@ john:
 analyze bicycle and pedestrian fatalities
 jupyter notebook not the only way to run the Python API, but visually compelling
 making the analysis reproducible and transparent
+notebooks.esri.com to get going quickly
+
 -->
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 # Anonymous _or_ Identified
 
 * citizens can interact with datasets anonymously
 
 * Hub engagement tools allow folks to unlock premium capabilities too
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 
@@ -279,7 +304,7 @@ create counter narratives
 volunteer field crews can conduct surveys
 run analysis on esri servers
 create drivetimes, analyze demographics
-publish new derived spatial data
+publish derived datasets
 
 facebook and google logins are supported
 
@@ -287,7 +312,7 @@ facebook and google logins are supported
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## _Way down_ under the hood...
 
@@ -298,14 +323,18 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 * TypeScript / Vanilla JS
 * Promise based
 
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
+
 <!-- john -->
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 * ArcGIS for Developers (angular)
 * ArcGIS Hub (ember)
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!-- john
 
@@ -325,13 +354,15 @@ brave men have gone down this path before
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## Hub Ready Apps
 
 a continuum.
 
 hardcoded > configurable > _hub ready_
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--john
 
@@ -341,7 +372,7 @@ all of the above can co-exist
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 * **ArcGIS Content** using Item config and Group Permissions
 * **ArcGIS Identity** for authentication and Community
@@ -354,7 +385,7 @@ all of the above can co-exist
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 * **Telemetry** to track usage and performance
 * **Data Citations** link back to Data
@@ -368,11 +399,13 @@ all of the above can co-exist
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## A _Hub Ready_ example/prototype
 
 [MyStreet](https://github.com/Esri/MyStreet/)
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--john
  be honest about the current state of doc
@@ -380,18 +413,20 @@ all of the above can co-exist
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## more lego pieces
 
 * [sonar](https://github.com/Esri/sonar)
 * [koop](koopjs.github.io)
 
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
+
 <!-- john -->
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" >
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" >
 
 ## Collaboration between government and the public
 
@@ -407,11 +442,13 @@ this seems useful to me, but happy to rethink
 
 -- -->
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## How do i keep up?
 
 * https://hub.arcgis.com/pages/changelog
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 john:
@@ -422,7 +459,7 @@ release cycle is RAPID
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
 
 ## resources
 
@@ -445,13 +482,13 @@ Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 idea, question, issue, or success story?
 
 [@geogangster](https://twitter.com/geogangster) / [@hamhandedly](https://twitter.com/hamhandedly)
 
-Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
+Slides: [`http://bit.ly/2AOXtk8`](http://bit.ly/2AOXtk8)
 
 <!--
 john:
@@ -462,4 +499,4 @@ let us know what else you'd like to see!
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-end.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-end.png" -->
