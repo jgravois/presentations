@@ -68,7 +68,7 @@ lots of demos and external links, we'll share urls at the end
 
 ## first, _why_ **ArcGIS Hub**?
 
-A long time ago, in a galaxy far far away...
+Story time!
 
 <!--
   patrick:
