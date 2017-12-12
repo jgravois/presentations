@@ -1,13 +1,6 @@
-<!-- outline
-
-https://gist.github.com/jgravois/2099fbcaf9fbca0f0ae2b45e9cdd544d
-
-dry run notes
+<!--
+notes
 make sure to advance slides!
-
-notes for patrick
-background on background
-before we talk about what Hub is, what is Open Data?
 
 give Patrick control _after_ his intro slides
 
@@ -23,7 +16,28 @@ the spectrum
     be honest about the current state of doc
     https://mystreet.surge.sh/
 
+notes from dry run #2
+
+story time is good!
+what could we use for slide content? picture of floppy disk?
+i like the transition from open data to Hub
+
+hub admin demo
+would be good to belabor the prerequisites
+they must bring their own data
+much of the configuration is automated
+configuration is no longer repetitive
+point out two different places to prove it
+why? to guide you to engagement
+packaged, but still open ended
+
+sandwich
+tell em what youre gonna tell em
+tell em
+tell em what you told em
 -->
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
 
 # ***ArcGIS* Hub** for GeoDevs
 
@@ -34,17 +48,19 @@ slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 
 ---
 
-<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
 
-notes: emphasis on civic tech outsiders collaborating with gov
+![screenshot of webinar tools](gotomeeting.png)
 
--->
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide3.png"-->
 
 ## Agenda
 
 1. What _is_ Hub?
-2. How the public can program against it
-3. How you can customize it
+2. How you can customize it
+3. How the public can program against it
 4. How we can **all** collaborate
  * within a city
  * across the :earth_americas:
@@ -60,6 +76,8 @@ stuff for folks that work in government
 stuff for civic transparency nerds
 
 lots of demos and external links, we'll share urls at the end
+
+ideal: emphasis on civic tech outsiders collaborating with gov
 -->
 
 ---
@@ -68,15 +86,18 @@ lots of demos and external links, we'll share urls at the end
 
 ## first, _why_ **ArcGIS Hub**?
 
-A long time ago, in a galaxy far far away...
+Story time
 
 <!--
   patrick:
+
+  before we talk about what Hub is, what is Open Data?
 
   before there was Open Data, gov operations were opaque
   ArcGIS Open Data sought to bridge the gap between operations and the public
   It has always been included with ArcGIS Online
   Open Data is now a capability of Hub that is included in ArcGIS Online subscriptions
+
 -->
 
 ---
@@ -129,6 +150,19 @@ Open Data + Initiatives + Community
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
+## ArcGIS Hub
+
+* Data + Initiatives + Community
+
+<!-- john
+
+
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
 ## Under the hood...
 
 ```bash
@@ -138,7 +172,10 @@ git clone https://github.com/Esri/cedar.git
 * New UX on the way for users to customize directly in the browser
 * Built on top of D3
 
-<!-- john -->
+<!-- john
+
+
+-->
 
 ---
 
@@ -189,11 +226,15 @@ leaning on https://hub.arcgis.com/pages/site-customization
 * load data dynamically
 * use [shared themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
 
-use Viewer as example?
-* show live app eat two app ids
-* show JSON
+<!-- john
 
-<!-- john (or axed)-->
+show live app eat two app ids / show JSON
+https://www.arcgis.com/apps/View/index.html?appid=a0633500540b4d8f878bdbdc479cdcac
+https://www.arcgis.com/apps/View/index.html?webmap=158cebd41f5c4005842283b39e84826c
+https://www.arcgis.com/sharing/content/items/a0633500540b4d8f878bdbdc479cdcac/data?f=json
+https://www.arcgis.com/sharing/content/items/158cebd41f5c4005842283b39e84826c/data?f=json
+
+-->
 
 ---
 
@@ -256,8 +297,6 @@ facebook and google logins are supported
 -->
 
 ---
-
-
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
@@ -424,7 +463,8 @@ Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 * [Customizing Hub pages](https://hub.arcgis.com/pages/site-customization)
 * [ArcGIS REST API doc](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000) - new port coming soon
 * [Configurable app examples](https://github.com/Esri/configurable-app-examples-4x-js)
-
+* [Ice Age Flooding](https://wadnr.maps.arcgis.com/apps/Cascade/index.html?appid=84ea4016ce124bd9a546c5cbc58f9e29
+)
 <!-- john self explanatory -->
 
 ---
