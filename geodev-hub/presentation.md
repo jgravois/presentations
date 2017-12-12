@@ -83,6 +83,25 @@ Story time!
 
 <!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
 
+## first, _why_ **ArcGIS Hub**?
+
+Story time!
+
+![removable storage](https://upload.wikimedia.org/wikipedia/commons/7/79/Forty_years_of_Removable_Storage.jpg)
+
+<!--
+  patrick:
+
+  before there was Open Data, gov operations were opaque
+  ArcGIS Open Data sought to bridge the gap between operations and the public
+  It has always been included with ArcGIS Online
+  Open Data is now a capability of Hub that is included in ArcGIS Online subscriptions
+-->
+
+---
+
+<!-- .slide: data-background="../../../fresher-template/images/2017-slide2.png" -->
+
 ## what _is_ **ArcGIS Hub**?
 
 Open Data + Initiatives + Community
