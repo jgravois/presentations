@@ -245,7 +245,13 @@ https://github.com/Esri/configurable-app-examples-4x-js
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
-<!-- patrick -->
+<!-- 
+
+patrick: 
+Citizen experience of initiatives
+Tools for managing your community: Two way communication + Events
+
+-->
 
 ---
 
