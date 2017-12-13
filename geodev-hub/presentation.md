@@ -100,7 +100,23 @@ Story time!
 
 ## Demo
 
-* Introducing Hub initiatives
+* Open Data >>> Initiatives
+
+<small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
+
+<!--
+  patrick:
+  Exploring open data as a user, two example of users taking this core capability and using it to move beyond transparency
+-->
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+
+
+## So...why _Hub_?
+
+* Open Data++
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
