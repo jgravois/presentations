@@ -2,7 +2,7 @@
 notes
 
 make sure to advance slides!
-
+git
 notes from dry run #2
 
 story time is good!
@@ -215,7 +215,7 @@ we're more flexible than ever about what data you give us
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-## Demo [dig into an oss configurable app]
+## _configurable apps_
 
 * maps loaded dynamically
 * use [shared themes](https://blogs.esri.com/esri/arcgis/2017/02/27/introducing-a-new-app-styling-capability-in-arcgis-online/)
@@ -236,13 +236,15 @@ https://github.com/Esri/configurable-app-examples-4x-js
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-## Demo [community admin tools]
+## Demo
+
+* community admin tools
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
-<!-- 
+<!--
 
-patrick: 
+patrick:
 Citizen experience of initiatives
 Tools for managing your community: Two way communication + Events
 
@@ -274,15 +276,17 @@ Tools for managing your community: Two way communication + Events
 
 john:
 we want to broaden engagement, but we have great tools for devs and data scientists too
-cross promote Python API webinar for more info
 
+we did a whole webinar dedicated to the Python API that was recorded
 -->
 
 ---
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-# [Python API Demo]
+## Demo
+
+* Jupyter Notebook analysis
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
@@ -294,29 +298,29 @@ jupyter notebook not the only way to run the Python API, but visually compelling
 making the analysis reproducible and transparent
 notebooks.esri.com to get going quickly
 
+steer priorities
+rally around an initiative
+isolate root causes
+propose solutions
+create counter narratives
+
 -->
 
 ---
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-# Anonymous _or_ Identified
+# Anonymous _or_ [Authenticated](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/)
 
 * citizens can interact with datasets anonymously
 
-* Hub engagement tools allow folks to unlock premium capabilities too
+* Hub engagement tools allow regular folks to unlock premium capabilities too
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
 
 john:
-
-steer priorities
-rally around an initiative
-isolate root causes
-propose solutions
-create counter narratives
 
 volunteer field crews can conduct surveys
 run analysis on esri servers
@@ -348,8 +352,8 @@ git clone https://github.com/Esri/arcgis-rest-js.git
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-* ArcGIS for Developers (angular)
-* ArcGIS Hub (ember)
+* ArcGIS for Developers - angular
+* ArcGIS Hub - ember
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
