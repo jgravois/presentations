@@ -3,18 +3,6 @@ notes
 
 make sure to advance slides!
 
-the spectrum
-  1. hardcoded app in space - python app
-
-  2. configurable app embedded in page - locator web app builder
-    developer demo is pointing it at a different webmap
-
-  3 hub ready app
-    my street?
-    refer to survey123, WAB,
-
-    https://mystreet.surge.sh/
-
 notes from dry run #2
 
 story time is good!
@@ -25,6 +13,10 @@ sandwich
 tell em what youre gonna tell em
 tell em
 tell em what you told em
+
+before we start
+jupyter notebook running
+
 -->
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide3.png"-->
@@ -58,16 +50,19 @@ slides: [`http://bit.ly/2AOXtk8`](http://bit.ly/2AOXtk8)
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
 <!--
+
 john:
-product introduction to set context
-focusing on extensibility points
-something for folks with different skill levels
-stuff for folks that work in government
-stuff for civic transparency nerds
 
-lots of demos and external links, we'll share urls at the end
+thank you all for joining us!
 
-ideal: emphasis on civic tech outsiders collaborating with gov
+ArcGIS Hub is a brand new product that stimulates collaboration between departments and increase community engagement.
+
+in today's webinar we're gonna take a look at how Hub works and focus on extensibility points for developers and part-time coders. We'll dig into Hub's many open source components and give you some ideas about other awesome stuff you can build
+
+we know we have both customers and civic tech activists on the line so we're going to show both how Hub can be customized and how citizens can program against open data.
+
+we've got lots of demos lined up and we're going to cover a lot of ground, so feel free to load the slides at home and use the resource links to dig in deeper.
+
 -->
 
 ---
@@ -368,6 +363,15 @@ hardcoded > configurable > _hub ready_
 
 all of the above can co-exist
 
+the spectrum
+  1. hardcoded app in space - python app
+
+  2. configurable app embedded in page
+
+  3 hub ready app
+    my street?
+    refer to survey123, WAB
+
 -->
 
 ---
@@ -409,6 +413,7 @@ all of the above can co-exist
 
 <!--john
  be honest about the current state of doc
+ 1201 L St NW, Washington, DC, 20005, USA
 -->
 
 ---
@@ -426,22 +431,6 @@ all of the above can co-exist
 
 ---
 
-<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" >
-
-## Collaboration between government and the public
-
-* weekend hackathons _don't_ generate business ready apps
-* they _can_ improve data literacy and data quality
-* they work best when lots of _different_ stakeholders participate
-
-<!--
-patrick:
-come to jesus moment for gov folks to set expectations about community events
-this seems useful to me, but happy to rethink
-->
-
--- -->
-
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
 ## How do i keep up?
@@ -452,9 +441,10 @@ this seems useful to me, but happy to rethink
 
 <!--
 john:
+you know youre a nerd if you get excited about changelogs
 practicing what we preach
-transparency into release cycle
-release cycle is RAPID
+transparency into our RAPID release cycle
+i refreshed the page yesterday and there was new info
 -->
 
 ---
@@ -478,6 +468,7 @@ Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 * [Configurable app examples](https://github.com/Esri/configurable-app-examples-4x-js)
 * [Ice Age Flooding](https://wadnr.maps.arcgis.com/apps/Cascade/index.html?appid=84ea4016ce124bd9a546c5cbc58f9e29
 )
+
 <!-- john self explanatory -->
 
 ---
@@ -492,6 +483,9 @@ Slides: [`http://bit.ly/2AOXtk8`](http://bit.ly/2AOXtk8)
 
 <!--
 john:
+west coasters, time for a coffee refill
+east coasters, i hope you didn't get any crumbs in your keyboard
+
 surveys will go out soon
 we have thick skin
 let us know what else you'd like to see!
