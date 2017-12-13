@@ -225,6 +225,9 @@ we're more flexible than ever about what data you give us
 <!-- john
 
 show live app eat two app ids / show JSON
+
+its the exact same app
+new deployments are just JSON configuration
 https://www.arcgis.com/apps/View/index.html?appid=a0633500540b4d8f878bdbdc479cdcac
 https://www.arcgis.com/apps/View/index.html?webmap=158cebd41f5c4005842283b39e84826c
 https://www.arcgis.com/sharing/content/items/a0633500540b4d8f878bdbdc479cdcac/data?f=json
@@ -258,7 +261,13 @@ Tools for managing your community: Two way communication + Events
 
 <small>[`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)</small>
 
-<!-- john -->
+<!-- john
+
+patrick just showed off lots of great engagement tools
+we want to broaden the scope of engagement beyond open data nerds
+but its not a black box and we dont have all the answers.
+
+-->
 
 ---
 
@@ -488,14 +497,17 @@ Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
 * [Hosted Jupyter Notebooks](http://notebooks.esri.com/)
 * [`arcgis-rest-js` Documentation](http://arcgis-rest-js.surge.sh/)
 * [ArcGIS for Developers](https://developers.arcgis.com/labs/)
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
+
 * [StoryMap accessiblity blog](https://blogs.esri.com/esri/arcgis/2017/12/07/map-journal-accessibility/)
 * [Customizing Hub pages](https://hub.arcgis.com/pages/site-customization)
 * [ArcGIS REST API doc](http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000tq000000) - new port coming soon
 * [Configurable app examples](https://github.com/Esri/configurable-app-examples-4x-js)
 * [Ice Age Flooding](https://wadnr.maps.arcgis.com/apps/Cascade/index.html?appid=84ea4016ce124bd9a546c5cbc58f9e29
 )
-
-<!-- john self explanatory -->
 
 ---
 
