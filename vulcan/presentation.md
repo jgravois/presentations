@@ -2,66 +2,9 @@
 
 desktop and enterprise can be extended with Python (and ArcObjects)
 
-JSAPI
-  WebGL building animation - https://developers.arcgis.com/javascript/latest/sample-code/visualization-vv-color-animate/live/index.html
-  vector tiles in other projections
-  (real) 3D
-  esri-loader
-
-Runtime
-  iOS
-  Android
-  .NET (can compile to Android and iOS with Xamarin)
-  Qt/C++ (AppStudio is built on this, as is Survey123)
-
-common MVC/MVVM paradigms, Auth and content
-
-Arcade scripting across the platform
-
-REST doc on developer site
-  LBS, etc.
-  https://johngravois.com/esri-leaflet-gp/closest-facility.html
-  https://johngravois.com/esri-leaflet-gp/demos/vrp.html
-
-labs
-conceptual doc
-choosing platform
-free account to get started with hosted services
-  private is free
-  public is free
-
-OSS
-  over 500 projects on github
-  #24 rank / ~350 active contributors - https://www.infoworld.com/article/3253948/open-source-tools/who-really-contributes-to-open-source.html
-    nuget - https://www.nuget.org/profiles/Esri_Inc
-    npm - ?
-
-  esri leaflet
-  koop
-    esri-proj-codes
-    show hurricane harvey walmart
-
-  cedar
-  lerc
-
-  more lego building blocks
-    https://www.npmjs.com/package/@esri/application-base-js
-
-  Java geometry engine
-  arcgis-rest-js
-  terraformer
-    @esri/arcgis-to-geojson-utils
-  calcite-web
-
-OSM
-  no more restrictions on use of OSM in basemaps from vendors
-  world (and clarity imagery)
-    https://www.openstreetmap.org/edit#map=18/-46.40505/168.36129
-  PR
-    https://github.com/openstreetmap/iD/pull/4633
 -->
 
-<!-- .slide: data-background="../fresher-template/images/2017-slide3.png"-->
+<!-- .slide: data-background="../fresher-template/images/2017-title.png"-->
 
 # ***ArcGIS*** for Devs
 
@@ -71,13 +14,14 @@ slides: [`http://bit.ly/...`](http://bit.ly/...)
 
 ---
 
-<!-- .slide: data-background="../fresher-template/images/2017-slide3.png"-->
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png"-->
 
-1. Locate the extensibility points
-2. What comes out of the box?
-3. Esri's Open Source projects
-4. What about OpenStreetMap?
-5. Q&A (no need to wait)
+## Agenda
+
+1. web development
+2. native apps
+3. open source projects
+4. OpenStreetMap
 
 <small>[`http://bit.ly/`](http://bit.ly/)</small>
 
@@ -89,7 +33,7 @@ notes
 
 ---
 
-<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
 
 ## code in **any** language
 ## ship to **any** device
@@ -106,32 +50,38 @@ notes
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
-## Web - ArcGIS API for JavaScript 4.x
+## ArcGIS API for JavaScript 4.x
 
-* WebGL supported
-* vector tiles in any coordinate system
-* real* 3D
-* github.com/Esri/esri-loader
+* [WebGL](https://developers.arcgis.com/javascript/latest/sample-code/visualization-vv-color-animate/live/index.html)
+* vector tiles (any coordinate system)
+* 2D & [3D](https://developers.arcgis.com/javascript/latest/sample-code/satellites-3d/index.html)
+* github.com/Esri/[esri-loader](https://github.com/Esri/esri-loader)
 
 <!--
 
-notes
+second generation API
+
 
 -->
 
 ---
 
-<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
 
-## Web - ArcGIS API for Python
+## ArcGIS API for Python
 
-* web centric
-* pythonic
-* Jupyter Notebook integration
+* distributed via conda
+* web centric / pythonic
+* [Jupyter Notebook](https://developers.arcgis.com/python/sample-notebooks/chennai-floods-analysis/) integration
+* tools for analysts _and_ administrators
 
 <!--
 
-notes
+geocoding
+buffers
+tracing downstream
+time aware image service
+integrates with matplotlib
 
 -->
 
@@ -153,17 +103,124 @@ notes
 
 ---
 
-<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
 
 ## Native ArcGIS Runtime SDKs
 
-* share common low level code
-* support offline workflows
-*
+* share low-level code
+* work offline
+* access to native device APIs
 
 <!--
 
-notes
+  loadables
+
+-->
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+
+## ArcGIS [for Developers](https://developers.arcgis.com)
+
+* SDK downloads
+* conceptual doc
+* [DevLabs](https://developers.arcgis.com/labs/arcgisonline/summarize-spatial-data/)
+* compare APIs
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
+
+## location-based services
+
+* routing
+* geocoding
+* elevation
+* analysis
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+
+## examples
+
+  * [closest facility](https://johngravois.com/esri-leaflet-gp/closest-facility.html)
+  * [traveling salesman](https://johngravois.com/esri-leaflet-gp/demos/vrp.html)
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
+
+## lets see some open source!
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+
+## [@esri/cedar](http://cedar-v1.surge.sh/)
+
+charting and visualization library
+
+---
+
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
+
+## [LERC](https://johngravois.com/lerc-leaflet/)
+
+limited error raster compression
+
+blazing fast encoder/decoder
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+
+## [koop](http://github.com/koopjs/koop-core)
+
+* [Any API](https://walmart.alertlink.com/rss/stores.rss) > [GeoJSON](https://github.com/jgravois/koop-walmart/blob/9c2d7b274b32fe67287c04ac7deaa1f4220374ab/model.js#L15-L39) > ArcGIS [Online](http://www.arcgis.com/home/webmap/viewer.html?webmap=a3b82def31334e14ae799d025a6aff8e)
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
+
+## [terraformer](http://terraformer.io)
+
+```js
+ArcGIS.parse({
+  'x':-122.6764,
+  'y':45.5165,
+  'spatialReference': {
+    'wkid': 4326
+  }
+}); // returns GeoJSON
+
+
+ArcGIS.convert({
+  'type': "Point",
+  'coordinates': [45.5165, -122.6764]
+}); // returns Esri flavored JSON
+```
+
+<!--
+  WKT
+  spatial predicates
+-->
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
+
+## What's new with OpenStreetMap?
+
+* Two [canonical](https://www.openstreetmap.org/edit#map=18/-46.40505/168.36129) Esri Imagery layers in OSM editors
+* Open [PR](https://github.com/openstreetmap/iD/pull/4633) in `iD` to streamline ingest of Esri geometries
+
+<!--
+
+  showcasing our Community Maps Program
+  no more vendor restrictions on mix and match
 
 -->
 
@@ -171,17 +228,13 @@ notes
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
 
-## resources
+## time for more?
 
-Slides: [`http://bit.ly/2jgH0h5`](http://bit.ly/2jgH0h5)
-
-* [Welcome to ArcGIS Hub Blog](https://blogs.esri.com/esri/arcgis/2017/06/27/welcome-to-arcgis-hub/)
-* [2017 UC Teaser](https://www.youtube.com/watch?v=7OrvBKEqQiU)
-* [Hub Python Tutorials](https://github.com/esridc/Hub-Tutorials/)
-* [Python API Documentation](https://developers.arcgis.com/python/)
-* [Hosted Jupyter Notebooks](http://notebooks.esri.com/)
-* [`arcgis-rest-js` Documentation](http://arcgis-rest-js.surge.sh/)
-* [ArcGIS for Developers](https://developers.arcgis.com/labs/)
+* [calcite-web](http://esri.github.io/calcite-web/)
+* [arcgis-rest-js](https://esri.github.io/arcgis-rest-js)
+* [i3s-spec](https://github.com/Esri/i3s-spec)
+* configurable app spec ([Albany](http://www.arcgis.com/apps/StoryMapBasic/index.html?appid=dd4813fd4ee64b5fa9db764ebd0dda80) / [Los Angeles](http://www.arcgis.com/apps/StoryMapBasic/index.html?appid=ddd535ae55c843c0a569729efb0bdd0b))
+* [Arcade](https://developers.arcgis.com/arcade/)
 
 ---
 
