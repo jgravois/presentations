@@ -6,7 +6,7 @@
 
 # ***Esri*** and OSM
 
-John ([@geogangster](@https://twitter.com/geogangster)) / Astrid
+Astrid / John ([@geogangster](@https://twitter.com/geogangster))
 
 slides: [`http://bit.ly/2onW2mT`](http://bit.ly/2onW2mT)
 
@@ -23,6 +23,91 @@ slides: [`http://bit.ly/2onW2mT`](http://bit.ly/2onW2mT)
 <small>[`http://bit.ly/2onW2mT`](http://bit.ly/2onW2mT)</small>
 
 note:
+
+---
+
+<!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
+
+## _Ezree_? who is Ezree?
+
+note:
+Esri makes mapping software used by organizations big and small
+  desktop software that plugs into your own database
+  server software to share spatial data to browsers and apps
+  subscription services (so that nothing has to be installed)
+
+
+---
+
+<!-- .slide: data-background="./img/pc.jpeg" -->
+
+note: Desktop >
+
+---
+
+<!-- .slide: data-background="./img/tablet.jpeg" -->
+
+note: Tablet > 
+
+---
+
+<!-- .slide: data-background="./img/server.jpeg" -->
+
+note: Software as a service
+
+---
+
+<!-- .slide: data-background="./img/noaa.jpeg" -->
+
+note: NOAA - studying climate change
+
+---
+
+<!-- .slide: data-background="./img/noaa-sea-level.jpg" -->
+
+note: NOAA - studying climate change
+
+---
+
+<!-- .slide: data-background="./img/cdc-nytimes.jpeg" -->
+
+note: CDC - analyzing public health epidemics
+
+---
+
+<!-- .slide: data-background="./img/cdc-poverty-map.jpg" -->
+
+note: CDC - analyzing public health epidemics
+
+---
+
+<!-- .slide: data-background="./img/911-telegraph.jpg" -->
+
+note: 911 dispatch, piping information to Waze
+
+---
+
+<!-- .slide: data-background="./img/tax-roll.jpg" -->
+
+note: Assessors tax rolls
+
+---
+
+<!-- .slide: data-background="./img/tree-inventory-bartlett.jpg" -->
+
+note: Parks and recreation, inventory and inspections
+
+---
+
+<!-- .slide: data-background="./img/electric-utility-hi-line-tool.jpg" -->
+
+note: Utility companies analyze network health
+
+---
+
+<!-- .slide: data-background="./img/fedex-forbes.jpg" -->
+
+note: FedEx / UPS / Postal Service fleet routing
 
 ---
 
@@ -65,13 +150,22 @@ note:
 
 ---
 
+<!-- .slide: data-background="../fresher-template/images/2017-slide2.png" -->
 
+## Civic Transparency
+
+note:
+  Open Data
+  silos between osm and government
+  silos _within_ government
+
+---
 
 <!-- .slide: data-background="../fresher-template/images/2017-slide3.png" -->
 
 ## What's new with OpenStreetMap?
 
-* proposed [feature](https://github.com/openstreetmap/iD/pull/4633) to reference open government data in `iD`
+* proposed `id` [feature](https://github.com/openstreetmap/iD/pull/4633) to load open government data
 
 ---
 
