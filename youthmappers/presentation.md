@@ -8,7 +8,7 @@
 
 Astrid / John ([@geogangster](@https://twitter.com/geogangster))
 
-slides: [`http://bit.ly/2onW2mT`](http://bit.ly/2onW2mT)
+slides: [`https://bit.ly/2EXBFDo`](https://bit.ly/2EXBFDo)
 
 ---
 
@@ -20,7 +20,7 @@ slides: [`http://bit.ly/2onW2mT`](http://bit.ly/2onW2mT)
 2. Humanitarian case-studies (Astrid)
 3. what's happening with OSM
 
-<small>[`http://bit.ly/2onW2mT`](http://bit.ly/2onW2mT)</small>
+<small>[`https://bit.ly/2EXBFDo`](https://bit.ly/2EXBFDo)</small>
 
 note:
 
