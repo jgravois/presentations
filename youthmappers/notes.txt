@@ -1,0 +1,42 @@
+still need
+cloud/SAS
+waze logo
+
+Esri makes mapping software used by organizations big and small
+  desktop software that plugs into your own database
+  server software to share spatial data to browsers and apps
+  subscription services (so that nothing has to be installed)
+ 
+Not just making maps, answering spatial questions
+
+Federal Government
+  NOAA - weather forecasting and climate analysis
+  CDC - analyzing public health epidemics
+
+Local Government
+  Public safety - 911 dispatch / Waze
+  Parks and Recreation - asset allocation, maintenance
+  Economic Development - zoning
+  Civic Transparency / Open Data
+
+Utility Companies
+  Water / Electric / Oil and Gas
+  monitoring network health, isolating problems
+
+Commerical
+  Fedex/UPS - fleet routing
+  Retail - site selection
+  Insurance - risk analysis
+  
+What makes Esri different than Microsoft/Facebook/Google?
+
+A lot smaller than the giants, a lot bigger than other specialty mapping companies
+We don't sell advertising (ie: users aren't our 'currency')
+Our tools are dataset agnostic
+Not publicly traded, don't need to answer to shareholders each quarter
+
+Why should you care?
+
+we (and more importantly our customers) are working on 'things that matter'
+the intersection of a particular domain and technology is exciting!
+the geospatial landscape evolves continuously
