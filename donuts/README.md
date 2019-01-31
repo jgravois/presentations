@@ -20,6 +20,14 @@
 
 ---
 
+## Bret Victor - [Inventing on Principle](https://vimeo.com/36579366)
+
+---
+
+> Creators need an immediate connection to what they're creating.
+
+---
+
 ## questions are welcome!
 
 ---
